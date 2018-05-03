@@ -1,0 +1,11 @@
+/**
+ * This CSS hides three image icons in the top bar, due to lack of IE support for the box-image CSS property.
+ *
+ * Will have to be this way until: A - IE starts supporting mask-image, B - fontawesome adds all 3 icons or C - I find another solution that's ok for IE
+ */
+
+.topbar a.social-massroots,
+.topbar a.social-weedmaps,
+.topbar a.social-leafly {
+	display: none !important;
+}

@@ -1,0 +1,60 @@
+body {
+	background: #FFF;
+	color: #000;
+	font-size: 16px;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+a,
+a:visited {
+	color: #000;
+	text-decoration: none;
+}
+
+a:hover {
+	color: rgba(0,0,0,0.4);
+	text-decoration: none;
+}
+
+#wpd-coupon {
+	margin: 10px auto;
+	width: 100%;
+	max-width: 750px;
+	padding: 10px;
+	border: 4px dashed #DDD;
+	text-align: center;
+}
+
+a.coupons-single-logo {
+    margin: 20px auto 0 auto;
+    display: block;
+    width: 100%;
+    max-width: 400px;
+}
+
+a.coupons-single-logo img {
+    max-width: 400px;
+}
+
+.entry-title {
+	margin-bottom: 10px;
+}
+
+@media print {
+	.dont-print { display: none; }
+}
+
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
