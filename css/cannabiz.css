@@ -811,7 +811,8 @@ section#primary {
 .has-post-thumbnail .type-concentrates .entry-header,
 .has-post-thumbnail .type-prerolls .entry-header,
 .has-post-thumbnail .type-topicals .entry-header,
-.has-post-thumbnail .type-growers .entry-header {
+.has-post-thumbnail .type-growers .entry-header,
+.has-post-thumbnail .type-gear .entry-header {
     margin: -60px 48px 0px 48px;
     padding: 20px 20px 0 20px;
 }
@@ -1095,11 +1096,13 @@ body.post-type-archive-concentrates .hentry,
 body.post-type-archive-prerolls .hentry,
 body.post-type-archive-topicals .hentry,
 body.post-type-archive-growers .hentry,
+body.post-type-archive-gear .hentry,
 body.tax-flowers_category .hentry,
 body.tax-edibles_category .hentry,
 body.tax-concentrates_category .hentry,
 body.tax-topicals_category .hentry,
 body.tax-growers_category .hentry,
+body.tax-wpd_gear_category .hentry,
 body.tax-aroma .hentry,
 body.tax-flavor .hentry,
 body.tax-effect .hentry,
@@ -1124,6 +1127,8 @@ body.post-type-archive-topicals .hentry .entry-header,
 body.post-type-archive-topicals .hentry .entry-footer,
 body.post-type-archive-growers .hentry .entry-header,
 body.post-type-archive-growers .hentry .entry-footer,
+body.post-type-archive-gear .hentry .entry-header,
+body.post-type-archive-gear .hentry .entry-footer,
 body.tax-flowers_category .hentry .entry-header,
 body.tax-flowers_category .hentry .entry-footer,
 body.tax-edibles_category .hentry .entry-header,
@@ -1134,6 +1139,8 @@ body.tax-growers_category .hentry .entry-header,
 body.tax-growers_category .hentry .entry-footer,
 body.tax-topicals_category .hentry .entry-header,
 body.tax-topicals_category .hentry .entry-footer,
+body.tax-wpd_gear_category .hentry .entry-header,
+body.tax-wpd_gear_category .hentry .entry-footer,
 body.tax-aroma .hentry .entry-header,
 body.tax-aroma .hentry .entry-footer,
 body.tax-flavor .hentry .entry-header,
@@ -1157,11 +1164,13 @@ body.post-type-archive-concentrates .hentry .entry-header h2.entry-title,
 body.post-type-archive-prerolls .hentry .entry-header h2.entry-title,
 body.post-type-archive-topicals .hentry .entry-header h2.entry-title,
 body.post-type-archive-growers .hentry .entry-header h2.entry-title,
+body.post-type-archive-gear .hentry .entry-header h2.entry-title,
 body.tax-flowers_category .hentry .entry-header h2.entry-title,
 body.tax-edibles_category .hentry .entry-header h2.entry-title,
 body.tax-concentrates_category .hentry .entry-header h2.entry-title,
 body.tax-growers_category .hentry .entry-header h2.entry-title,
 body.tax-topicals_category .hentry .entry-header h2.entry-title,
+body.tax-wpd_gear_category .hentry .entry-header h2.entry-title,
 body.tax-aroma .hentry .entry-header h2.entry-title,
 body.tax-flavor .hentry .entry-header h2.entry-title,
 body.tax-effect .hentry .entry-header h2.entry-title,
@@ -1179,11 +1188,13 @@ body.post-type-archive-concentrates nav.navigation.posts-navigation,
 body.post-type-archive-prerolls nav.navigation.posts-navigation,
 body.post-type-archive-topicals nav.navigation.posts-navigation,
 body.post-type-archive-growers nav.navigation.posts-navigation,
+body.post-type-archive-gear nav.navigation.posts-navigation,
 body.tax-flowers_category nav.navigation.posts-navigation,
 body.tax-edibles_category nav.navigation.posts-navigation,
 body.tax-concentrates_category nav.navigation.posts-navigation,
 body.tax-topicals_category nav.navigation.posts-navigation,
 body.tax-growers_category nav.navigation.posts-navigation,
+body.tax-wpd_gear_category nav.navigation.posts-navigation,
 body.tax-aromas nav.navigation.posts-navigation,
 body.tax-flavor nav.navigation.posts-navigation,
 body.tax-effect nav.navigation.posts-navigation,
@@ -1692,7 +1703,9 @@ ol.comment-list ol.children li:last-child {
 .woocommerce ul.products li.product .woocommerce-loop-category__title,
 .woocommerce ul.products li.product .woocommerce-loop-product__title,
 .woocommerce ul.products li.product h3 {
-	font-size: 1.4em;
+	font-family: 'Open Sans', 'Open Sans', sans-serif;
+	font-size: 16px;
+	font-weight: 600;
 }
 
 .woocommerce ul.products li.product a.woocommerce-LoopProduct-link {
@@ -1736,6 +1749,29 @@ td.value select {
 
 .woocommerce div.product form.cart .variations td.label label {
     padding: 2px 0;
+}
+
+ul.product_list_widget span.woocommerce-Price-amount.amount {
+    color: #AAA;
+    font-size: 12px;
+}
+
+.hentry nav.woocommerce-MyAccount-navigation ul {
+    padding-left: 0;
+}
+
+.woocommerce .woocommerce-breadcrumb {
+    font-size: 13px;
+    color: #AAA;
+}
+
+.woocommerce .woocommerce-breadcrumb a,
+.woocommerce .woocommerce-breadcrumb a:visited {
+	color: #777;
+}
+
+.woocommerce .woocommerce-breadcrumb a:hover {
+	color: #AAA;
 }
 
 

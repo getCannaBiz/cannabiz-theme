@@ -299,7 +299,7 @@ break;
 /**
  * Add "CannaBiz" submenu to WPD admin menu
  */
-add_action( 'admin_menu', 'wpd_cannabiz_submenu_page' );
+add_action( 'admin_menu', 'wpd_cannabiz_submenu_page', 15 );
 function wpd_cannabiz_submenu_page() {
 	add_submenu_page( 'wpd-settings', 'CannaBiz', 'CannaBiz', 'manage_options', 'customize.php', NULL );
 }

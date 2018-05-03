@@ -1486,7 +1486,10 @@ function cannabiz_customizer_css() {
 	<style type="text/css">
 
 	<?php if ( get_theme_mod( 'cannabiz_main_font' ) !='' ) { ?>
-		body {
+		body,
+		.woocommerce ul.products li.product .woocommerce-loop-category__title,
+		.woocommerce ul.products li.product .woocommerce-loop-product__title,
+		.woocommerce ul.products li.product h3 {
 			font-family: '<?php echo get_theme_mod( 'cannabiz_main_font' ); ?>', 'Open Sans', sans-serif;
 		}
 	<?php } ?>

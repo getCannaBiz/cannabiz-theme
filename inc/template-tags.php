@@ -149,7 +149,7 @@ function cannabiz_entry_footer() {
 				printf( '<span class="tags-links '. $nodate .'">' . esc_html__( '%1$s', 'cannabiz' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 			}
 		}
-	} elseif ( 'flowers' || 'edibles' || 'concentrates' || 'prerolls' || 'topicals' || 'growers' === get_post_type() ) {
+	} elseif ( 'flowers' || 'edibles' || 'concentrates' || 'prerolls' || 'topicals' || 'growers' || 'gear' === get_post_type() ) {
 		echo '<span class="dispensary-comments"><i class="fa fa-comment"></i> ';
 		echo comments_popup_link( esc_html__( '0', 'cannabiz' ), esc_html__( '1', 'cannabiz' ), esc_html__( '%', 'cannabiz' ) );
 		echo '</span>'; // WPCS: XSS OK.
@@ -161,6 +161,8 @@ function cannabiz_entry_footer() {
 			echo "<span class='dispensary-category'>" .get_the_term_list( $post->ID, 'topicals_category', '', ' ', '' ) . "</span>";
 		} elseif ( 'growers' === get_post_type() ) {
 			echo "<span class='dispensary-category'>" .get_the_term_list( $post->ID, 'growers_category', '', ' ', '' ) . "</span>";
+		} elseif ( 'gear' === get_post_type() ) {
+			echo "<span class='dispensary-category'>" .get_the_term_list( $post->ID, 'wpd_gear_category', '', ' ', '' ) . "</span>";
 		} elseif ( 'prerolls' === get_post_type() ) {
 			$prerollflower = get_post_meta( get_the_id(), '_selected_flowers', true );
 			echo "<span class='dispensary-category'>";
