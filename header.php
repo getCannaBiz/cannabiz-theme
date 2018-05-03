@@ -65,6 +65,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="site-branding">
+						<?php do_action( 'cannabiz_logo_before' ); ?>
 					<?php if ( get_theme_mod('cannabiz_logo') !='' ) { ?>
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_theme_mod( 'cannabiz_logo' ); ?>" alt="<?php bloginfo( 'name' ); ?>" /></a>
 					<?php } else { ?>
@@ -77,9 +78,12 @@
 							<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 						<?php } ?>
 					<?php } ?>
+						<?php do_action( 'cannabiz_logo_after' ); ?>
 					</div><!-- .site-branding -->
 					<nav id="site-navigation" class="main-navigation" role="navigation">
+						<?php do_action( 'cannabiz_navigation_before' ); ?>
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+						<?php do_action( 'cannabiz_navigation_after' ); ?>
 					</nav><!-- #site-navigation -->
 				</div><!-- .col-lg-12 -->
 			</div><!-- .row -->
@@ -93,7 +97,7 @@
 		}
 	?>
 	
-	<?php cannabiz_titlelarge(); ?>
+	<?php cannabiz_title_large(); ?>
 
 	<div id="content" class="site-content">
 		<div class="container">

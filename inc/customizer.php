@@ -118,6 +118,29 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 		)
 	);
 
+	/* Transparent header option */
+	$wp_customize->add_setting(
+		'cannabiz_transparenthead',
+		array(
+			'default'            => 'off',
+			'sanitize_callback'  => 'cannabiz_sanitize_input',
+			'transport'          => 'refresh'
+		)
+	);
+	$wp_customize->add_control(
+		'cannabiz_transparenthead',
+		array(
+			'section'  => 'title_tagline',
+			'label'    => 'Transparent Header',
+			'type'     => 'radio',
+			'choices'  => array(
+				'off'  => 'Off',
+				'on'   => 'On'
+			),
+			'priority'  => 12
+		)
+	);
+
 	/* Show or Hide Top Bar */
 	$wp_customize->add_setting(
 		'cannabiz_topbar',
@@ -1611,9 +1634,7 @@ function cannabiz_customizer_css() {
 		}
 	<?php } ?>
 	<?php if ( '' != get_theme_mod( 'cannabiz_background_header_color' ) || null != get_theme_mod( 'cannabiz_background_header_color' ) ) { ?>
-		.site-header,
-		.main-navigation ul ul,
-		.main-navigation ul {
+		.site-header {
 			background-color: <?php echo get_theme_mod( 'cannabiz_background_header_color' ); ?>;
 		}
 		.main-navigation ul ul:before {
@@ -1712,6 +1733,18 @@ function cannabiz_customizer_css() {
 		.site-footer .menu a:hover {
 			color: <?php echo get_theme_mod( 'cannabiz_footer_link_hover_color' ); ?>;
 		}
+	<?php } ?>
+	<?php if ( 'on' === get_theme_mod( 'cannabiz_transparenthead' ) || '' === get_theme_mod( 'cannabiz_transparenthead' ) ) { ?>
+		.site-header {
+			background: transparent;
+			border-bottom: none;
+		}
+		<?php if ( '' != get_theme_mod( 'cannabiz_background_header_color' ) || null != get_theme_mod( 'cannabiz_background_header_color' ) ) { ?>
+		.site-header.scroll-to-fixed-fixed {
+			background: <?php echo get_theme_mod( 'cannabiz_background_header_color' ); ?>;
+			border-bottom: 1px solid #DDD;
+		}
+		<?php } ?>
 	<?php } ?>
 	</style>
 <?php

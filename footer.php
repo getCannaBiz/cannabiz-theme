@@ -41,12 +41,15 @@
 		<?php } ?>
 			<div class="row bottom">
 				<div class="col-lg-6 copyright">
-					<?php if ( get_theme_mod( 'cannabiz_copyright' ) !== '' ) { ?>
+					<?php if ( '' != get_theme_mod( 'cannabiz_copyright' ) ) { ?>
 						<?php echo get_theme_mod( 'cannabiz_copyright' ); ?>
 					<?php } else { ?>
 						&copy; <?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?>. <?php printf( esc_html__( '%s', 'cannabiz' ), 'Powered by ' ); ?>
 						<?php printf( esc_html__( '%1$s', 'cannabiz' ), '<a href="https://www.wpdispensary.com/" rel="WP Dispensary - WordPress Marijuana Plugin">WP Dispensary</a>' ); ?>
 					<?php } ?>
+					<?php
+						echo apply_filters( 'cannabiz_footer_designedby', $cannabiz_footer_designedby );
+					?>
 				</div><!-- .col-lg-12.copyright -->
 				<div class="col-lg-6 menu">
 					<?php if ( 'show' === get_theme_mod( 'cannabiz_footer_menu' ) || '' === get_theme_mod( 'cannabiz_footer_menu' ) ) {

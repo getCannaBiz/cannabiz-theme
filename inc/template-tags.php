@@ -257,11 +257,11 @@ function cannabiz_product_footer() {
 endif;
 
 
-if ( ! function_exists( 'cannabiz_titlelarge' ) ) :
+if ( ! function_exists( 'cannabiz_title_large' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags and comments.
  */
-function cannabiz_titlelarge() {
+function cannabiz_title_large() {
 	?>
 	<?php if ( 'show' === get_theme_mod( 'cannabiz_pages_show_title' ) || get_post_meta( get_the_ID(), 'page_title', true ) ) { ?>
 		<?php if(is_page()) { ?>

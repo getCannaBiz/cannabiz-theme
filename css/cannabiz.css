@@ -337,6 +337,13 @@ a.button.alt:hover {
 	max-width: 400px; /* Suggested max-width based on current header style */
 }
 
+@media screen and (max-width: 400px) {
+	.site-branding img {
+		max-width: 100%;
+		width: 100%;
+	}
+}
+
 .site-title {
 	display: inline-block;
 	font-size: 48px;
@@ -1035,6 +1042,10 @@ span.caption.text-muted {
     opacity: 0.5;
 }
 
+body.single .attachment-large-image:hover {
+	opacity: 1.0;
+}
+
 /* Blockquotes */
 
 blockquote {
@@ -1690,6 +1701,41 @@ ol.comment-list ol.children li:last-child {
 
 .woocommerce ul.products li.product a.woocommerce-LoopProduct-link:hover {
 	color: #76BD1D;
+}
+
+span.posted_in,
+span.tagged_as,
+span.sku_wrapper {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+span.posted_in a,
+span.tagged_as a,
+span.sku_wrapper span.sku {
+	font-weight: 300;
+}
+
+.woocommerce .quantity .qty {
+    width: 3.631em;
+    text-align: center;
+    padding: 5px;
+}
+
+td.value select {
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.woocommerce div.product form.cart .variations td.label {
+    padding: 0px;
+    line-height: 32px;
+}
+
+.woocommerce div.product form.cart .variations td.label label {
+    padding: 2px 0;
 }
 
 
