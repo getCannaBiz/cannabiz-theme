@@ -2,6 +2,8 @@
 /**
  * The template for displaying all single posts.
  *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ *
  * @package CannaBiz
  */
 
@@ -12,7 +14,7 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'template-parts/edibles', 'single' ); ?>
+			<?php get_template_part( 'template-parts/tinctures', 'single' ); ?>
 
 			<?php if ( comments_open() || get_comments_number() ) { ?>
 			<div class="comments">
@@ -25,5 +27,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar( 'edibles' ); ?>
+<?php get_sidebar( 'tinctures' ); ?>
 <?php get_footer(); ?>

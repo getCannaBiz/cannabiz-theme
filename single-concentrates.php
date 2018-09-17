@@ -27,5 +27,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar('concentrates'); ?>
+<?php get_sidebar( 'concentrates' ); ?>
 <?php get_footer(); ?>

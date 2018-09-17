@@ -27,5 +27,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar('topicals'); ?>
+<?php get_sidebar( 'topicals' ); ?>
 <?php get_footer(); ?>

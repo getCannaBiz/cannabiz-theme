@@ -27,5 +27,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar('gear'); ?>
+<?php get_sidebar( 'gear' ); ?>
 <?php get_footer(); ?>

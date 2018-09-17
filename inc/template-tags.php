@@ -29,7 +29,10 @@ function cannabiz_posted_on() {
 		}
 	}
 
-	if ( is_post_type_archive( array( 'prerolls', 'edibles' ) ) ) {
+	/**
+	 * Price - Edibles, Pre-rolls, Growers
+	 */
+	if ( is_post_type_archive( array( 'edibles', 'prerolls', 'growers', 'gear', 'tinctures' ) ) ) {
 
 		if ( get_post_meta( get_the_ID(), '_priceeach', true ) ) {
 			echo "$" . get_post_meta( get_the_id(), '_priceeach', true );
@@ -37,6 +40,20 @@ function cannabiz_posted_on() {
 
 	}
 
+	/**
+	 * Price - Topicals
+	 */
+	if ( is_post_type_archive( array( 'topicals' ) ) ) {
+
+		if ( get_post_meta( get_the_ID(), '_pricetopical', true ) ) {
+			echo "$" . get_post_meta( get_the_id(), '_pricetopical', true );
+		}
+
+	}
+
+	/**
+	 * Price - Flowers
+	 */
 	if ( is_post_type_archive( 'flowers' ) ) {
 
 		if ( get_post_meta( get_the_ID(), '_gram', true ) ) {
@@ -63,29 +80,32 @@ function cannabiz_posted_on() {
 
 	}
 	
+	/**
+	 * Price - Concentrates
+	 */
 	if ( is_post_type_archive( 'concentrates' ) ) {
 		if ( get_post_meta( get_the_ID(), '_priceeach', true ) ) {
-			$pricingeach    = '$' . get_post_meta( get_the_id(), '_priceeach', true ) . ' each';
+			$pricingeach = '$' . get_post_meta( get_the_id(), '_priceeach', true ) . ' each';
 		} else {
-			$pricingeach    = '';
+			$pricingeach = '';
 		}
 
 		if ( get_post_meta( get_the_ID(), '_halfgram', true ) ) {
-			$halfgram       = '<span class="wpd-productinfo"><strong>1/2g: </strong>$' . get_post_meta( get_the_id(), '_halfgram', true ) .'</span>';
+			$halfgram = '<span class="wpd-productinfo"><strong>1/2g: </strong>$' . get_post_meta( get_the_id(), '_halfgram', true ) .'</span>';
 		} else {
-			$halfgram       = '';
+			$halfgram = '';
 		}
 
 		if ( get_post_meta( get_the_ID(), '_gram', true ) ) {
-			$gram           = '<span class="wpd-productinfo"><strong>1g: </strong>$' . get_post_meta( get_the_id(), '_gram', true ) .'</span>';
+			$gram = '<span class="wpd-productinfo"><strong>1g: </strong>$' . get_post_meta( get_the_id(), '_gram', true ) .'</span>';
 		} else {
-			$gram           = '';
+			$gram = '';
 		}
 
 		if ( get_post_meta( get_the_ID(), '_twograms', true ) ) {
-			$twograms       = '<span class="wpd-productinfo"><strong>2g: </strong>$' . get_post_meta( get_the_id(), '_twograms', true ) .'</span>';
+			$twograms = '<span class="wpd-productinfo"><strong>2g: </strong>$' . get_post_meta( get_the_id(), '_twograms', true ) .'</span>';
 		} else {
-			$twograms       = '';
+			$twograms = '';
 		}
 
 		if ( empty( $pricingeach ) ) {
@@ -96,6 +116,117 @@ function cannabiz_posted_on() {
 
 	}
 
+	/**
+	 * Price - Taxonomies
+	 */
+	if (
+		is_tax(
+			array(
+				'aroma',
+				'flavor',
+				'effect',
+				'condition',
+				'symptom',
+				'vendor',
+				'flowers_category',
+				'concentrates_category',
+				'edibles_category',
+				'topicals_category',
+				'growers_category',
+				'wpd_gear_category',
+				'wpd_tinctures_category',
+
+			)
+		)
+	) {
+
+		if ( 'flowers' === get_post_type() ) {
+			if ( get_post_meta( get_the_ID(), '_gram', true ) ) {
+				echo "$" . get_post_meta(get_the_id(), '_gram', true);
+			} elseif ( get_post_meta( get_the_ID(), '_eighth', true ) ) {
+				echo "$" . get_post_meta(get_the_id(), '_eighth', true);
+			} elseif ( get_post_meta( get_the_ID(), '_quarter', true ) ) {
+				echo "$" . get_post_meta(get_the_id(), '_quarter', true);
+			} elseif ( get_post_meta( get_the_ID(), '_halfounce', true ) ) {
+				echo "$" . get_post_meta(get_the_id(), '_halfounce', true);
+			}
+			echo " - ";
+			if ( get_post_meta( get_the_ID(), '_ounce', true ) ) {
+				echo "$" . get_post_meta( get_the_id(), '_ounce', true );
+			} elseif ( get_post_meta( get_the_ID(), '_halfounce', true ) ) {
+				echo "$" . get_post_meta( get_the_id(), '_halfounce', true );
+			} elseif ( get_post_meta( get_the_ID(), '_quarter', true ) ) {
+				echo "$" . get_post_meta( get_the_id(), '_quarter', true );
+			} elseif ( get_post_meta( get_the_ID(), '_eighth', true ) ) {
+				echo "$" . get_post_meta( get_the_id(), '_eighth', true );
+			} elseif ( get_post_meta( get_the_ID(), '_gram', true ) ) {
+				echo "$" . get_post_meta( get_the_id(), '_gram', true );
+			}
+		}
+
+		if ( 'edibles' === get_post_type() ) {
+			if ( get_post_meta( get_the_ID(), '_priceeach', true ) ) {
+				echo "$" . get_post_meta( get_the_id(), '_priceeach', true );
+			}
+		}
+
+		if ( 'prerolls' === get_post_type() ) {
+			if ( get_post_meta( get_the_ID(), '_priceeach', true ) ) {
+				echo "$" . get_post_meta( get_the_id(), '_priceeach', true );
+			}
+		}
+
+		if ( 'growers' === get_post_type() ) {
+			if ( get_post_meta( get_the_ID(), '_priceeach', true ) ) {
+				echo "$" . get_post_meta( get_the_id(), '_priceeach', true );
+			}
+		}
+
+		if ( 'topicals' === get_post_type() ) {
+			if ( get_post_meta( get_the_ID(), '_priceeach', true ) ) {
+				echo "$" . get_post_meta( get_the_id(), '_priceeach', true );
+			}
+		}
+
+		if ( 'concentrates' === get_post_type() ) {
+
+			if ( get_post_meta( get_the_ID(), '_priceeach', true ) ) {
+				$pricingeach = '$' . get_post_meta( get_the_id(), '_priceeach', true ) . ' each';
+			} else {
+				$pricingeach = '';
+			}
+
+			if ( get_post_meta( get_the_ID(), '_halfgram', true ) ) {
+				$halfgram = '<span class="wpd-productinfo"><strong>1/2g: </strong>$' . get_post_meta( get_the_id(), '_halfgram', true ) .'</span>';
+			} else {
+				$halfgram = '';
+			}
+
+			if ( get_post_meta( get_the_ID(), '_gram', true ) ) {
+				$gram = '<span class="wpd-productinfo"><strong>1g: </strong>$' . get_post_meta( get_the_id(), '_gram', true ) .'</span>';
+			} else {
+				$gram = '';
+			}
+
+			if ( get_post_meta( get_the_ID(), '_twograms', true ) ) {
+				$twograms = '<span class="wpd-productinfo"><strong>2g: </strong>$' . get_post_meta( get_the_id(), '_twograms', true ) .'</span>';
+			} else {
+				$twograms = '';
+			}
+
+			if ( empty( $pricingeach ) ) {
+				echo $halfgram .''. $gram .''. $twograms;
+			} else {
+				echo $pricingeach;
+			}
+
+		}
+
+	}
+
+	/**
+	 * Link - Edit
+	 */
 	edit_post_link(
 		sprintf(
 			/* translators: %s: Name of current post */
@@ -149,10 +280,16 @@ function cannabiz_entry_footer() {
 				printf( '<span class="tags-links '. $nodate .'">' . esc_html__( '%1$s', 'cannabiz' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 			}
 		}
-	} elseif ( 'flowers' || 'edibles' || 'concentrates' || 'prerolls' || 'topicals' || 'growers' || 'gear' === get_post_type() ) {
-		echo '<span class="dispensary-comments"><i class="fa fa-comment"></i> ';
-		echo comments_popup_link( esc_html__( '0', 'cannabiz' ), esc_html__( '1', 'cannabiz' ), esc_html__( '%', 'cannabiz' ) );
-		echo '</span>'; // WPCS: XSS OK.
+	} elseif ( 'flowers' || 'edibles' || 'concentrates' || 'prerolls' || 'topicals' || 'growers' || 'gear' || 'tinctures' === get_post_type() ) {
+		global $post;
+		
+		if ( ! comments_open() ) {
+			echo '<span></span> &nbsp;'; // No Comments.
+		} else {
+			echo '<span class="dispensary-comments"><i class="fa fa-comment"></i> ';
+			echo comments_popup_link( esc_html__( '0', 'cannabiz' ), esc_html__( '1', 'cannabiz' ), esc_html__( '%', 'cannabiz' ) );
+			echo '</span>'; // WPCS: XSS OK.
+		}
 		if ( 'concentrates' === get_post_type() ) {
 			echo "<span class='dispensary-category'>" .get_the_term_list( $post->ID, 'concentrates_category', '', ' ', '' ) . "</span>";
 		} elseif ( 'edibles' === get_post_type() ) {
@@ -163,6 +300,8 @@ function cannabiz_entry_footer() {
 			echo "<span class='dispensary-category'>" .get_the_term_list( $post->ID, 'growers_category', '', ' ', '' ) . "</span>";
 		} elseif ( 'gear' === get_post_type() ) {
 			echo "<span class='dispensary-category'>" .get_the_term_list( $post->ID, 'wpd_gear_category', '', ' ', '' ) . "</span>";
+		} elseif ( 'tinctures' === get_post_type() ) {
+			echo "<span class='dispensary-category'>" .get_the_term_list( $post->ID, 'wpd_tinctures_category', '', ' ', '' ) . "</span>";
 		} elseif ( 'prerolls' === get_post_type() ) {
 			$prerollflower = get_post_meta( get_the_id(), '_selected_flowers', true );
 			echo "<span class='dispensary-category'>";
@@ -183,16 +322,16 @@ if ( ! function_exists( 'cannabiz_social_icons' ) ) :
  */
 function cannabiz_social_icons() {
 
+	if ( get_theme_mod( 'cannabiz_social_leafly' ) !='' ) { ?>
+		<a href="<?php echo get_theme_mod( 'cannabiz_social_leafly' ); ?>" target="_blank" class="social-leafly"></a>
+	<?php }
+
 	if ( get_theme_mod( 'cannabiz_social_massroots' ) !='' ) { ?>
 		<a href="<?php echo get_theme_mod( 'cannabiz_social_massroots' ); ?>" target="_blank" class="social-massroots"></a>
 	<?php }
 
 	if ( get_theme_mod( 'cannabiz_social_weedmaps' ) !='' ) { ?>
 		<a href="<?php echo get_theme_mod( 'cannabiz_social_weedmaps' ); ?>" target="_blank" class="social-weedmaps"></a>
-	<?php }
-
-	if ( get_theme_mod( 'cannabiz_social_leafly' ) !='' ) { ?>
-		<a href="<?php echo get_theme_mod( 'cannabiz_social_leafly' ); ?>" target="_blank" class="social-leafly"></a>
 	<?php }
 
 	if ( get_theme_mod( 'cannabiz_social_twitter' ) !='' ) { ?>

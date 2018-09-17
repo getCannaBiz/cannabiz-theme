@@ -4,7 +4,7 @@ Theme URI: https://www.wpdispensary.com/downloads/cannabiz
 Author: WP Dispensary
 Author URI: https://www.wpdispensary.com
 Description: CannaBiz is a commercial WordPress theme for the cannabis industry, built to work with the <a href="https://www.wpdispensary.com/" target="_blank">WP Dispensary</a> WordPress plugin.
-Version: 1.9
+Version: 2.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: cannabiz
@@ -428,7 +428,6 @@ input[type="submit"] {
 	font-size: 0.75rem;
 	line-height: 1;
 	padding: .6em 1em .4em;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 button:hover,

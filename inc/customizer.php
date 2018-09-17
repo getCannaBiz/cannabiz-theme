@@ -33,51 +33,13 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 		'priority'  => 1
 	) ) );
 
-	/* Blog Title Size */
-	$wp_customize->add_setting(
-		'cannabiz_blogtitle_size',
-		array(
-			'default'            => '48',
-			'sanitize_callback'  => 'cannabiz_sanitize_text',
-			'transport'          => 'refresh'
-		)
-	);
-	$wp_customize->add_control(
-		'cannabiz_blogtitle_size',
-		array(
-			'section'  	=> 'title_tagline',
-			'label'    	=> 'Size (px)',
-			'type'     	=> 'number',
-			'priority'  => 10
-		)
-	);
-
-	/* Blog Description Size */
-	$wp_customize->add_setting(
-		'cannabiz_blogdescription_size',
-		array(
-			'default'            => '14',
-			'sanitize_callback'  => 'cannabiz_sanitize_text',
-			'transport'          => 'refresh'
-		)
-	);
-	$wp_customize->add_control(
-		'cannabiz_blogdescription_size',
-		array(
-			'section'  	=> 'title_tagline',
-			'label'    	=> 'Size (px)',
-			'type'     	=> 'number',
-			'priority'  => 11
-		)
-	);
-
 	/* Show or Hide Blog Description */
 	$wp_customize->add_setting(
 		'cannabiz_blogdescription',
 		array(
-			'default'   => 'hide',
-			'sanitize_callback'  => 'cannabiz_sanitize_input',
-			'transport' => 'refresh'
+			'default'           => 'hide',
+			'sanitize_callback' => 'cannabiz_sanitize_input',
+			'transport'         => 'refresh'
 		)
 	);
 	$wp_customize->add_control(
@@ -87,10 +49,10 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 			'label'    => 'Tagline display',
 			'type'     => 'radio',
 			'choices'  => array(
-				'hide'    => 'Hide',
-				'show'   => 'Show'
+				'hide' => 'Hide',
+				'show' => 'Show'
 			),
-			'priority'  => 11
+			'priority' => 11
 
 		)
 	);
@@ -99,9 +61,9 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 	$wp_customize->add_setting(
 		'cannabiz_stickyhead',
 		array(
-			'default'            => 'off',
-			'sanitize_callback'  => 'cannabiz_sanitize_input',
-			'transport'          => 'refresh'
+			'default'           => 'off',
+			'sanitize_callback' => 'cannabiz_sanitize_input',
+			'transport'         => 'refresh'
 		)
 	);
 	$wp_customize->add_control(
@@ -114,7 +76,7 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 				'off'  => 'Off',
 				'on'   => 'On'
 			),
-			'priority'  => 12
+			'priority' => 12
 		)
 	);
 
@@ -145,9 +107,9 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 	$wp_customize->add_setting(
 		'cannabiz_topbar',
 		array(
-			'default'   => 'hide',
-			'sanitize_callback'  => 'cannabiz_sanitize_input',
-			'transport' => 'refresh'
+			'default'           => 'hide',
+			'sanitize_callback' => 'cannabiz_sanitize_input',
+			'transport'         => 'refresh'
 		)
 	);
 	$wp_customize->add_control(
@@ -157,10 +119,10 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 			'label'    => 'Top Bar',
 			'type'     => 'radio',
 			'choices'  => array(
-				'hide'    => 'Hide',
-				'show'   => 'Show'
+				'hide' => 'Hide',
+				'show' => 'Show'
 			),
-			'priority'  => 25
+			'priority' => 25
 		)
 	);
 
@@ -168,9 +130,9 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 	$wp_customize->add_setting(
 		'cannabiz_topbar_email_address',
 		array(
-			'default'            => '',
-			'sanitize_callback'  => 'cannabiz_sanitize_text',
-			'transport'          => 'refresh'
+			'default'           => '',
+			'sanitize_callback' => 'cannabiz_sanitize_text',
+			'transport'         => 'refresh'
 		)
 	);
 	$wp_customize->add_control(
@@ -179,7 +141,7 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 			'section'  => 'title_tagline',
 			'label'    => 'Email Address',
 			'type'     => 'text',
-			'priority'  => 26
+			'priority' => 26
 		)
 	);
 
@@ -187,9 +149,9 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 	$wp_customize->add_setting(
 		'cannabiz_topbar_email',
 		array(
-			'default'   => 'hide',
-			'sanitize_callback'  => 'cannabiz_sanitize_input',
-			'transport' => 'refresh'
+			'default'           => 'hide',
+			'sanitize_callback' => 'cannabiz_sanitize_input',
+			'transport'         => 'refresh'
 		)
 	);
 	$wp_customize->add_control(
@@ -199,10 +161,10 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 			'label'    => '',
 			'type'     => 'radio',
 			'choices'  => array(
-				'hide'    => 'Hide',
-				'show'   => 'Show'
+				'hide' => 'Hide',
+				'show' => 'Show'
 			),
-			'priority'  => 26
+			'priority' => 26
 		)
 	);
 
@@ -816,6 +778,9 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 	// Add a Google Font control
 	require_once dirname(__FILE__) . '/select/google-font-dropdown-custom-control.php';
 
+	/**
+	 * FONT - Main (default)
+	 */
 	$wp_customize->add_setting(
 		'cannabiz_main_font',
 		array(
@@ -830,7 +795,7 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 		$wp_customize,
 		'cannabiz_main_font',
 		array(
-			'label'        => 'Main Font',
+			'label'        => 'Main (default)',
 			'section'      => 'cannabiz_font_options',
 			'settings'     => 'cannabiz_main_font',
 			'priority'     => 12
@@ -838,6 +803,32 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 		)
 	);
 
+	/**
+	 * FONT - Main (default) - Weight
+	 */
+	$wp_customize->add_setting(
+		'cannabiz_main_font_weight',
+		array(
+			'default'            => '400',
+			'sanitize_callback'  => 'cannabiz_sanitize_text',
+			'transport'          => 'refresh'
+		)
+	);
+
+	$wp_customize->add_control(
+		'cannabiz_main_font_weight',
+		array(
+			'type'     => 'select',
+			'label'    => 'Main (weight)',
+			'section'  => 'cannabiz_font_options',
+			'choices'  => array( '', 100, 200, 300, 400, 500, 600, 700, 800, 900 ),
+			'priority' => 12
+		)
+	);
+
+	/**
+	 * FONT - Title (default)
+	 */
 	$wp_customize->add_setting(
 		'cannabiz_title_font',
 		array(
@@ -852,7 +843,7 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 		$wp_customize,
 		'cannabiz_title_font',
 		array(
-			'label'        => 'Title Font',
+			'label'        => 'Title (default)',
 			'section'      => 'cannabiz_font_options',
 			'settings'     => 'cannabiz_title_font',
 			'priority'     => 12
@@ -860,8 +851,170 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 		)
 	);
 
+	/**
+	 * FONT -Title (default) - Weight
+	 */
+	$wp_customize->add_setting(
+		'cannabiz_title_font_weight',
+		array(
+			'default'            => '400',
+			'sanitize_callback'  => 'cannabiz_sanitize_text',
+			'transport'          => 'refresh'
+		)
+	);
+
+	$wp_customize->add_control(
+		'cannabiz_title_font_weight',
+		array(
+			'type'     => 'select',
+			'label'    => 'Title (weight)',
+			'section'  => 'cannabiz_font_options',
+			'choices'  => array( '', 100, 200, 300, 400, 500, 600, 700, 800, 900 ),
+			'priority' => 12
+		)
+	);
+
+
+	/**
+	 *  Font - Blog Title Size
+	 */
+	$wp_customize->add_setting(
+		'cannabiz_blogtitle_size',
+		array(
+			'default'            => '48',
+			'sanitize_callback'  => 'cannabiz_sanitize_text',
+			'transport'          => 'refresh'
+		)
+	);
+	$wp_customize->add_control(
+		'cannabiz_blogtitle_size',
+		array(
+			'section'  => 'cannabiz_font_options',
+			'label'    => 'Site Title (size)',
+			'type'     => 'number',
+			'priority' => 12
+		)
+	);
+
+	/**
+	 * Font - Blog Description Size
+	 */
+	$wp_customize->add_setting(
+		'cannabiz_blogdescription_size',
+		array(
+			'default'            => '14',
+			'sanitize_callback'  => 'cannabiz_sanitize_text',
+			'transport'          => 'refresh'
+		)
+	);
+	$wp_customize->add_control(
+		'cannabiz_blogdescription_size',
+		array(
+			'section'  => 'cannabiz_font_options',
+			'label'    => 'Site Description (size)',
+			'type'     => 'number',
+			'priority' => 12
+		)
+	);
+
+	/* Post Title Size */
+	$wp_customize->add_setting(
+		'cannabiz_post_title_size',
+		array(
+			'default'            => '50',
+			'sanitize_callback'  => 'cannabiz_sanitize_text',
+			'transport'          => 'refresh'
+		)
+	);
+	$wp_customize->add_control(
+		'cannabiz_post_title_size',
+		array(
+			'section'  => 'cannabiz_font_options',
+			'label'    => 'Post Title (size)',
+			'type'     => 'number',
+			'priority' => 12
+		)
+	);
+
+	/**
+	 * FONT - Top Bar
+	 */
+	$wp_customize->add_setting(
+		'cannabiz_menu_topbar_font',
+		array(
+			'default'   		=> '',
+			'sanitize_callback' => 'cannabiz_sanitize_input',
+			'transport' 		=> 'refresh'
+		)
+	);
+
+	$wp_customize->add_control(
+		new Google_Font_Dropdown_Custom_Control(
+		$wp_customize,
+		'cannabiz_menu_topbar_font',
+		array(
+			'label'        => 'Top Bar',
+			'section'      => 'cannabiz_font_options',
+			'settings'     => 'cannabiz_menu_topbar_font',
+			'priority'     => 12
+		)
+		)
+	);
+
+	/**
+	 * FONT - Menu (top level)
+	 */
+	$wp_customize->add_setting(
+		'cannabiz_menu_toplevel_font',
+		array(
+			'default'   		=> '',
+			'sanitize_callback' => 'cannabiz_sanitize_input',
+			'transport' 		=> 'refresh'
+		)
+	);
+
+	$wp_customize->add_control(
+		new Google_Font_Dropdown_Custom_Control(
+		$wp_customize,
+		'cannabiz_menu_toplevel_font',
+		array(
+			'label'        => 'Menu (top level)',
+			'section'      => 'cannabiz_font_options',
+			'settings'     => 'cannabiz_menu_toplevel_font',
+			'priority'     => 12
+		)
+		)
+	);
+
+	/**
+	 * FONT - Menu (sub level)
+	 */
+	$wp_customize->add_setting(
+		'cannabiz_menu_sublevel_font',
+		array(
+			'default'   		=> '',
+			'sanitize_callback' => 'cannabiz_sanitize_input',
+			'transport' 		=> 'refresh'
+		)
+	);
+
+	$wp_customize->add_control(
+		new Google_Font_Dropdown_Custom_Control(
+		$wp_customize,
+		'cannabiz_menu_sublevel_font',
+		array(
+			'label'        => 'Menu (sub level)',
+			'section'      => 'cannabiz_font_options',
+			'settings'     => 'cannabiz_menu_sublevel_font',
+			'priority'     => 12
+		)
+		)
+	);
+
+
+
 	/*-----------------------------------------------------------*
-	 * Defining our own 'Blog Pages' section
+	 * Defining our own 'Pages' section
 	 *-----------------------------------------------------------*/
 
 	$wp_customize->add_section(
@@ -889,8 +1042,8 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 			'label'    			=> 'Page Title',
 			'type'     			=> 'radio',
 			'choices'  			=> array(
-				'hide'			=> 'Hide',
-				'show'			=> 'Show'
+				'hide'			=> 'Default',
+				'show'			=> 'Large'
 			)
 		)
 	);
@@ -904,24 +1057,6 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 		array(
 			'title'     => 'Posts',
 			'priority'  => 30
-		)
-	);
-
-	/* Post Title Size */
-	$wp_customize->add_setting(
-		'cannabiz_post_title_size',
-		array(
-			'default'            => '50',
-			'sanitize_callback'  => 'cannabiz_sanitize_text',
-			'transport'          => 'refresh'
-		)
-	);
-	$wp_customize->add_control(
-		'cannabiz_post_title_size',
-		array(
-			'section'  	=> 'cannabiz_blogposts_options',
-			'label'    	=> 'Post Title Size (px)',
-			'type'     	=> 'number'
 		)
 	);
 
@@ -1122,6 +1257,24 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 		)
 	);
 
+	/* Leafly URL */
+	$wp_customize->add_setting(
+		'cannabiz_social_leafly',
+		array(
+			'default'            => '',
+			'sanitize_callback'  => 'cannabiz_sanitize_input',
+			'transport'          => 'refresh'
+		)
+	);
+	$wp_customize->add_control(
+		'cannabiz_social_leafly',
+		array(
+			'section'  => 'cannabiz_social',
+			'label'    => 'Leafly',
+			'type'     => 'text'
+		)
+	);
+
 	/* Massroots URL */
 	$wp_customize->add_setting(
 		'cannabiz_social_massroots',
@@ -1154,24 +1307,6 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 		array(
 			'section'  => 'cannabiz_social',
 			'label'    => 'Weedmaps',
-			'type'     => 'text'
-		)
-	);
-
-	/* Leafly URL */
-	$wp_customize->add_setting(
-		'cannabiz_social_leafly',
-		array(
-			'default'            => '',
-			'sanitize_callback'  => 'cannabiz_sanitize_input',
-			'transport'          => 'refresh'
-		)
-	);
-	$wp_customize->add_control(
-		'cannabiz_social_leafly',
-		array(
-			'section'  => 'cannabiz_social',
-			'label'    => 'Leafly',
 			'type'     => 'text'
 		)
 	);
@@ -1409,66 +1544,66 @@ function cannabiz_sanitize_input( $input ) {
 
 function cannabiz_sanitize_text( $input ) {
 	$allowed = array(
-		's'			=> array(),
-		'br'			=> array(),
-		'em'			=> array(),
-		'i'			=> array(),
-		'strong'		=> array(),
-		'b'			=> array(),
-		'a'			=> array(
-			'href'			=> array(),
-			'title'			=> array(),
-			'class'			=> array(),
-			'id'			=> array(),
-			'style'			=> array(),
+		's'          => array(),
+		'br'         => array(),
+		'em'         => array(),
+		'i'          => array(),
+		'strong'     => array(),
+		'b'          => array(),
+		'a'          => array(
+			'href'  => array(),
+			'title' => array(),
+			'class' => array(),
+			'id'    => array(),
+			'style' => array(),
 		),
-		'form'			=> array(
-			'id'			=> array(),
-			'class'			=> array(),
-			'action'		=> array(),
-			'method'		=> array(),
-			'autocomplete'		=> array(),
-			'style'			=> array(),
+		'form'       => array(
+			'id'           => array(),
+			'class'        => array(),
+			'action'       => array(),
+			'method'       => array(),
+			'autocomplete' => array(),
+			'style'        => array(),
 		),
-		'input'			=> array(
-			'type'			=> array(),
-			'name'			=> array(),
-			'class' 		=> array(),
-			'id'			=> array(),
-			'value'			=> array(),
-			'placeholder'		=> array(),
-			'tabindex'		=> array(),
-			'style'			=> array(),
+		'input'      => array(
+			'type'        => array(),
+			'name'        => array(),
+			'class'       => array(),
+			'id'          => array(),
+			'value'       => array(),
+			'placeholder' => array(),
+			'tabindex'    => array(),
+			'style'       => array(),
 		),
-		'img'			=> array(
-			'src'			=> array(),
-			'alt'			=> array(),
-			'class'			=> array(),
-			'id'			=> array(),
-			'style'			=> array(),
-			'height'		=> array(),
-			'width'			=> array(),
+		'img'        => array(
+			'src'    => array(),
+			'alt'    => array(),
+			'class'  => array(),
+			'id'     => array(),
+			'style'  => array(),
+			'height' => array(),
+			'width'  => array(),
 		),
-		'span'			=> array(
-			'class'			=> array(),
-			'id'			=> array(),
-			'style'			=> array(),
+		'span'       => array(
+			'class' => array(),
+			'id'    => array(),
+			'style' => array(),
 		),
-		'p'			=> array(
-			'class'			=> array(),
-			'id'			=> array(),
-			'style'			=> array(),
+		'p'          => array(
+			'class' => array(),
+			'id'    => array(),
+			'style' => array(),
 		),
-		'div'			=> array(
-			'class'			=> array(),
-			'id'			=> array(),
-			'style'			=> array(),
+		'div'        => array(
+			'class' => array(),
+			'id'    => array(),
+			'style' => array(),
 		),
-		'blockquote'		=> array(
-			'cite'			=> array(),
-			'class'			=> array(),
-			'id'			=> array(),
-			'style'			=> array(),
+		'blockquote' => array(
+			'cite'  => array(),
+			'class' => array(),
+			'id'    => array(),
+			'style' => array(),
 		),
 	);
     return wp_kses( $input, $allowed );
@@ -1493,9 +1628,22 @@ function cannabiz_customizer_css() {
 			font-family: '<?php echo get_theme_mod( 'cannabiz_main_font' ); ?>', 'Open Sans', sans-serif;
 		}
 	<?php } ?>
+	<?php if ( get_theme_mod( 'cannabiz_main_font_weight' ) !='' ) { ?>
+		body,
+		.woocommerce ul.products li.product .woocommerce-loop-category__title,
+		.woocommerce ul.products li.product .woocommerce-loop-product__title,
+		.woocommerce ul.products li.product h3 {
+			font-weight: <?php echo get_theme_mod( 'cannabiz_main_font_weight' ); ?>00;
+		}
+	<?php } ?>
 	<?php if ( get_theme_mod( 'cannabiz_title_font' ) !='' ) { ?>
 		h1, h2, h3 {
 			font-family: '<?php echo get_theme_mod( 'cannabiz_title_font' ); ?>', 'Oregano', serif;
+		}
+	<?php } ?>
+	<?php if ( get_theme_mod( 'cannabiz_title_font_weight' ) !='' ) { ?>
+		h1, h2, h3 {
+			font-weight: <?php echo get_theme_mod( 'cannabiz_title_font_weight' ); ?>00;
 		}
 	<?php } ?>
 
@@ -1538,7 +1686,15 @@ function cannabiz_customizer_css() {
 		html input[type=button]:hover,
 		input[type=reset]:hover,
 		input[type=submit]:hover,
-		#commentform #submit:hover {
+		#commentform #submit:hover,
+		.woocommerce #respond input#submit.alt:hover,
+		.woocommerce a.button.alt:hover,
+		.woocommerce button.button.alt:hover,
+		.woocommerce input.button.alt:hover,
+		.woocommerce #respond input#submit:hover,
+		.woocommerce a.button:hover,
+		.woocommerce button.button:hover,
+		.woocommerce input.button:hover {
 			background: <?php echo get_theme_mod( 'cannabiz_button_hover_color' ); ?>;
 			color: #FFF;
 		}
@@ -1561,7 +1717,15 @@ function cannabiz_customizer_css() {
 		input[type=reset],
 		input[type=submit],
 		#commentform #submit,
-		.menu-toggle {
+		.menu-toggle,
+		.woocommerce #respond input#submit.alt,
+		.woocommerce a.button.alt,
+		.woocommerce button.button.alt,
+		.woocommerce input.button.alt,
+		.woocommerce #respond input#submit,
+		.woocommerce a.button,
+		.woocommerce button.button,
+		.woocommerce input.button {
 			background: <?php echo get_theme_mod( 'cannabiz_button_color' ); ?>;
 		}
 	<?php } ?>
@@ -1600,18 +1764,23 @@ function cannabiz_customizer_css() {
 			webkit-tap-highlight-color: <?php echo get_theme_mod( 'cannabiz_link_color' ); ?>;
 		}
 	<?php } ?>
+	<?php if ( '' != get_theme_mod( 'cannabiz_menu_topbar_font' ) ) { ?>
+		.topbar {
+			font-family: '<?php echo get_theme_mod( 'cannabiz_menu_topbar_font' ); ?>', 'Open Sans', sans-serif;
+		}
+	<?php } ?>
 	<?php if ( '' != get_theme_mod( 'cannabiz_topbar_link_color' ) || null != get_theme_mod( 'cannabiz_topbar_link_color' ) ) { ?>
 		.topbar .fa,
 		.topbar a,
 		.topbar a:visited {
 			color: <?php echo get_theme_mod( 'cannabiz_topbar_link_color' ); ?>;
 		}
+		.topbar a.social-leafly,
+		.topbar a.social-leafly:visited,
 		.topbar a.social-massroots,
 		.topbar a.social-massroots:visited,
 		.topbar a.social-weedmaps,
-		.topbar a.social-weedmaps:visited,
-		.topbar a.social-leafly,
-		.topbar a.social-leafly:visited {
+		.topbar a.social-weedmaps:visited {
 			background-color: <?php echo get_theme_mod( 'cannabiz_topbar_link_color' ); ?>;
 		}
 	<?php } ?>
@@ -1620,9 +1789,9 @@ function cannabiz_customizer_css() {
 		.topbar a:hover {
 			color: <?php echo get_theme_mod( 'cannabiz_topbar_link_hover_color' ); ?>;
 		}
+		.topbar a.social-leafly:hover,
 		.topbar a.social-massroots:hover,
-		.topbar a.social-weedmaps:hover,
-		.topbar a.social-leafly:hover {
+		.topbar a.social-weedmaps:hover {
 			background-color: <?php echo get_theme_mod( 'cannabiz_topbar_link_hover_color' ); ?>;
 		}
 	<?php } ?>
@@ -1634,6 +1803,11 @@ function cannabiz_customizer_css() {
 	<?php if ( '' != get_theme_mod( 'cannabiz_blogtitle_size' ) || null != get_theme_mod( 'cannabiz_blogtitle_size' ) ) { ?>
 		.site-title {
 			font-size: <?php echo get_theme_mod( 'cannabiz_blogtitle_size' ); ?>px;
+		}
+	<?php } ?>
+	<?php if ( get_theme_mod( 'cannabiz_title_font_weight' ) !='' ) { ?>
+		.site-title {
+			font-weight: <?php echo get_theme_mod( 'cannabiz_title_font_weight' ); ?>00;
 		}
 	<?php } ?>
 	<?php if ( '' != get_theme_mod( 'cannabiz_background_header_color' ) || null != get_theme_mod( 'cannabiz_background_header_color' ) ) { ?>
@@ -1658,6 +1832,16 @@ function cannabiz_customizer_css() {
 	<?php if ( '' != get_theme_mod( 'cannabiz_blogtitle_subtitle_color' ) || null != get_theme_mod( 'cannabiz_blogtitle_subtitle_color' ) ) { ?>
 		.site-description {
 			color: <?php echo get_theme_mod( 'cannabiz_blogtitle_subtitle_color' ); ?>;
+		}
+	<?php } ?>
+	<?php if ( get_theme_mod( 'cannabiz_menu_toplevel_font' ) !='' ) { ?>
+		.main-navigation {
+			font-family: '<?php echo get_theme_mod( 'cannabiz_menu_toplevel_font' ); ?>', 'Open Sans', sans-serif;
+		}
+	<?php } ?>
+	<?php if ( get_theme_mod( 'cannabiz_menu_sublevel_font' ) !='' ) { ?>
+		.main-navigation li ul {
+			font-family: '<?php echo get_theme_mod( 'cannabiz_menu_sublevel_font' ); ?>', 'Open Sans', sans-serif;
 		}
 	<?php } ?>
 	<?php if ( '' != get_theme_mod( 'cannabiz_menu_link_color' ) || null != get_theme_mod( 'cannabiz_menu_link_color' ) ) { ?>
@@ -1689,6 +1873,11 @@ function cannabiz_customizer_css() {
 			font-size: <?php echo get_theme_mod( 'cannabiz_post_title_size' ); ?>px;
 		}
 	<?php } ?>
+	<?php if ( get_theme_mod( 'cannabiz_title_font_weight' ) !='' ) { ?>
+		h1.entry-title, h2.entry-title {
+			font-weight: <?php echo get_theme_mod( 'cannabiz_title_font_weight' ); ?>00;
+		}
+	<?php } ?>
 	<?php if ( '' != get_theme_mod( 'cannabiz_post_title_color' ) || null != get_theme_mod( 'cannabiz_post_title_color' ) ) { ?>
 		h1.entry-title a,
 		h1.entry-title a:visited,
@@ -1713,6 +1902,17 @@ function cannabiz_customizer_css() {
 			color: <?php echo get_theme_mod( 'cannabiz_page_title_color' ); ?>;
 		}
 	<?php } ?>
+	<?php if ( get_theme_mod( 'cannabiz_title_font' ) !='' || null != get_theme_mod( 'cannabiz_title_font' )  ) { ?>
+		h2.widget-title {
+			font-family: '<?php echo get_theme_mod( 'cannabiz_title_font' ); ?>', 'Open Sans', sans-serif;
+		}
+	<?php } ?>
+	<?php if ( get_theme_mod( 'cannabiz_title_font_weight' ) !=''  || null != get_theme_mod( 'cannabiz_title_font_weight' ) ) { ?>
+		h2.widget-title {
+			font-weight: <?php echo get_theme_mod( 'cannabiz_title_font_weight' ); ?>00;
+		}
+	<?php } ?>
+
 	<?php if ( '' != get_theme_mod( 'cannabiz_background_footer_color' ) || null != get_theme_mod( 'cannabiz_background_footer_color' ) ) { ?>
 		.site-footer {
 			background: <?php echo get_theme_mod( 'cannabiz_background_footer_color' ); ?>;
@@ -1763,7 +1963,7 @@ function cannabiz_customize_scripts() {
 	if ( get_theme_mod( 'cannabiz_title_font' ) ===  'Oregano' ) {
 		wp_enqueue_style( 'cannabiz-oregano', 'https://fonts.googleapis.com/css?family=Oregano' );
 	} elseif ( get_theme_mod( 'cannabiz_title_font' ) === 'Merriweather' ) {
-		wp_enqueue_style( 'cannabiz-merriweather', 'https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i' );		
+		wp_enqueue_style( 'cannabiz-merriweather', 'https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i' );
 	} elseif ( get_theme_mod( 'cannabiz_title_font' ) === 'Open Sans' ) {
 		wp_enqueue_style( 'cannabiz-opensans', 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900,300italic,400italic,700italic' );
 	} elseif ( get_theme_mod( 'cannabiz_title_font' ) === 'Roboto' ) {
@@ -1782,10 +1982,30 @@ function cannabiz_customize_scripts() {
 		wp_enqueue_style( 'cannabiz-playfairdisplay', 'https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i' );
 	} elseif ( get_theme_mod( 'cannabiz_title_font' ) === 'Ubuntu' ) {
 		wp_enqueue_style( 'cannabiz-ubuntu', 'https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700,700i' );
+	} elseif ( get_theme_mod( 'cannabiz_title_font' ) === 'Arvo' ) {
+		wp_enqueue_style( 'cannabiz-arvo', 'https://fonts.googleapis.com/css?family=Arvo:400,700' );
+	} elseif ( get_theme_mod( 'cannabiz_title_font' ) === 'Limelight' ) {
+		wp_enqueue_style( 'cannabiz-limelight', 'https://fonts.googleapis.com/css?family=Limelight' );
+	} elseif ( get_theme_mod( 'cannabiz_title_font' ) === 'Lobster' ) {
+		wp_enqueue_style( 'cannabiz-lobster', 'https://fonts.googleapis.com/css?family=Lobster' );
+	} elseif ( get_theme_mod( 'cannabiz_title_font' ) === 'Quicksand' ) {
+		wp_enqueue_style( 'cannabiz-quicksand', 'https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700' );
+	} elseif ( get_theme_mod( 'cannabiz_title_font' ) === 'Cabin' ) {
+		wp_enqueue_style( 'cannabiz-cabin', 'https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700' );
+	} elseif ( get_theme_mod( 'cannabiz_title_font' ) === 'Oxygen' ) {
+		wp_enqueue_style( 'cannabiz-oxygen', 'https://fonts.googleapis.com/css?family=Oxygen:300,400,700' );
+	} elseif ( get_theme_mod( 'cannabiz_title_font' ) === 'Libre Baskerville' ) {
+		wp_enqueue_style( 'cannabiz-libre-baskerville', 'https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700' );
+	} elseif ( get_theme_mod( 'cannabiz_title_font' ) === 'Abril Fatface' ) {
+		wp_enqueue_style( 'cannabiz-abril-fatface', 'https://fonts.googleapis.com/css?family=Abril+Fatface' );
+	} elseif ( get_theme_mod( 'cannabiz_title_font' ) === 'Amatic SC' ) {
+		wp_enqueue_style( 'cannabiz-amatic-sc', 'https://fonts.googleapis.com/css?family=Amatic+SC:400,700' );
+	} elseif ( get_theme_mod( 'cannabiz_title_font' ) === 'Permanent Marker' ) {
+		wp_enqueue_style( 'cannabiz-permanent-marker', 'https://fonts.googleapis.com/css?family=Permanent+Marker' );
 	} else {
 		wp_enqueue_style( 'cannabiz-oregano', 'https://fonts.googleapis.com/css?family=Oregano' );
 	}
-	
+
 	/**
 	 * Main font
 	 */
@@ -1793,7 +2013,7 @@ function cannabiz_customize_scripts() {
 	if ( get_theme_mod( 'cannabiz_main_font' ) ===  'Oregano' ) {
 		wp_enqueue_style( 'cannabiz-oregano', 'https://fonts.googleapis.com/css?family=Oregano' );
 	} elseif ( get_theme_mod( 'cannabiz_main_font' ) === 'Merriweather' ) {
-		wp_enqueue_style( 'cannabiz-merriweather', 'https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i' );		
+		wp_enqueue_style( 'cannabiz-merriweather', 'https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i' );
 	} elseif ( get_theme_mod( 'cannabiz_main_font' ) === 'Open Sans' ) {
 		wp_enqueue_style( 'cannabiz-opensans', 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900,300italic,400italic,700italic' );
 	} elseif ( get_theme_mod( 'cannabiz_main_font' ) === 'Roboto' ) {
@@ -1812,9 +2032,173 @@ function cannabiz_customize_scripts() {
 		wp_enqueue_style( 'cannabiz-playfairdisplay', 'https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i' );
 	} elseif ( get_theme_mod( 'cannabiz_main_font' ) === 'Ubuntu' ) {
 		wp_enqueue_style( 'cannabiz-ubuntu', 'https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700,700i' );
+	} elseif ( get_theme_mod( 'cannabiz_title_font' ) === 'Arvo' ) {
+		wp_enqueue_style( 'cannabiz-arvo', 'https://fonts.googleapis.com/css?family=Arvo:400,700' );
+	} elseif ( get_theme_mod( 'cannabiz_title_font' ) === 'Limelight' ) {
+		wp_enqueue_style( 'cannabiz-limelight', 'https://fonts.googleapis.com/css?family=Limelight' );
+	} elseif ( get_theme_mod( 'cannabiz_title_font' ) === 'Lobster' ) {
+		wp_enqueue_style( 'cannabiz-lobster', 'https://fonts.googleapis.com/css?family=Lobster' );
+	} elseif ( get_theme_mod( 'cannabiz_title_font' ) === 'Quicksand' ) {
+		wp_enqueue_style( 'cannabiz-quicksand', 'https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700' );
+	} elseif ( get_theme_mod( 'cannabiz_title_font' ) === 'Cabin' ) {
+		wp_enqueue_style( 'cannabiz-cabin', 'https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700' );
+	} elseif ( get_theme_mod( 'cannabiz_title_font' ) === 'Oxygen' ) {
+		wp_enqueue_style( 'cannabiz-oxygen', 'https://fonts.googleapis.com/css?family=Oxygen:300,400,700' );
+	} elseif ( get_theme_mod( 'cannabiz_title_font' ) === 'Libre Baskerville' ) {
+		wp_enqueue_style( 'cannabiz-libre-baskerville', 'https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700' );
+	} elseif ( get_theme_mod( 'cannabiz_title_font' ) === 'Abril Fatface' ) {
+		wp_enqueue_style( 'cannabiz-abril-fatface', 'https://fonts.googleapis.com/css?family=Abril+Fatface' );
+	} elseif ( get_theme_mod( 'cannabiz_title_font' ) === 'Amatic SC' ) {
+		wp_enqueue_style( 'cannabiz-amatic-sc', 'https://fonts.googleapis.com/css?family=Amatic+SC:400,700' );
+	} elseif ( get_theme_mod( 'cannabiz_title_font' ) === 'Permanent Marker' ) {
+		wp_enqueue_style( 'cannabiz-permanent-marker', 'https://fonts.googleapis.com/css?family=Permanent+Marker' );
 	} else {
 		wp_enqueue_style( 'cannabiz-opensans', 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900,300italic,400italic,700italic' );
 	}
+
+	/**
+	 * Top Bar font
+	 */
+
+	if ( get_theme_mod( 'cannabiz_menu_topbar_font' ) ===  'Oregano' ) {
+		wp_enqueue_style( 'cannabiz-oregano', 'https://fonts.googleapis.com/css?family=Oregano' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_topbar_font' ) === 'Merriweather' ) {
+		wp_enqueue_style( 'cannabiz-merriweather', 'https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_topbar_font' ) === 'Open Sans' ) {
+		wp_enqueue_style( 'cannabiz-opensans', 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900,300italic,400italic,700italic' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_topbar_font' ) === 'Roboto' ) {
+		wp_enqueue_style( 'cannabiz-roboto', 'https://fonts.googleapis.com/css?family=Roboto:300,400,700' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_topbar_font' ) === 'Lato' ) {
+		wp_enqueue_style( 'cannabiz-lato', 'https://fonts.googleapis.com/css?family=Lato:300,400,700' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_topbar_font' ) === 'Oswald' ) {
+		wp_enqueue_style( 'cannabiz-oswald', 'https://fonts.googleapis.com/css?family=Oswald:300,400,600' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_topbar_font' ) === 'Source Sans' ) {
+		wp_enqueue_style( 'cannabiz-sourcesans', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_topbar_font' ) === 'Raleway' ) {
+		wp_enqueue_style( 'cannabiz-raleway', 'https://fonts.googleapis.com/css?family=Raleway:300,400,600' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_topbar_font' ) === 'Lora' ) {
+		wp_enqueue_style( 'cannabiz-lora', 'https://fonts.googleapis.com/css?family=Lora:400,700' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_topbar_font' ) === 'Playfair Display' ) {
+		wp_enqueue_style( 'cannabiz-playfairdisplay', 'https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_topbar_font' ) === 'Ubuntu' ) {
+		wp_enqueue_style( 'cannabiz-ubuntu', 'https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700,700i' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_topbar_font' ) === 'Arvo' ) {
+		wp_enqueue_style( 'cannabiz-arvo', 'https://fonts.googleapis.com/css?family=Arvo:400,700' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_topbar_font' ) === 'Limelight' ) {
+		wp_enqueue_style( 'cannabiz-limelight', 'https://fonts.googleapis.com/css?family=Limelight' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_topbar_font' ) === 'Lobster' ) {
+		wp_enqueue_style( 'cannabiz-lobster', 'https://fonts.googleapis.com/css?family=Lobster' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_topbar_font' ) === 'Quicksand' ) {
+		wp_enqueue_style( 'cannabiz-quicksand', 'https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_topbar_font' ) === 'Cabin' ) {
+		wp_enqueue_style( 'cannabiz-cabin', 'https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_topbar_font' ) === 'Oxygen' ) {
+		wp_enqueue_style( 'cannabiz-oxygen', 'https://fonts.googleapis.com/css?family=Oxygen:300,400,700' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_topbar_font' ) === 'Libre Baskerville' ) {
+		wp_enqueue_style( 'cannabiz-libre-baskerville', 'https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_topbar_font' ) === 'Abril Fatface' ) {
+		wp_enqueue_style( 'cannabiz-abril-fatface', 'https://fonts.googleapis.com/css?family=Abril+Fatface' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_topbar_font' ) === 'Amatic SC' ) {
+		wp_enqueue_style( 'cannabiz-amatic-sc', 'https://fonts.googleapis.com/css?family=Amatic+SC:400,700' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_topbar_font' ) === 'Permanent Marker' ) {
+		wp_enqueue_style( 'cannabiz-permanent-marker', 'https://fonts.googleapis.com/css?family=Permanent+Marker' );
+	} else { }
+
+	/**
+	 * Menu (top level) font
+	 */
+
+	if ( get_theme_mod( 'cannabiz_menu_toplevel_font' ) ===  'Oregano' ) {
+		wp_enqueue_style( 'cannabiz-oregano', 'https://fonts.googleapis.com/css?family=Oregano' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_toplevel_font' ) === 'Merriweather' ) {
+		wp_enqueue_style( 'cannabiz-merriweather', 'https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_toplevel_font' ) === 'Open Sans' ) {
+		wp_enqueue_style( 'cannabiz-opensans', 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900,300italic,400italic,700italic' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_toplevel_font' ) === 'Roboto' ) {
+		wp_enqueue_style( 'cannabiz-roboto', 'https://fonts.googleapis.com/css?family=Roboto:300,400,700' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_toplevel_font' ) === 'Lato' ) {
+		wp_enqueue_style( 'cannabiz-lato', 'https://fonts.googleapis.com/css?family=Lato:300,400,700' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_toplevel_font' ) === 'Oswald' ) {
+		wp_enqueue_style( 'cannabiz-oswald', 'https://fonts.googleapis.com/css?family=Oswald:300,400,600' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_toplevel_font' ) === 'Source Sans' ) {
+		wp_enqueue_style( 'cannabiz-sourcesans', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_toplevel_font' ) === 'Raleway' ) {
+		wp_enqueue_style( 'cannabiz-raleway', 'https://fonts.googleapis.com/css?family=Raleway:300,400,600' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_toplevel_font' ) === 'Lora' ) {
+		wp_enqueue_style( 'cannabiz-lora', 'https://fonts.googleapis.com/css?family=Lora:400,700' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_toplevel_font' ) === 'Playfair Display' ) {
+		wp_enqueue_style( 'cannabiz-playfairdisplay', 'https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_toplevel_font' ) === 'Ubuntu' ) {
+		wp_enqueue_style( 'cannabiz-ubuntu', 'https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700,700i' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_toplevel_font' ) === 'Arvo' ) {
+		wp_enqueue_style( 'cannabiz-arvo', 'https://fonts.googleapis.com/css?family=Arvo:400,700' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_toplevel_font' ) === 'Limelight' ) {
+		wp_enqueue_style( 'cannabiz-limelight', 'https://fonts.googleapis.com/css?family=Limelight' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_toplevel_font' ) === 'Lobster' ) {
+		wp_enqueue_style( 'cannabiz-lobster', 'https://fonts.googleapis.com/css?family=Lobster' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_toplevel_font' ) === 'Quicksand' ) {
+		wp_enqueue_style( 'cannabiz-quicksand', 'https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_toplevel_font' ) === 'Cabin' ) {
+		wp_enqueue_style( 'cannabiz-cabin', 'https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_toplevel_font' ) === 'Oxygen' ) {
+		wp_enqueue_style( 'cannabiz-oxygen', 'https://fonts.googleapis.com/css?family=Oxygen:300,400,700' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_toplevel_font' ) === 'Libre Baskerville' ) {
+		wp_enqueue_style( 'cannabiz-libre-baskerville', 'https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_toplevel_font' ) === 'Abril Fatface' ) {
+		wp_enqueue_style( 'cannabiz-abril-fatface', 'https://fonts.googleapis.com/css?family=Abril+Fatface' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_toplevel_font' ) === 'Amatic SC' ) {
+		wp_enqueue_style( 'cannabiz-amatic-sc', 'https://fonts.googleapis.com/css?family=Amatic+SC:400,700' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_toplevel_font' ) === 'Permanent Marker' ) {
+		wp_enqueue_style( 'cannabiz-permanent-marker', 'https://fonts.googleapis.com/css?family=Permanent+Marker' );
+	} else { }
+
+	/**
+	 * Menu (sub level) font
+	 */
+
+	if ( get_theme_mod( 'cannabiz_menu_sublevel_font' ) ===  'Oregano' ) {
+		wp_enqueue_style( 'cannabiz-oregano', 'https://fonts.googleapis.com/css?family=Oregano' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_sublevel_font' ) === 'Merriweather' ) {
+		wp_enqueue_style( 'cannabiz-merriweather', 'https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_sublevel_font' ) === 'Open Sans' ) {
+		wp_enqueue_style( 'cannabiz-opensans', 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900,300italic,400italic,700italic' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_sublevel_font' ) === 'Roboto' ) {
+		wp_enqueue_style( 'cannabiz-roboto', 'https://fonts.googleapis.com/css?family=Roboto:300,400,700' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_sublevel_font' ) === 'Lato' ) {
+		wp_enqueue_style( 'cannabiz-lato', 'https://fonts.googleapis.com/css?family=Lato:300,400,700' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_sublevel_font' ) === 'Oswald' ) {
+		wp_enqueue_style( 'cannabiz-oswald', 'https://fonts.googleapis.com/css?family=Oswald:300,400,600' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_sublevel_font' ) === 'Source Sans' ) {
+		wp_enqueue_style( 'cannabiz-sourcesans', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_sublevel_font' ) === 'Raleway' ) {
+		wp_enqueue_style( 'cannabiz-raleway', 'https://fonts.googleapis.com/css?family=Raleway:300,400,600' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_sublevel_font' ) === 'Lora' ) {
+		wp_enqueue_style( 'cannabiz-lora', 'https://fonts.googleapis.com/css?family=Lora:400,700' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_sublevel_font' ) === 'Playfair Display' ) {
+		wp_enqueue_style( 'cannabiz-playfairdisplay', 'https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_sublevel_font' ) === 'Ubuntu' ) {
+		wp_enqueue_style( 'cannabiz-ubuntu', 'https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700,700i' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_sublevel_font' ) === 'Arvo' ) {
+		wp_enqueue_style( 'cannabiz-arvo', 'https://fonts.googleapis.com/css?family=Arvo:400,700' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_sublevel_font' ) === 'Limelight' ) {
+		wp_enqueue_style( 'cannabiz-limelight', 'https://fonts.googleapis.com/css?family=Limelight' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_sublevel_font' ) === 'Lobster' ) {
+		wp_enqueue_style( 'cannabiz-lobster', 'https://fonts.googleapis.com/css?family=Lobster' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_sublevel_font' ) === 'Quicksand' ) {
+		wp_enqueue_style( 'cannabiz-quicksand', 'https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_sublevel_font' ) === 'Cabin' ) {
+		wp_enqueue_style( 'cannabiz-cabin', 'https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_sublevel_font' ) === 'Oxygen' ) {
+		wp_enqueue_style( 'cannabiz-oxygen', 'https://fonts.googleapis.com/css?family=Oxygen:300,400,700' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_sublevel_font' ) === 'Libre Baskerville' ) {
+		wp_enqueue_style( 'cannabiz-libre-baskerville', 'https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_sublevel_font' ) === 'Abril Fatface' ) {
+		wp_enqueue_style( 'cannabiz-abril-fatface', 'https://fonts.googleapis.com/css?family=Abril+Fatface' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_sublevel_font' ) === 'Amatic SC' ) {
+		wp_enqueue_style( 'cannabiz-amatic-sc', 'https://fonts.googleapis.com/css?family=Amatic+SC:400,700' );
+	} elseif ( get_theme_mod( 'cannabiz_menu_sublevel_font' ) === 'Permanent Marker' ) {
+		wp_enqueue_style( 'cannabiz-permanent-marker', 'https://fonts.googleapis.com/css?family=Permanent+Marker' );
+	} else { }
 
 }
 add_action( 'wp_enqueue_scripts', 'cannabiz_customize_scripts' );
@@ -1824,14 +2208,14 @@ add_action( 'wp_enqueue_scripts', 'cannabiz_customize_scripts' );
  *
  * @package    cannabiz
  * @since      1.0.0
- * @version    1.0.0
+ * @version    2.0.0
  */
 function cannabiz_customizer_live_preview() {
 	wp_enqueue_script(
 		'cannabiz-theme-customizer',
 		get_template_directory_uri() . '/js/customizer.js',
 		array( 'customize-preview' ),
-		'1.0.0',
+		'2.0.0',
 		true
 	);
 } // end cannabiz_customizer_live_preview

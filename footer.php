@@ -12,7 +12,9 @@
 ?>
 			</div><!-- .row -->
 		</div><!-- .container -->
+	<?php do_action( 'cannabiz_content_inside_bottom' ); ?>
 	</div><!-- #content -->
+	<?php do_action( 'cannabiz_content_after' ); ?>
 
 	<?php
 	$cannabizsliderbottom = get_theme_mod( 'cannabiz_home_slider_bottom' );
@@ -21,7 +23,9 @@
 	}
 	?>
 
+	<?php do_action( 'cannabiz_footer_before' ); ?>
 	<footer id="colophon" class="site-footer" role="contentinfo">
+		<?php do_action( 'cannabiz_footer_inside_top' ); ?>
 		<div class="container">
 		<?php if ( is_active_sidebar( 'footer-1' ) ) { ?>
 			<div class="row widgets">
@@ -48,6 +52,7 @@
 						<?php printf( esc_html__( '%1$s', 'cannabiz' ), '<a href="https://www.wpdispensary.com/" rel="WP Dispensary - WordPress Marijuana Plugin">WP Dispensary</a>' ); ?>
 					<?php } ?>
 					<?php
+						$cannabiz_footer_designedby = '';
 						echo apply_filters( 'cannabiz_footer_designedby', $cannabiz_footer_designedby );
 					?>
 				</div><!-- .col-lg-12.copyright -->
@@ -59,6 +64,7 @@
 								'theme_location' => 'footer',
 								'menu_id'        => 'footer-menu',
 								'fallback_cb'    => false,
+								'container'      => false,
 							)
 						);
 						if ( ! empty( $menu ) ) :
@@ -68,7 +74,9 @@
 				</div><!-- .col-lg-6.menu -->
 			</div><!-- .row -->
 		</div><!-- .container -->
+		<?php do_action( 'cannabiz_footer_inside_bottom' ); ?>
 	</footer><!-- #colophon -->
+	<?php do_action( 'cannabiz_footer_after' ); ?>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

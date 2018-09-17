@@ -18,9 +18,9 @@
 body {
 	background: #EEE;
 	color: #454545;
-	font-size: 18px;
+	font-size: 15px;
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-	line-height: 1.6;
+	line-height: 1.4;
 	word-wrap: break-word;
 }
 
@@ -106,7 +106,10 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"],
-textarea {
+input[type="date"],
+input[type="tel"],
+textarea,
+select {
 	padding: 10px;
 	transition: .07s ease-in;
 	-webkit-appearance: none;
@@ -121,7 +124,10 @@ input[type="email"]:focus,
 input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
-textarea:focus {
+input[type="date"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
 	border: 1px solid #76BD1D;
 	outline: none;
 }
@@ -194,6 +200,41 @@ a.button.alt:hover {
 	background: #BBB;
 }
 
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt,
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button {
+	background-color: #76BD1D;
+	color: #FFF;
+}
+
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover,
+.woocommerce #respond input#submit:hover,
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover {
+    background-color: #83d122;
+    color: #FFF;
+}
+
+.woocommerce button.button:disabled,
+.woocommerce button.button:disabled[disabled] {
+	color: #FFF;
+}
+
+a.button.add_to_cart_button,
+a.button.ajax_add_to_cart,
+.woocommerce ul.products li.product .button {
+    text-align: center;
+    width: 100%;
+}
 
 /*--------------------------------------------------------------
 ## Header
@@ -306,7 +347,6 @@ a.button.alt:hover {
 .site-header {
 	background-color: #FFF;
 	border-bottom: 1px solid #DDD;
-	color: #FFF;
 	display: block;
 	padding: 36px 0;
 	position: relative;
@@ -385,12 +425,19 @@ a.button.alt:hover {
 	z-index: 15;
 }
 
-@media only screen and (max-width: 960px) {
+@media screen and (min-width: 961px) {
+	.main-navigation {
+		width: 100%;
+		max-width: 700px;
+	}
+}
+
+@media screen and (max-width: 960px) {
   .main-navigation {
     width: 75%;
   }
 }
-@media only screen and (max-width: 780px) {
+@media screen and (max-width: 780px) {
   .main-navigation {
     width: 72%;
   }
@@ -404,9 +451,23 @@ a.button.alt:hover {
 	width: 100%;
 }
 
+@media screen and (min-width: 961px) {
+	.main-navigation ul {
+		/** display: flex; */
+		/** display: unset; */
+		overflow: inherit;
+	}
+}
+
 .main-navigation li {
 	display: inline-block;
 	position: relative;
+}
+
+@media screen and (min-width: 961px) {
+	.main-navigation li {
+		float: none;
+	}
 }
 
 .main-navigation ul ul {
@@ -425,6 +486,17 @@ a.button.alt:hover {
 	-webkit-transform: scale(0.95);
 	-ms-transform: scale(0.95);
 	transform: scale(0.95);
+}
+
+@media screen and (max-width: 600px) {
+	.main-navigation ul {
+		background: #83D122;
+		overflow: auto;
+		padding: 0;
+	}
+	.main-navigation ul li.menu-item-home {
+		display: none;
+	}
 }
 
 .main-navigation .show-sub,
@@ -648,6 +720,8 @@ span.menu-close {
 	.main-navigation a {
 		display: inline-block;
 		font-size: 15px;
+		padding: 0;
+		width: 100%;
 	}
 
 	.main-navigation ul > li > a {
@@ -678,7 +752,7 @@ span.menu-close {
 	}
 
 	.main-navigation ul > li.menu-item-has-children:hover:after {
-		color: #fff;
+		color: #b5bdc3;
 	}
 
 	.main-navigation .current-cart .widget:before,
@@ -690,9 +764,9 @@ span.menu-close {
 	.main-navigation ul {
 		display: block;
 		margin-bottom: 0;
-		padding: 0 2%;
+		padding: 0;
 		text-align: left;
-		background: #282E34;
+		background: transparent;
 		animation: smoothFade .5s;
 		-moz-animation: smoothFade .5s;
 		-webkit-animation: smoothFade .5s;
@@ -708,7 +782,7 @@ span.menu-close {
 
 	.main-navigation li {
 		width: 100%;
-		border-bottom: dotted 1px #373F47;
+		border-bottom: dotted 1px rgba(255,255,255,0.3);
 	}
 
 	.main-navigation li:last-child {
@@ -734,7 +808,7 @@ span.menu-close {
 		-ms-transform: scale(1);
 		transform: scale(1);
 		width: 100%;
-		padding: 0 0 0 5%;
+		padding: 0;
 		background: transparent;
 	}
 
@@ -758,7 +832,7 @@ span.menu-close {
 	color: #FFF;
 	display: block;
 	margin: 0;
-	padding: 24px;
+	padding: 48px 24px;
 	position: relative;
 	text-align: center;
 	width: 100%;
@@ -771,6 +845,7 @@ body.fl-builder .titlelarge {
 .titlelarge h1 {
 	color: #FFF;
 	font-size: 58px;
+	margin: 0;
 }
 
 
@@ -794,16 +869,16 @@ section#primary {
 /* Entry title */
 
 .entry-header {
-    background: #FFF;
+  background: #FFF;
 	border-top: 6px solid #76BD1D;
-    margin: 0;
-    padding: 20px 20px 0 20px;
-    position: relative;
-    text-align: center;
+  margin: 0;
+  padding: 20px 20px 0 20px;
+  position: relative;
+  text-align: center;
 }
 
 .has-post-thumbnail .entry-header {
-	margin: -60px 48px 0 48px;
+	margin: 0;
 }
 
 .has-post-thumbnail .type-flowers .entry-header,
@@ -812,9 +887,10 @@ section#primary {
 .has-post-thumbnail .type-prerolls .entry-header,
 .has-post-thumbnail .type-topicals .entry-header,
 .has-post-thumbnail .type-growers .entry-header,
-.has-post-thumbnail .type-gear .entry-header {
-    margin: -60px 48px 0px 48px;
-    padding: 20px 20px 0 20px;
+.has-post-thumbnail .type-gear .entry-header,
+.has-post-thumbnail .type-tinctures .entry-header {
+  margin: 0;
+  padding: 20px 20px 0 20px;
 }
 
 h1.entry-title a,
@@ -840,6 +916,12 @@ h2.entry-title {
 span.entry-subtitle {
 	display: none !important;
     font-weight: 300;
+}
+
+.entry-content h1.entry-title span.entry-subtitle {
+    display: block !important;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-size: 20px;
 }
 
 /* Featured Image */
@@ -926,11 +1008,20 @@ span.edit-link {
 
 .entry-content {
 	margin: 0;
-	padding: 24px 48px;
+	padding: 24px 24px;
 }
 
 .entry-content p {
-	margin: 24px 0;
+	margin: 18px 0;
+}
+
+.entry-content p:first-child {
+    margin-top: 0;
+}
+
+/** Inventory Management */
+.entry-content .warning p:first-child {
+	margin-top: 12px;
 }
 
 .entry-content .carousel-item p,
@@ -1097,12 +1188,14 @@ body.post-type-archive-prerolls .hentry,
 body.post-type-archive-topicals .hentry,
 body.post-type-archive-growers .hentry,
 body.post-type-archive-gear .hentry,
+body.post-type-archive-tinctures .hentry,
 body.tax-flowers_category .hentry,
 body.tax-edibles_category .hentry,
 body.tax-concentrates_category .hentry,
 body.tax-topicals_category .hentry,
 body.tax-growers_category .hentry,
 body.tax-wpd_gear_category .hentry,
+body.tax-wpd_tinctures_category .hentry,
 body.tax-aroma .hentry,
 body.tax-flavor .hentry,
 body.tax-effect .hentry,
@@ -1129,6 +1222,8 @@ body.post-type-archive-growers .hentry .entry-header,
 body.post-type-archive-growers .hentry .entry-footer,
 body.post-type-archive-gear .hentry .entry-header,
 body.post-type-archive-gear .hentry .entry-footer,
+body.post-type-archive-tinctures .hentry .entry-header,
+body.post-type-archive-tinctures .hentry .entry-footer,
 body.tax-flowers_category .hentry .entry-header,
 body.tax-flowers_category .hentry .entry-footer,
 body.tax-edibles_category .hentry .entry-header,
@@ -1141,6 +1236,8 @@ body.tax-topicals_category .hentry .entry-header,
 body.tax-topicals_category .hentry .entry-footer,
 body.tax-wpd_gear_category .hentry .entry-header,
 body.tax-wpd_gear_category .hentry .entry-footer,
+body.tax-wpd_tinctures_category .hentry .entry-header,
+body.tax-wpd_tinctures_category .hentry .entry-footer,
 body.tax-aroma .hentry .entry-header,
 body.tax-aroma .hentry .entry-footer,
 body.tax-flavor .hentry .entry-header,
@@ -1165,12 +1262,14 @@ body.post-type-archive-prerolls .hentry .entry-header h2.entry-title,
 body.post-type-archive-topicals .hentry .entry-header h2.entry-title,
 body.post-type-archive-growers .hentry .entry-header h2.entry-title,
 body.post-type-archive-gear .hentry .entry-header h2.entry-title,
+body.post-type-archive-topicals .hentry .entry-header h2.entry-title,
 body.tax-flowers_category .hentry .entry-header h2.entry-title,
 body.tax-edibles_category .hentry .entry-header h2.entry-title,
 body.tax-concentrates_category .hentry .entry-header h2.entry-title,
 body.tax-growers_category .hentry .entry-header h2.entry-title,
 body.tax-topicals_category .hentry .entry-header h2.entry-title,
 body.tax-wpd_gear_category .hentry .entry-header h2.entry-title,
+body.tax-wpd_tinctures_category .hentry .entry-header h2.entry-title,
 body.tax-aroma .hentry .entry-header h2.entry-title,
 body.tax-flavor .hentry .entry-header h2.entry-title,
 body.tax-effect .hentry .entry-header h2.entry-title,
@@ -1189,12 +1288,14 @@ body.post-type-archive-prerolls nav.navigation.posts-navigation,
 body.post-type-archive-topicals nav.navigation.posts-navigation,
 body.post-type-archive-growers nav.navigation.posts-navigation,
 body.post-type-archive-gear nav.navigation.posts-navigation,
+body.post-type-archive-tinctures nav.navigation.posts-navigation,
 body.tax-flowers_category nav.navigation.posts-navigation,
 body.tax-edibles_category nav.navigation.posts-navigation,
 body.tax-concentrates_category nav.navigation.posts-navigation,
 body.tax-topicals_category nav.navigation.posts-navigation,
 body.tax-growers_category nav.navigation.posts-navigation,
 body.tax-wpd_gear_category nav.navigation.posts-navigation,
+body.tax-wpd_tinctures_category nav.navigation.posts-navigation,
 body.tax-aromas nav.navigation.posts-navigation,
 body.tax-flavor nav.navigation.posts-navigation,
 body.tax-effect nav.navigation.posts-navigation,
@@ -1335,7 +1436,7 @@ input.search-field {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
     display: inline-block;
-    padding: 13.5px 20px;
+    padding: 11.5px 20px;
     position: absolute;
     top: 0;
     right: 0;
@@ -1647,7 +1748,8 @@ ol.comment-list ol.children li:last-child {
     min-width: 3.736em;
 }
 
-.woocommerce .woocommerce-product-rating .star-rating {
+.woocommerce .woocommerce-product-rating .star-rating,
+.woocommerce .star-rating span::before {
 	color: #8224e3;
 }
 
@@ -1738,8 +1840,9 @@ span.sku_wrapper span.sku {
 
 td.value select {
     font-size: 14px;
-    padding: 5px;
-    border-radius: 3px;
+    padding: 10px;
+	border-radius: 3px;
+	line-height: 1.2;
 }
 
 .woocommerce div.product form.cart .variations td.label {
@@ -1774,6 +1877,86 @@ ul.product_list_widget span.woocommerce-Price-amount.amount {
 	color: #AAA;
 }
 
+.woocommerce-product-details__short-description {
+    font-size: 14px;
+}
+
+.woocommerce form .form-row .input-checkbox {
+    position: relative;
+}
+
+.woocommerce-MyAccount-navigation {
+    background: #f8f8f8;
+    font-size: 16px;
+		line-height: 1;
+}
+
+.woocommerce-MyAccount-navigation ul {
+	margin: 0;
+	padding: 0;
+}
+
+.woocommerce-MyAccount-navigation ul li:before {
+	display: none;
+}
+
+.woocommerce-MyAccount-navigation ul li {
+	padding: 10px;
+}
+
+.entry-content .woocommerce-MyAccount-content p {
+    margin-top: 0;
+}
+
+.woocommerce .woocommerce-ordering select {
+    vertical-align: top;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.woocommerce-result-count {
+	padding: 5px 0;
+    font-size: 14px;
+}
+
+ul.product_list_widget span.reviewer {
+    display: none;
+}
+
+ul.product_list_widget li,
+.woocommerce ul.product_list_widget li {
+    margin-bottom: 10px;
+}
+
+ul.product_list_widget li .star-rating,
+ul.product_list_widget li .star-rating span::before {
+    font-size: 12px !important;
+}
+
+/*--------------------------------------------------------------
+## Gutenberg
+--------------------------------------------------------------*/
+
+.alignwide {
+    width: auto;
+    max-width: 1000%;
+    margin-right: calc(25% - 25vw);
+    margin-left: calc(25% - 25vw);
+}
+
+.alignfull {
+    width: auto;
+    max-width: 1000%;
+
+    margin-right: calc(50.75% - 50vw);
+    margin-left: calc(50.75% - 50vw);
+}
+
+.alignwide > *,
+.alignfull > * {
+    width: 100%;
+}
+
 
 /*--------------------------------------------------------------
 ## Responsive
@@ -1801,18 +1984,24 @@ ul.product_list_widget span.woocommerce-Price-amount.amount {
 	}
 
 	.site-branding { padding-bottom: 24px; }
-	
+
 	.site-header.scroll-to-fixed-fixed .site-branding { padding-bottom: 0; }
 
 	body.post-type-archive-flowers .hentry,
 	body.post-type-archive-edibles .hentry,
 	body.post-type-archive-concentrates .hentry,
 	body.post-type-archive-prerolls .hentry,
+	body.post-type-archive-topicals .hentry,
+	body.post-type-archive-growers .hentry,
+	body.post-type-archive-gear .hentry,
+	body.post-type-archive-tinctures .hentry,
 	body.tax-flowers_category .hentry,
 	body.tax-edibles_category .hentry,
 	body.tax-concentrates_category .hentry,
 	body.tax-topicals_category .hentry,
 	body.tax-growers_category .hentry,
+	body.tax-wpd_gear_category .hentry,
+	body.tax-wpd_tinctures_category .hentry,
 	body.tax-aroma .hentry,
 	body.tax-flavor .hentry,
 	body.tax-effect .hentry,
@@ -1838,7 +2027,11 @@ ul.product_list_widget span.woocommerce-Price-amount.amount {
 	.type-edibles .entry-header,
 	.type-concentrates .entry-header,
 	.type-flowers .entry-header,
-	.type-prerolls .entry-header	{
+	.type-prerolls .entry-header,
+	.type-topicals .entry-header,
+	.type-growers .entry-header,
+	.type-gear .entry-header,
+	.type-tinctures .entry-header {
 		margin: 0;
 	}
 
@@ -1858,11 +2051,17 @@ ul.product_list_widget span.woocommerce-Price-amount.amount {
 	body.post-type-archive-edibles .hentry,
 	body.post-type-archive-concentrates .hentry,
 	body.post-type-archive-prerolls .hentry,
+	body.post-type-archive-tinctures .hentry,
+	body.post-type-archive-growers .hentry,
+	body.post-type-archive-gear .hentry,
+	body.post-type-archive-tinctures .hentry,
 	body.tax-flowers_category .hentry,
 	body.tax-edibles_category .hentry,
 	body.tax-concentrates_category .hentry,
 	body.tax-topicals_category .hentry,
 	body.tax-growers_category .hentry,
+	body.tax-wpd_gear_category .hentry,
+	body.tax-wpd_tinctures_category .hentry,
 	body.tax-aroma .hentry,
 	body.tax-flavor .hentry,
 	body.tax-effect .hentry,
