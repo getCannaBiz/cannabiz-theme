@@ -1643,7 +1643,7 @@ function cannabiz_customizer_css() {
 	<?php } ?>
 	<?php if ( get_theme_mod( 'cannabiz_title_font_weight' ) !='' ) { ?>
 		h1, h2, h3 {
-			font-weight: <?php echo get_theme_mod( 'cannabiz_title_font_weight' ); ?>00;
+			font-weight: <?php echo get_theme_mod( 'cannabiz_title_font_weight' ); ?>;
 		}
 	<?php } ?>
 
