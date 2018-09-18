@@ -1418,6 +1418,24 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 		)
 	);
 
+	/* WordPress URL */
+	$wp_customize->add_setting(
+		'cannabiz_social_wordpress',
+		array(
+			'default'            => '',
+			'sanitize_callback'  => 'cannabiz_sanitize_input',
+			'transport'          => 'refresh'
+		)
+	);
+	$wp_customize->add_control(
+		'cannabiz_social_wordpress',
+		array(
+			'section'  => 'cannabiz_social',
+			'label'    => 'WordPress',
+			'type'     => 'text'
+		)
+	);
+
 	/* Linkedin URL */
 	$wp_customize->add_setting(
 		'cannabiz_social_linkedin',

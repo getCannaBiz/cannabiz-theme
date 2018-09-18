@@ -356,6 +356,10 @@ function cannabiz_social_icons() {
 		<a href="<?php echo get_theme_mod( 'cannabiz_social_github' ); ?>" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
 	<?php }
 
+	if ( get_theme_mod( 'cannabiz_social_wordpress' ) !='' ) { ?>
+		<a href="<?php echo get_theme_mod( 'cannabiz_social_wordpress' ); ?>" target="_blank"><i class="fa fa-wordpress" aria-hidden="true"></i></a>
+	<?php }
+
 	if ( get_theme_mod( 'cannabiz_social_linkedin' ) !='' ) { ?>
 		<a href="<?php echo get_theme_mod( 'cannabiz_social_linkedin' ); ?>" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
 	<?php }
