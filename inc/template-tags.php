@@ -403,12 +403,16 @@ if ( ! function_exists( 'cannabiz_title_large' ) ) :
 function cannabiz_title_large() {
 	?>
 	<?php if ( 'show' === get_theme_mod( 'cannabiz_pages_show_title' ) || get_post_meta( get_the_ID(), 'page_title', true ) ) { ?>
-		<?php if ( is_front_page() && ! is_home() || is_page() || is_home() && ! is_front_page() ) { ?>
+		<?php if ( is_front_page() && ! is_home() || is_page() || is_home() && ! is_front_page() || is_post_type_archive() ) { ?>
 		<div class="titlelarge">
 			<div class="container">
 				<div class="row site-intro">
 					<div class="col-lg-12">
-						<h1 class="intro-title"><?php single_post_title(); ?></h1>
+						<?php if ( is_post_type_archive() ) {?>
+							<h1 class="intro-title"><?php post_type_archive_title(); ?></h1>
+						<?php } else { ?>
+							<h1 class="intro-title"><?php single_post_title(); ?></h1>
+						<?php } ?>
 						<?php if ( function_exists( 'the_subtitle' ) ) {
 							the_subtitle( '<span class="intro-sub">', '</span>' );
 						} ?>
