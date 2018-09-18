@@ -1012,7 +1012,6 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 	);
 
 
-
 	/*-----------------------------------------------------------*
 	 * Defining our own 'Pages' section
 	 *-----------------------------------------------------------*/
@@ -1183,7 +1182,7 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 		'cannabiz_footer',
 		array(
 			'title'     => 'Footer',
-			'priority'  => 30
+			'priority'  => 40
 		)
 	);
 
