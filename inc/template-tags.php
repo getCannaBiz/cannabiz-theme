@@ -2,14 +2,12 @@
 /**
  * Custom template tags for this theme.
  *
- * Eventually, some of the functionality here could be replaced by core features.
- *
  * @package CannaBiz
  */
 
 if ( ! function_exists( 'cannabiz_posted_on' ) ) :
 /**
- * Prints HTML with meta information for the current post-date/time and author.
+ * Prints HTML with meta information for the current post's comments, category, author and prices for WP Dispensary products.
  */
 function cannabiz_posted_on() {
 
@@ -30,7 +28,7 @@ function cannabiz_posted_on() {
 	}
 
 	/**
-	 * Price - Edibles, Pre-rolls, Growers
+	 * Price - Edibles, Pre-rolls, Growers, Gear, Tinctures
 	 */
 	if ( is_post_type_archive( array( 'edibles', 'prerolls', 'growers', 'gear', 'tinctures' ) ) ) {
 
@@ -242,7 +240,7 @@ endif;
 
 if ( ! function_exists( 'cannabiz_entry_footer' ) ) :
 /**
- * Prints HTML with meta information for the categories, tags and comments.
+ * Prints HTML with meta information for the entry.
  */
 function cannabiz_entry_footer() {
 	// Hide category and tag text for pages.
@@ -318,7 +316,7 @@ endif;
 
 if ( ! function_exists( 'cannabiz_social_icons' ) ) :
 /**
- * Prints HTML with meta information for the current post-date/time and author.
+ * Prints Social media icons based on links added in the Customizer.
  */
 function cannabiz_social_icons() {
 
@@ -400,7 +398,7 @@ endif;
 
 if ( ! function_exists( 'cannabiz_title_large' ) ) :
 /**
- * Prints HTML with meta information for the categories, tags and comments.
+ * Prints HTML for the large title area on pages.
  */
 function cannabiz_title_large() {
 	?>
