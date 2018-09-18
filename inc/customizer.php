@@ -1900,6 +1900,9 @@ function cannabiz_customizer_css() {
 		.titlelarge h1 {
 			color: <?php echo get_theme_mod( 'cannabiz_page_title_color' ); ?>;
 		}
+		span.intro-sub:before {
+			background: <?php echo get_theme_mod( 'cannabiz_page_title_color' ); ?>;
+		}
 	<?php } ?>
 	<?php if ( get_theme_mod( 'cannabiz_title_font' ) !='' || null != get_theme_mod( 'cannabiz_title_font' )  ) { ?>
 		h2.widget-title {

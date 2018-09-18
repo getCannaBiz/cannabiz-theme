@@ -848,6 +848,16 @@ body.fl-builder .titlelarge {
 	margin: 0;
 }
 
+/** Title Large Subtitle */
+
+span.intro-sub:before {
+    content: '';
+    background: #FFF;
+    width: 10%;
+    height: 2px;
+    display: block;
+    margin: 12px auto;
+}
 
 /*--------------------------------------------------------------
 ## Content
