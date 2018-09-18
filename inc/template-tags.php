@@ -405,7 +405,7 @@ if ( ! function_exists( 'cannabiz_title_large' ) ) :
 function cannabiz_title_large() {
 	?>
 	<?php if ( 'show' === get_theme_mod( 'cannabiz_pages_show_title' ) || get_post_meta( get_the_ID(), 'page_title', true ) ) { ?>
-		<?php if(is_page()) { ?>
+		<?php if ( is_front_page() && ! is_home() || is_page() || is_home() && ! is_front_page() ) { ?>
 		<div class="titlelarge">
 			<div class="container">
 				<div class="row site-intro">
