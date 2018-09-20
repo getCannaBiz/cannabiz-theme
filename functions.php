@@ -130,61 +130,6 @@ function cannabiz_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar Flowers', 'cannabiz' ),
-		'id'            => 'sidebar-flowers',
-		'description'   => 'Displays at top of the sidebar in Flowers',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar Concentrates', 'cannabiz' ),
-		'id'            => 'sidebar-concentrates',
-		'description'   => 'Displays at top of the sidebar in Concentrates',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar Edibles', 'cannabiz' ),
-		'id'            => 'sidebar-edibles',
-		'description'   => 'Displays at top of the sidebar in Edibles',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar Pre-rolls', 'cannabiz' ),
-		'id'            => 'sidebar-prerolls',
-		'description'   => 'Displays at top of the sidebar in Pre-rolls',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar Topicals', 'cannabiz' ),
-		'id'            => 'sidebar-topicals',
-		'description'   => 'Displays at top of the sidebar in Topicals',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar Growers', 'cannabiz' ),
-		'id'            => 'sidebar-growers',
-		'description'   => 'Displays at top of the sidebar in Growers',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-
-	register_sidebar( array(
 		'name'          => esc_html__( 'Footer row #1', 'cannabiz' ),
 		'id'            => 'footer-1',
 		'description'   => '',
@@ -223,6 +168,66 @@ function cannabiz_widgets_init() {
 
 }
 add_action( 'widgets_init', 'cannabiz_widgets_init' );
+
+function wp_dispensary_sidebars() {
+	if ( is_plugin_active( 'wp-dispensary/wp-dispensary.php' ) ) {
+		register_sidebar( array(
+			'name'          => esc_html__( 'Sidebar Flowers', 'cannabiz' ),
+			'id'            => 'sidebar-flowers',
+			'description'   => 'Displays at top of the sidebar in Flowers',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		) );
+		register_sidebar( array(
+			'name'          => esc_html__( 'Sidebar Concentrates', 'cannabiz' ),
+			'id'            => 'sidebar-concentrates',
+			'description'   => 'Displays at top of the sidebar in Concentrates',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		) );
+		register_sidebar( array(
+			'name'          => esc_html__( 'Sidebar Edibles', 'cannabiz' ),
+			'id'            => 'sidebar-edibles',
+			'description'   => 'Displays at top of the sidebar in Edibles',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		) );
+		register_sidebar( array(
+			'name'          => esc_html__( 'Sidebar Pre-rolls', 'cannabiz' ),
+			'id'            => 'sidebar-prerolls',
+			'description'   => 'Displays at top of the sidebar in Pre-rolls',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		) );
+		register_sidebar( array(
+			'name'          => esc_html__( 'Sidebar Topicals', 'cannabiz' ),
+			'id'            => 'sidebar-topicals',
+			'description'   => 'Displays at top of the sidebar in Topicals',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		) );
+		register_sidebar( array(
+			'name'          => esc_html__( 'Sidebar Growers', 'cannabiz' ),
+			'id'            => 'sidebar-growers',
+			'description'   => 'Displays at top of the sidebar in Growers',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		) );
+	}
+}
+add_action( 'widgets_init', 'wp_dispensary_sidebars' );
 
 /**
  * Enqueue scripts and styles.
