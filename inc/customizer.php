@@ -1647,7 +1647,7 @@ function cannabiz_customizer_css() {
 		.entry-title a:hover,
 		h1.entry-title a:hover,
 		h2.entry-title a:hover,
-		table.cannabizispensary-table td,
+		table.wpdispensary-table td,
 		.woocommerce ul.products li.product a h3,
 		.woocommerce ul.products li.product a:visited h3 {
 			color: <?php echo get_theme_mod( 'cannabiz_link_color' ); ?>;
