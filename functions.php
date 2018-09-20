@@ -341,8 +341,8 @@ function cannabiz_page_title( $value ) {
 
 function page_title_add_meta_box() {
 	add_meta_box(
-		'page_title-top-sellers',
-		__( 'CannaBiz Page Title', 'wp-dispensary' ),
+		'large_page_title',
+		__( 'Large Page Title', 'wp-dispensary' ),
 		'page_title_html',
 		array ( 'page' ),
 		'side',
