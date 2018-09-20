@@ -291,6 +291,11 @@ a.button.ajax_add_to_cart,
 	position: relative;
 }
 
+.topbar-link {
+    position: relative;
+    margin-right: 10px;
+}
+
 .topbar-social {
     float: right;
 	padding-bottom: 12px;
