@@ -19,9 +19,6 @@ function cannabiz_posted_on() {
 				echo '</span>';
 			}
 		}
-		if ( 'show' === get_theme_mod( 'cannabiz_posts_show_category' ) || '' === get_theme_mod( 'cannabiz_posts_show_category' ) ) {
-			echo '<span class="category-link"><i class="fa fa-folder"></i> ' . get_the_category_list( ', ', get_the_id() ) .'</span>';
-		}
 		if ( 'show' === get_theme_mod( 'cannabiz_posts_show_author' ) || '' === get_theme_mod( 'cannabiz_posts_show_author' ) ) {
 			echo '<span class="author-link"><i class="fa fa-user"></i> ' . get_the_author_link( get_the_id() ) .'</span>';
 		}
@@ -271,12 +268,8 @@ function cannabiz_entry_footer() {
 		if ( 'show' === get_theme_mod( 'cannabiz_posts_show_date' ) || null === get_theme_mod( 'cannabiz_posts_show_date' ) ) {
 			echo '<span class="posted-on"><i class="fa fa-calendar"></i> ' . $posted_on . '</span>'; // WPCS: XSS OK.
 		}
-		/* translators: used between list items, there is a space after the comma */
-		if ( 'show' === get_theme_mod( 'cannabiz_posts_show_tags' ) || null === get_theme_mod( 'cannabiz_posts_show_tags' ) ) {
-			$tags_list = get_the_tag_list( '', esc_html__( ' ', 'cannabiz' ) );
-			if ( $tags_list ) {
-				printf( '<span class="tags-links '. $nodate .'">' . esc_html__( '%1$s', 'cannabiz' ) . '</span>', $tags_list ); // WPCS: XSS OK.
-			}
+		if ( 'show' === get_theme_mod( 'cannabiz_posts_show_category' ) || '' === get_theme_mod( 'cannabiz_posts_show_category' ) ) {
+			echo '<span class="category-link">' . get_the_category_list( ', ', get_the_id() ) .'</span>';
 		}
 	} elseif ( 'flowers' || 'edibles' || 'concentrates' || 'prerolls' || 'topicals' || 'growers' || 'gear' || 'tinctures' === get_post_type() ) {
 		global $post;

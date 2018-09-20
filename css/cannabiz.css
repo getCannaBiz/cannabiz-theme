@@ -1021,8 +1021,7 @@ span.edit-link {
 	margin-left: 0;
 }
 
-.comments-link,
-.category-link {
+.comments-link {
 	margin-right: 10px;
 }
 
@@ -1079,7 +1078,7 @@ span.caption.text-muted {
 	line-height: 1.6;
 }
 
-.tags-links {
+.category-link {
 	float: right;
 	font-size: 13px;
 	font-weight: 600;
@@ -1087,8 +1086,8 @@ span.caption.text-muted {
 	text-align: right;
 }
 
-.tags-links a,
-.tags-links a:visited {
+.category-link a,
+.category-link a:visited {
     background: #EEE;
     border-radius: 15px;
     color: #AAA;
@@ -1096,7 +1095,7 @@ span.caption.text-muted {
     padding: 5px 10px;
 }
 
-.tags-links a:hover {
+.category-link a:hover {
 	color: #454545;
 }
 

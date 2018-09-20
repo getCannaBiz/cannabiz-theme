@@ -1151,29 +1151,6 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 		)
 	);
 
-	/* Post tags */
-	$wp_customize->add_setting(
-		'cannabiz_posts_show_tags',
-		array(
-			'default'   		=> 'show',
-			'sanitize_callback' => 'cannabiz_sanitize_input',
-			'transport' 		=> 'refresh'
-		)
-	);
-
-	$wp_customize->add_control(
-		'cannabiz_posts_show_tags',
-		array(
-			'section'  			=> 'cannabiz_blogposts_options',
-			'label'    			=> 'Post tags',
-			'type'     			=> 'radio',
-			'choices'  			=> array(
-				'hide'			=> 'Hide',
-				'show'			=> 'Show'
-			)
-		)
-	);
-
 	/*-----------------------------------------------------------*
 	 * Defining our own 'Footer' section
 	 *-----------------------------------------------------------*/
