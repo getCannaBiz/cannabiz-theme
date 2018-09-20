@@ -1073,11 +1073,11 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 		'cannabiz_posts_show_comments',
 		array(
 			'section'  			=> 'cannabiz_blogposts_options',
-			'label'    			=> 'Post comments',
+			'label'    			=> 'Comments',
 			'type'     			=> 'radio',
 			'choices'  			=> array(
-				'hide'			=> 'Hide',
-				'show'			=> 'Show'
+				'hide'			=> 'hide',
+				'show'			=> 'show'
 			)
 		)
 	);
@@ -1096,11 +1096,11 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 		'cannabiz_posts_show_category',
 		array(
 			'section'  			=> 'cannabiz_blogposts_options',
-			'label'    			=> 'Post category',
+			'label'    			=> 'Categories',
 			'type'     			=> 'radio',
 			'choices'  			=> array(
-				'hide'			=> 'Hide',
-				'show'			=> 'Show'
+				'hide'			=> 'hide',
+				'show'			=> 'show'
 			)
 		)
 	);
@@ -1119,11 +1119,11 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 		'cannabiz_posts_show_author',
 		array(
 			'section'  			=> 'cannabiz_blogposts_options',
-			'label'    			=> 'Post author',
+			'label'    			=> 'Author',
 			'type'     			=> 'radio',
 			'choices'  			=> array(
-				'hide'			=> 'Hide',
-				'show'			=> 'Show'
+				'hide'			=> 'hide',
+				'show'			=> 'show'
 			)
 		)
 	);
@@ -1142,11 +1142,11 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 		'cannabiz_posts_show_date',
 		array(
 			'section'  			=> 'cannabiz_blogposts_options',
-			'label'    			=> 'Post date',
+			'label'    			=> 'Date',
 			'type'     			=> 'radio',
 			'choices'  			=> array(
-				'hide'			=> 'Hide',
-				'show'			=> 'Show'
+				'hide'			=> 'hide',
+				'show'			=> 'show'
 			)
 		)
 	);
