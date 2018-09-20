@@ -247,7 +247,7 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 		'cannabiz_home_slider',
 		array(
 			'section'  => 'title_tagline',
-			'label'    => 'Home page slider shortcode',
+			'label'    => 'Home page top shortcode',
 			'type'     => 'text',
 			'priority'  => 31
 		)
@@ -1199,7 +1199,7 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 		'cannabiz_home_slider_bottom',
 		array(
 			'section'  => 'cannabiz_footer',
-			'label'    => 'Home page bottom slider shortcode',
+			'label'    => 'Home page bottom shortcode',
 			'type'     => 'text'
 		)
 	);
