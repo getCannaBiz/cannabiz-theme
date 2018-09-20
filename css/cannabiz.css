@@ -507,9 +507,13 @@ a.button.ajax_add_to_cart,
 	-webkit-transform: scale(0.95);
 	-ms-transform: scale(0.95);
 	transform: scale(0.95);
+	padding: 3px 0;
 }
 
 @media screen and (max-width: 600px) {
+	.main-navigation ul ul {
+		box-shadow: none;
+	}
 	.main-navigation ul {
 		background: #83D122;
 		overflow: auto;
@@ -673,7 +677,7 @@ a.button.ajax_add_to_cart,
 	font-weight: normal;
 	line-height: 2;
 	margin: 0;
-	padding: 12px 20px;
+	padding: 3px 12px;
 	position: relative;
 	text-transform: none;
 	width: auto;
@@ -841,10 +845,6 @@ span.menu-close {
 		top: auto;
 		left: auto;
 		padding-left: 5%;
-	}
-
-	.main-navigation ul ul li:first-child {
-		border-top: dotted 1px #373F47;
 	}
 }
 
