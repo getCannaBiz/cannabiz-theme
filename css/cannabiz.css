@@ -901,8 +901,6 @@ section#primary {
 /* Entry title */
 
 .entry-header {
-	background: #FFF;
-	border-top: 6px solid #8224e3;
 	margin: 0;
 	padding: 20px 20px 0 20px;
 	position: relative;
