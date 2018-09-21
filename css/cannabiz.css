@@ -2075,6 +2075,28 @@ h3.ddwc span {
     width: 100%;
 }
 
+/*--------------------------------------------------------------
+## Age Verification
+--------------------------------------------------------------*/
+
+.wpd-av h2 {
+	border-bottom: 0;
+	color: #AAA;
+	margin-bottom: 0;
+}
+
+.wpd-av h2:after {
+	content: '';
+	background: #DDD;
+	height: 4px;
+	width: 48px;
+	margin: 12px auto 0 auto;
+	display: block;
+}
+
+.wpd-av p {
+	margin-bottom: 4px;
+}
 
 /*--------------------------------------------------------------
 ## Responsive
