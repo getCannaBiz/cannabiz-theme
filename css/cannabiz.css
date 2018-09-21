@@ -1049,6 +1049,10 @@ span.edit-link {
     margin-top: 0;
 }
 
+.entry-content :last-child {
+    margin-bottom: 0;
+}
+
 /** Inventory Management */
 .entry-content .warning p:first-child {
 	margin-top: 12px;
