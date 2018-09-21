@@ -258,8 +258,8 @@ a.button.ajax_add_to_cart,
 --------------------------------------------------------------*/
 
 .topbar {
-	background-color: #76BD1D;
-	color: #FFF;
+	background-color: #f1f1f1;
+	color: #AAA;
 	display: block;
 	font-size: 14px;
 	line-height: 1;
@@ -273,14 +273,14 @@ a.button.ajax_add_to_cart,
 .topbar .fa,
 .topbar a,
 .topbar a:visited {
-	color: #FFF;
+	color: #AAA;
 	-webkit-transition: .07s ease-in-out;
 	transition: .07s ease-in-out;
 }
 
 .topbar a:hover .fa,
 .topbar a:hover {
-	color: rgba(255,255,255,0.5);
+	color: #454545;
 }
 
 .topbar-email {
@@ -318,7 +318,7 @@ a.button.ajax_add_to_cart,
 
 .topbar a.social-massroots,
 .topbar a.social-massroots:visited {
-	background-color: #FFF;
+	background-color: #AAA;
 	mask-image: url(../img/social-massroots.png);
 	-webkit-mask-image: url(../img/social-massroots.png);
 	display: inline-table;
@@ -329,12 +329,12 @@ a.button.ajax_add_to_cart,
 }
 
 .topbar a.social-massroots:hover {
-	background-color: rgba(255,255,255,0.4);
+	background-color: #454545;
 }
 
 .topbar a.social-weedmaps,
 .topbar a.social-weedmaps:visited {
-	background-color: #FFF;
+	background-color: #AAA;
 	mask-image: url(../img/social-weedmaps.png);
 	-webkit-mask-image: url(../img/social-weedmaps.png);
 	display: inline-table;
@@ -345,12 +345,12 @@ a.button.ajax_add_to_cart,
 }
 
 .topbar a.social-weedmaps:hover {
-	background-color: rgba(255,255,255,0.4);
+	background-color: #454545;
 }
 
 .topbar a.social-leafly,
 .topbar a.social-leafly:visited {
-	background-color: #FFF;
+	background-color: #AAA;
 	mask-image: url(../img/social-leafly.png);
 	-webkit-mask-image: url(../img/social-leafly.png);
 	display: inline-table;
@@ -361,7 +361,7 @@ a.button.ajax_add_to_cart,
 }
 
 .topbar a.social-leafly:hover {
-	background-color: rgba(255,255,255,0.4);
+	background-color: #454545;
 }
 
 /** Site Header */
@@ -417,11 +417,11 @@ a.button.ajax_add_to_cart,
 .site-title a,
 .site-title a:visited {
     position: relative;
-    color: #8224e3;
+    color: #76bd1d;
 }
 
 .site-title a:hover {
-	color: #76bd1d;
+	color: #8224e3;
 }
 
 .site-description {
@@ -849,7 +849,7 @@ span.menu-close {
 }
 
 .titlelarge {
-	background: #8224e3;
+	background: #76bd1d;
 	color: #FFF;
 	display: block;
 	margin: 0;
@@ -936,12 +936,12 @@ h1.entry-title a,
 h1.entry-title a:visited,
 h2.entry-title a,
 h2.entry-title a:visited {
-	color: #8224e3;
+	color: #76bd1d;
 }
 
 h1.entry-title a:hover,
 h2.entry-title a:hover {
-	color: #76BD1D;
+	color: #8224e3;
 }
 
 span.entry-subtitle {
@@ -1377,6 +1377,23 @@ body.tax-vendor nav.navigation.posts-navigation {
 
 i.fa.fa-comment.hide-comments {
     color: #FFF;
+}
+
+/**
+ * WP Dispensary shortcode title
+ */
+
+h2.wpd-title {
+	color: #AAA;
+}
+
+h2.wpd-title:after {
+	content: '';
+	display: block;
+	margin: 12px auto;
+	background: #DDD;
+	height: 4px;
+	width: 48px;
 }
 
 body.home .wpd-title {
