@@ -2036,6 +2036,64 @@ ul.product_list_widget li .star-rating span::before {
     font-size: 12px !important;
 }
 
+/** Empty Cart Message in Cart widget */
+p.woocommerce-mini-cart__empty-message {
+    text-align: center;
+}
+
+/** WooCommerce Checkout Select Boxes */
+.select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    padding: 5px;
+    height: auto;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+	height: 38px;
+}
+
+/** WooCommerce checkout payment method */
+
+#add_payment_method #payment,
+.woocommerce-cart #payment,
+.woocommerce-checkout #payment {
+    background: transparent;
+    border-radius: 0;
+}
+
+#add_payment_method #payment ul.payment_methods,
+.woocommerce-cart #payment ul.payment_methods,
+.woocommerce-checkout #payment ul.payment_methods,
+#add_payment_method #payment div.form-row,
+.woocommerce-cart #payment div.form-row,
+.woocommerce-checkout #payment div.form-row {
+	border-bottom: 0;
+	padding-bottom: 0;
+	padding: 1em 0;
+}
+
+#add_payment_method #payment div.payment_box,
+.woocommerce-cart #payment div.payment_box,
+.woocommerce-checkout #payment div.payment_box {
+    background-color: #EEE;
+}
+
+#add_payment_method #payment div.payment_box::before,
+.woocommerce-cart #payment div.payment_box::before,
+.woocommerce-checkout #payment div.payment_box::before {
+	content: '';
+    display: block;
+	border: 1em solid #EEE;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    position: absolute;
+    top: -.75em;
+    left: 0;
+    margin: -1em 0 0 2em;
+}
 /** Delivery Drivers for WooCommerce Styles */
 
 .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--driver-dashboard a:before {
