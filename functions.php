@@ -170,7 +170,7 @@ function cannabiz_widgets_init() {
 add_action( 'widgets_init', 'cannabiz_widgets_init' );
 
 function wp_dispensary_sidebars() {
-	if ( is_plugin_active( 'wp-dispensary/wp-dispensary.php' ) ) {
+	if( class_exists( 'WP_Dispensary' ) ) {
 		register_sidebar( array(
 			'name'          => esc_html__( 'Sidebar Flowers', 'cannabiz' ),
 			'id'            => 'sidebar-flowers',
@@ -245,7 +245,7 @@ function cannabiz_scripts() {
 	wp_enqueue_script( 'cannabiz-hoverIntent', get_template_directory_uri() . '/js/hoverIntent.min.js', array(), '20180917', true );
 	wp_enqueue_script( 'cannabiz-js', get_template_directory_uri() . '/js/cannabiz.min.js', array(), '20180917', true );
 
-	if ( is_plugin_active( 'wp-dispensary/wp-dispensary.php' ) ) {
+	if( class_exists( 'WP_Dispensary' ) ) {
 		wp_enqueue_script( 'cannabiz-wpd-js', get_template_directory_uri() . '/js/wp-dispensary.js', array(), '20180917', true );
 	}
 
