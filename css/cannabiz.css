@@ -612,7 +612,6 @@ a.added_to_cart,
 
 .main-navigation ul ul li {
 	width: 100%;
-	border-bottom: dotted 1px rgba(255,255,255,0.5);
 }
 
 .main-navigation ul ul li:last-child {
