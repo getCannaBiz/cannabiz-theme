@@ -151,6 +151,10 @@ select:focus {
 
 /* Buttons */
 
+a.button {
+	display: inline-block;
+}
+
 a.button,
 a.button:visited,
 button,
@@ -248,6 +252,7 @@ a.button.alt:hover {
 
 a.button.add_to_cart_button,
 a.button.ajax_add_to_cart,
+a.added_to_cart,
 .woocommerce ul.products li.product .button {
     text-align: center;
     width: 100%;
