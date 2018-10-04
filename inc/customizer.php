@@ -1661,7 +1661,8 @@ function cannabiz_customizer_css() {
 		.woocommerce ul.products li.product a:hover h3,
 		.woocommerce ul.products li.product a:active h3,
 		.woocommerce ul.products li.product a:focus h3,
-		.woocommerce-MyAccount-navigation ul li a:hover {
+		.woocommerce-MyAccount-navigation ul li a:hover,
+		.wpdshortcode.display-list p a:hover {
 			color: <?php echo get_theme_mod( 'cannabiz_link_hover_color' ); ?>;
 		}
 	<?php } ?>
