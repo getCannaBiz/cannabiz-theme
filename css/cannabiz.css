@@ -112,6 +112,13 @@ ol, ul {
 	display: none;
 }
 
+/** Elementor li:before removal */
+
+.elementor-editor-section-settings .elementor-editor-element-setting:first-child:before {
+	display: inline-block;
+	margin-right: 0 !important;
+}
+
 /* Forms */
 
 .wpcf7-form label {
