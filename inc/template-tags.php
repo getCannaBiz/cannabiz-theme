@@ -30,7 +30,7 @@ function cannabiz_posted_on() {
 	if ( is_post_type_archive( array( 'edibles', 'prerolls', 'growers', 'gear', 'tinctures' ) ) ) {
 
 		if ( get_post_meta( get_the_ID(), '_priceeach', true ) ) {
-			echo "$" . get_post_meta( get_the_id(), '_priceeach', true );
+			echo wpd_currency_code() . get_post_meta( get_the_id(), '_priceeach', true );
 		}
 
 	}
@@ -41,7 +41,7 @@ function cannabiz_posted_on() {
 	if ( is_post_type_archive( array( 'topicals' ) ) ) {
 
 		if ( get_post_meta( get_the_ID(), '_pricetopical', true ) ) {
-			echo "$" . get_post_meta( get_the_id(), '_pricetopical', true );
+			echo wpd_currency_code() . get_post_meta( get_the_id(), '_pricetopical', true );
 		}
 
 	}
@@ -52,25 +52,25 @@ function cannabiz_posted_on() {
 	if ( is_post_type_archive( 'flowers' ) ) {
 
 		if ( get_post_meta( get_the_ID(), '_gram', true ) ) {
-			echo "$" . get_post_meta(get_the_id(), '_gram', true);
+			echo wpd_currency_code() . get_post_meta(get_the_id(), '_gram', true);
 		} elseif ( get_post_meta( get_the_ID(), '_eighth', true ) ) {
-			echo "$" . get_post_meta(get_the_id(), '_eighth', true);
+			echo wpd_currency_code() . get_post_meta(get_the_id(), '_eighth', true);
 		} elseif ( get_post_meta( get_the_ID(), '_quarter', true ) ) {
-			echo "$" . get_post_meta(get_the_id(), '_quarter', true);
+			echo wpd_currency_code() . get_post_meta(get_the_id(), '_quarter', true);
 		} elseif ( get_post_meta( get_the_ID(), '_halfounce', true ) ) {
-			echo "$" . get_post_meta(get_the_id(), '_halfounce', true);
+			echo wpd_currency_code() . get_post_meta(get_the_id(), '_halfounce', true);
 		}
 		echo " - ";
 		if ( get_post_meta( get_the_ID(), '_ounce', true ) ) {
-			echo "$" . get_post_meta( get_the_id(), '_ounce', true );
+			echo wpd_currency_code() . get_post_meta( get_the_id(), '_ounce', true );
 		} elseif ( get_post_meta( get_the_ID(), '_halfounce', true ) ) {
-			echo "$" . get_post_meta( get_the_id(), '_halfounce', true );
+			echo wpd_currency_code() . get_post_meta( get_the_id(), '_halfounce', true );
 		} elseif ( get_post_meta( get_the_ID(), '_quarter', true ) ) {
-			echo "$" . get_post_meta( get_the_id(), '_quarter', true );
+			echo wpd_currency_code() . get_post_meta( get_the_id(), '_quarter', true );
 		} elseif ( get_post_meta( get_the_ID(), '_eighth', true ) ) {
-			echo "$" . get_post_meta( get_the_id(), '_eighth', true );
+			echo wpd_currency_code() . get_post_meta( get_the_id(), '_eighth', true );
 		} elseif ( get_post_meta( get_the_ID(), '_gram', true ) ) {
-			echo "$" . get_post_meta( get_the_id(), '_gram', true );
+			echo wpd_currency_code() . get_post_meta( get_the_id(), '_gram', true );
 		}
 
 	}
@@ -80,7 +80,7 @@ function cannabiz_posted_on() {
 	 */
 	if ( is_post_type_archive( 'concentrates' ) ) {
 		if ( get_post_meta( get_the_ID(), '_priceeach', true ) ) {
-			$pricingeach = '$' . get_post_meta( get_the_id(), '_priceeach', true ) . ' each';
+			$pricingeach = wpd_currency_code() . get_post_meta( get_the_id(), '_priceeach', true ) . ' each';
 		} else {
 			$pricingeach = '';
 		}
@@ -137,56 +137,56 @@ function cannabiz_posted_on() {
 
 		if ( 'flowers' === get_post_type() ) {
 			if ( get_post_meta( get_the_ID(), '_gram', true ) ) {
-				echo "$" . get_post_meta(get_the_id(), '_gram', true);
+				echo wpd_currency_code() . get_post_meta(get_the_id(), '_gram', true);
 			} elseif ( get_post_meta( get_the_ID(), '_eighth', true ) ) {
-				echo "$" . get_post_meta(get_the_id(), '_eighth', true);
+				echo wpd_currency_code() . get_post_meta(get_the_id(), '_eighth', true);
 			} elseif ( get_post_meta( get_the_ID(), '_quarter', true ) ) {
-				echo "$" . get_post_meta(get_the_id(), '_quarter', true);
+				echo wpd_currency_code() . get_post_meta(get_the_id(), '_quarter', true);
 			} elseif ( get_post_meta( get_the_ID(), '_halfounce', true ) ) {
-				echo "$" . get_post_meta(get_the_id(), '_halfounce', true);
+				echo wpd_currency_code() . get_post_meta(get_the_id(), '_halfounce', true);
 			}
 			echo " - ";
 			if ( get_post_meta( get_the_ID(), '_ounce', true ) ) {
-				echo "$" . get_post_meta( get_the_id(), '_ounce', true );
+				echo wpd_currency_code() . get_post_meta( get_the_id(), '_ounce', true );
 			} elseif ( get_post_meta( get_the_ID(), '_halfounce', true ) ) {
-				echo "$" . get_post_meta( get_the_id(), '_halfounce', true );
+				echo wpd_currency_code() . get_post_meta( get_the_id(), '_halfounce', true );
 			} elseif ( get_post_meta( get_the_ID(), '_quarter', true ) ) {
-				echo "$" . get_post_meta( get_the_id(), '_quarter', true );
+				echo wpd_currency_code() . get_post_meta( get_the_id(), '_quarter', true );
 			} elseif ( get_post_meta( get_the_ID(), '_eighth', true ) ) {
-				echo "$" . get_post_meta( get_the_id(), '_eighth', true );
+				echo wpd_currency_code() . get_post_meta( get_the_id(), '_eighth', true );
 			} elseif ( get_post_meta( get_the_ID(), '_gram', true ) ) {
-				echo "$" . get_post_meta( get_the_id(), '_gram', true );
+				echo wpd_currency_code() . get_post_meta( get_the_id(), '_gram', true );
 			}
 		}
 
 		if ( 'edibles' === get_post_type() ) {
 			if ( get_post_meta( get_the_ID(), '_priceeach', true ) ) {
-				echo "$" . get_post_meta( get_the_id(), '_priceeach', true );
+				echo wpd_currency_code() . get_post_meta( get_the_id(), '_priceeach', true );
 			}
 		}
 
 		if ( 'prerolls' === get_post_type() ) {
 			if ( get_post_meta( get_the_ID(), '_priceeach', true ) ) {
-				echo "$" . get_post_meta( get_the_id(), '_priceeach', true );
+				echo wpd_currency_code() . get_post_meta( get_the_id(), '_priceeach', true );
 			}
 		}
 
 		if ( 'growers' === get_post_type() ) {
 			if ( get_post_meta( get_the_ID(), '_priceeach', true ) ) {
-				echo "$" . get_post_meta( get_the_id(), '_priceeach', true );
+				echo wpd_currency_code() . get_post_meta( get_the_id(), '_priceeach', true );
 			}
 		}
 
 		if ( 'topicals' === get_post_type() ) {
 			if ( get_post_meta( get_the_ID(), '_priceeach', true ) ) {
-				echo "$" . get_post_meta( get_the_id(), '_priceeach', true );
+				echo wpd_currency_code() . get_post_meta( get_the_id(), '_priceeach', true );
 			}
 		}
 
 		if ( 'concentrates' === get_post_type() ) {
 
 			if ( get_post_meta( get_the_ID(), '_priceeach', true ) ) {
-				$pricingeach = '$' . get_post_meta( get_the_id(), '_priceeach', true ) . ' each';
+				$pricingeach = wpd_currency_code() . get_post_meta( get_the_id(), '_priceeach', true ) . ' each';
 			} else {
 				$pricingeach = '';
 			}
