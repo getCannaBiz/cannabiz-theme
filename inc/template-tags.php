@@ -90,19 +90,19 @@ function cannabiz_posted_on() {
 		}
 
 		if ( get_post_meta( get_the_ID(), '_halfgram', true ) ) {
-			$halfgram = '<span class="wpd-productinfo"><strong>1/2g: </strong>$' . get_post_meta( get_the_id(), '_halfgram', true ) .'</span>';
+			$halfgram = '<span class="wpd-productinfo"><strong>1/2g: </strong>' . wpd_currency_code() . get_post_meta( get_the_id(), '_halfgram', true ) .'</span>';
 		} else {
 			$halfgram = '';
 		}
 
 		if ( get_post_meta( get_the_ID(), '_gram', true ) ) {
-			$gram = '<span class="wpd-productinfo"><strong>1g: </strong>$' . get_post_meta( get_the_id(), '_gram', true ) .'</span>';
+			$gram = '<span class="wpd-productinfo"><strong>1g: </strong>' . wpd_currency_code() . get_post_meta( get_the_id(), '_gram', true ) .'</span>';
 		} else {
 			$gram = '';
 		}
 
 		if ( get_post_meta( get_the_ID(), '_twograms', true ) ) {
-			$twograms = '<span class="wpd-productinfo"><strong>2g: </strong>$' . get_post_meta( get_the_id(), '_twograms', true ) .'</span>';
+			$twograms = '<span class="wpd-productinfo"><strong>2g: </strong>' . wpd_currency_code() . get_post_meta( get_the_id(), '_twograms', true ) .'</span>';
 		} else {
 			$twograms = '';
 		}
