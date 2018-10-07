@@ -265,6 +265,10 @@ a.added_to_cart,
     width: 100%;
 }
 
+.hentry.no-results.not-found input.search-submit {
+    padding: 12px 24px;
+}
+
 /*--------------------------------------------------------------
 ## Header
 --------------------------------------------------------------*/
@@ -1220,6 +1224,11 @@ nav.navigation.pagination {
     padding: 20px 20px;
 }
 
+/** 404 Pages */
+
+article.hentry.no-results.not-found {
+    width: 98%;
+}
 
 /*--------------------------------------------------------------
 ## Custom Post Types
