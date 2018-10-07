@@ -139,6 +139,9 @@ function cannabiz_posted_on() {
 		)
 	) {
 
+		// Add price each & per pack to these menu types.
+		$priceeachperpack = array( 'edibles', 'prerolls', 'growers', 'gear', 'tinctures' );
+
 		if ( 'flowers' === get_post_type() ) {
 			if ( get_post_meta( get_the_ID(), '_gram', true ) ) {
 				echo wpd_currency_code() . get_post_meta(get_the_id(), '_gram', true);
@@ -161,33 +164,18 @@ function cannabiz_posted_on() {
 			} elseif ( get_post_meta( get_the_ID(), '_gram', true ) ) {
 				echo wpd_currency_code() . get_post_meta( get_the_id(), '_gram', true );
 			}
-		}
-
-		if ( 'edibles' === get_post_type() ) {
+		} elseif ( in_array( get_post_type(), $priceeachperpack ) ) {
+			if ( get_post_meta( get_the_ID(), '_priceeach', true ) ) {
+				echo '<strong> ' . __( 'Price', 'cannabiz' ) . ':</strong> ' . wpd_currency_code() . get_post_meta( get_the_id(), '_priceeach', true );
+			}
+			if ( get_post_meta( get_the_ID(), '_priceperpack', true ) ) {
+				echo ' &middot; ' . get_post_meta( get_the_id(), '_unitsperpack', true ) . ' for ' . wpd_currency_code() . get_post_meta( get_the_id(), '_priceperpack', true );
+			}
+		} elseif ( 'topicals' === get_post_type() ) {
 			if ( get_post_meta( get_the_ID(), '_priceeach', true ) ) {
 				echo wpd_currency_code() . get_post_meta( get_the_id(), '_priceeach', true );
 			}
-		}
-
-		if ( 'prerolls' === get_post_type() ) {
-			if ( get_post_meta( get_the_ID(), '_priceeach', true ) ) {
-				echo wpd_currency_code() . get_post_meta( get_the_id(), '_priceeach', true );
-			}
-		}
-
-		if ( 'growers' === get_post_type() ) {
-			if ( get_post_meta( get_the_ID(), '_priceeach', true ) ) {
-				echo wpd_currency_code() . get_post_meta( get_the_id(), '_priceeach', true );
-			}
-		}
-
-		if ( 'topicals' === get_post_type() ) {
-			if ( get_post_meta( get_the_ID(), '_priceeach', true ) ) {
-				echo wpd_currency_code() . get_post_meta( get_the_id(), '_priceeach', true );
-			}
-		}
-
-		if ( 'concentrates' === get_post_type() ) {
+		} elseif ( 'concentrates' === get_post_type() ) {
 
 			if ( get_post_meta( get_the_ID(), '_priceeach', true ) ) {
 				$pricingeach = wpd_currency_code() . get_post_meta( get_the_id(), '_priceeach', true ) . ' each';
