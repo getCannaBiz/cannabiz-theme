@@ -127,6 +127,7 @@ function cannabiz_posted_on() {
 				'condition',
 				'symptom',
 				'vendor',
+				'allergens',
 				'flowers_category',
 				'concentrates_category',
 				'edibles_category',
