@@ -30,7 +30,11 @@ function cannabiz_posted_on() {
 	if ( is_post_type_archive( array( 'edibles', 'prerolls', 'growers', 'gear', 'tinctures' ) ) ) {
 
 		if ( get_post_meta( get_the_ID(), '_priceeach', true ) ) {
-			echo wpd_currency_code() . get_post_meta( get_the_id(), '_priceeach', true );
+			echo '<strong> ' . __( 'Price', 'cannabiz' ) . ':</strong> ' . wpd_currency_code() . get_post_meta( get_the_id(), '_priceeach', true );
+		}
+
+		if ( get_post_meta( get_the_ID(), '_priceperpack', true ) ) {
+			echo ' &middot; ' . get_post_meta( get_the_id(), '_unitsperpack', true ) . ' for ' . wpd_currency_code() . get_post_meta( get_the_id(), '_priceperpack', true );
 		}
 
 	}
