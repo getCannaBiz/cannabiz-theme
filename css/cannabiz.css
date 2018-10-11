@@ -2164,6 +2164,27 @@ h3.ddwc span {
 	display: none;
 }
 
+/** WooCommerce Edit Account Fields */
+
+p.woocommerce-form-row.form-row span em {
+    font-size: 0.85em;
+}
+
+.woocommerce-EditAccountForm.edit-account fieldset {
+    display: block;
+    margin-top: 24px;
+}
+
+.woocommerce-EditAccountForm.edit-account legend {
+    display: inline-block;
+    font-size: 24px;
+    margin: 0 0 24px 0;
+}
+
+.woocommerce form .form-row {
+    padding: 3px 0;
+}
+
 /*--------------------------------------------------------------
 ## Gutenberg
 --------------------------------------------------------------*/
