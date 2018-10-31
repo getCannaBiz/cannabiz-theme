@@ -1691,7 +1691,8 @@ function cannabiz_customizer_css() {
 		.woocommerce #respond input#submit:hover,
 		.woocommerce a.button:hover,
 		.woocommerce button.button:hover,
-		.woocommerce input.button:hover {
+		.woocommerce input.button:hover,
+		.wpd-av button.yes:hover {
 			background: <?php echo get_theme_mod( 'cannabiz_button_hover_color' ); ?>;
 			color: #FFF;
 		}
@@ -1722,7 +1723,8 @@ function cannabiz_customizer_css() {
 		.woocommerce #respond input#submit,
 		.woocommerce a.button,
 		.woocommerce button.button,
-		.woocommerce input.button {
+		.woocommerce input.button,
+		.wpd-av button.yes {
 			background: <?php echo get_theme_mod( 'cannabiz_button_color' ); ?>;
 		}
 	<?php } ?>
