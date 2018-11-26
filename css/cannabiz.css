@@ -36,7 +36,7 @@ a, a:visited {
 a:hover,
 a:focus,
 a:active {
-	color: #8224e3;
+	color: #454545;
 	text-decoration: none;
 }
 
@@ -210,6 +210,7 @@ input[type=submit]:hover,
 #commentform #submit:hover {
 	background: #83D122;
 	box-shadow: none;
+	color: #FFF;
 }
 
 a.button:focus,
@@ -224,6 +225,7 @@ input[type="submit"]:active {
 	box-shadow: none;
 	border: none;
 	outline: 0;
+	color: #FFF;
 }
 
 a.button,
@@ -233,6 +235,7 @@ a.button:visited {
 
 a.button:hover {
 	background: #83d122;
+	color: #FFF;
 }
 
 a.button.alt,
@@ -413,9 +416,16 @@ a.added_to_cart,
 	padding: 16px 0;
 }
 
+body.admin-bar .site-header.scroll-to-fixed-fixed {
+    margin-top: 32px;
+}
+
 @media screen and (max-width: 768px) {
 	.site-header.scroll-to-fixed-fixed {
 		padding-top: 0;
+	}
+	body.admin-bar .site-header.scroll-to-fixed-fixed {
+		margin-top: 0;
 	}
 }
 
@@ -453,7 +463,7 @@ a.added_to_cart,
 }
 
 .site-title a:hover {
-	color: #8224e3;
+	color: #454545;
 }
 
 .site-description {
@@ -663,12 +673,12 @@ a.added_to_cart,
 
 .sub-menu li.current-menu-item > a {
 	font-weight: normal !important;
-	color: #8224e3 !important;
+	color: #454545 !important;
 	border-bottom: none !important;
 }
 
 .sub-menu li.current-menu-item a:hover {
-	color: #8224e3 !important;
+	color: #454545 !important;
 }
 
 .sub-menu li.current-menu-item > a:before {
@@ -681,7 +691,7 @@ a.added_to_cart,
 
 .main-navigation a,
 .main-navigation a:visited {
-	color: #8224e3;
+	color: #454545;
 	display: block;
 	font-size: 16px;
 	font-weight: 700;
@@ -922,11 +932,21 @@ section#primary {
 	margin-bottom: 24px;
 }
 
+@media screen and (max-width:600px) {
+	div#primary,
+	section#primary {
+		float: left;
+		width: 100%;
+	}
+}
+
 .hentry {
 	background: #FFF;
 	border-radius: 3px;
 	box-shadow: 0 2px 0 rgba(0,0,0,0.1);
+	float: left;
 	padding: 0;
+	width: 100%;
 }
 
 /* Entry title */
@@ -971,7 +991,7 @@ h2.entry-title a:visited {
 
 h1.entry-title a:hover,
 h2.entry-title a:hover {
-	color: #8224e3;
+	color: #454545;
 }
 
 span.entry-subtitle {
@@ -1428,7 +1448,7 @@ i.fa.fa-comment.hide-comments {
  */
 
 h2.wpd-title {
-	color: #AAA;
+	color: #454545;
 }
 
 h2.wpd-title:after {
@@ -1437,13 +1457,28 @@ h2.wpd-title:after {
 	margin: 12px auto;
 	background: #DDD;
 	height: 4px;
-	width: 48px;
+	width: 42px;
 }
 
 body.home .wpd-title {
-	font-size: 36px;
+	font-size: 34px;
 	line-height: 1;
     text-align: center;
+}
+
+body.wp-dispensary.dispensary-menu h1.entry-title {
+    font-size: 48px;
+	line-height: 1;
+	text-align: center;
+}
+
+body.wp-dispensary.dispensary-menu h1.entry-title span.entry-title-primary:after {
+	content: '';
+	display: block;
+	margin: 12px auto;
+	background: #DDD;
+	height: 4px;
+	width: 42px;
 }
 
 body.home .metaslider {
@@ -1470,6 +1505,13 @@ body.home .tp-caption.Newspaper-Subtitle, .Newspaper-Subtitle {
 div#secondary {
     margin-top: 42px;
 	margin-bottom: 24px;
+}
+
+@media screen and (max-width:600px) {
+	div#secondary {
+		float: left;
+		width: 100%;
+	}
 }
 
 .widget-area .widget {
@@ -1852,7 +1894,7 @@ ol.comment-list ol.children li:last-child {
 
 .woocommerce .woocommerce-product-rating .star-rating,
 .woocommerce .star-rating span::before {
-	color: #8224e3;
+	color: #454545;
 }
 
 .woocommerce-cart table.cart td.actions .coupon .input-text {
@@ -1876,13 +1918,13 @@ ol.comment-list ol.children li:last-child {
 
 .woocommerce ul.products li.product a h3,
 .woocommerce ul.products li.product a:visited h3 {
-    color: #8224e3;
+    color: #454545;
 }
 
 .woocommerce ul.products li.product a:hover h3,
 .woocommerce ul.products li.product a:active h3,
 .woocommerce ul.products li.product a:focus h3 {
-    color: #8224e3;
+    color: #454545;
 }
 
 .woocommerce-checkout #payment .payment_method_paypal .about_paypal {
@@ -1918,7 +1960,7 @@ ol.comment-list ol.children li:last-child {
 }
 
 .woocommerce ul.products li.product a.woocommerce-LoopProduct-link {
-	color: #8224e3;
+	color: #454545;
 }
 
 .woocommerce ul.products li.product a.woocommerce-LoopProduct-link:hover {
