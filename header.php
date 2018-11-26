@@ -19,6 +19,28 @@
 <!--[if IE]>
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/css/ie.css" />
 <![endif]-->
+
+<?php
+/**
+ * @todo move this script to the wpd-ecommerce plugin
+ */
+?>
+<?php
+if ( is_home() ) {
+	$pushState = get_bloginfo( 'home' );
+} else {
+	$pushState = get_the_permalink();
+} ?>
+<?php
+/*
+<script>
+    if(typeof window.history.pushState == 'function') {
+        window.history.pushState({}, "Hide", '<?php echo $pushState ?>');
+    }
+</script>
+*/
+?>
+
 <?php wp_head(); ?>
 
 <?php if ( 'on' === get_theme_mod( 'cannabiz_stickyhead' ) || '' === get_theme_mod( 'cannabiz_stickyhead' ) ) { ?>
