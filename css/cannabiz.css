@@ -1898,7 +1898,7 @@ ol.comment-list ol.children li:last-child {
 }
 
 .woocommerce-cart table.cart td.actions .coupon .input-text {
-	padding: 10px;
+	padding: 5px 10px;
 }
 
 .woocommerce-page #content table.cart td.actions #coupon_code.input-text {
@@ -2147,6 +2147,28 @@ p.woocommerce-mini-cart__empty-message {
 	height: 38px;
 }
 
+/** WooCommerce Checkout Coupon Code */
+
+.woocommerce form.checkout_coupon .form-row input.input-text {
+    padding: 6px 10px;
+}
+
+/** WooCommerce checkout different shipping address */
+
+h3#ship-to-different-address {
+    font-size: 24px;
+    line-height: 1.4;
+    margin-top: 28px;
+}
+
+label.woocommerce-form__label.woocommerce-form__label-for-checkbox.checkbox {
+    margin-top: 0;
+}
+
+input#ship-to-different-address-checkbox {
+    margin-top: 12px;
+}
+
 /** WooCommerce checkout payment method */
 
 #add_payment_method #payment,
@@ -2187,6 +2209,19 @@ p.woocommerce-mini-cart__empty-message {
     left: 0;
     margin: -1em 0 0 2em;
 }
+
+/** WooCommerce Error notices */
+
+.hentry ul.woocommerce-error li:before {
+	display: none;
+}
+
+/** WooCommerce Shipping Methods */
+
+ul#shipping_method li:before {
+	display: none;
+}
+
 /** Delivery Drivers for WooCommerce Styles */
 
 .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--driver-dashboard a:before {
