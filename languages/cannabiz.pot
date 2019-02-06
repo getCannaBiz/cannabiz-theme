@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: CannaBiz\n"
-"POT-Creation-Date: 2018-09-27 00:09-0400\n"
-"PO-Revision-Date: 2018-09-27 00:07-0400\n"
+"POT-Creation-Date: 2019-02-04 13:31-0500\n"
+"PO-Revision-Date: 2019-02-04 13:31-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -40,39 +40,45 @@ msgstr ""
 #: archive-concentrates.php:27 archive-edibles.php:35 archive-flowers.php:35
 #: archive-gear.php:35 archive-growers.php:35 archive-prerolls.php:35
 #: archive-tinctures.php:35 archive-topicals.php:35 index.php:38
-#: taxonomy-aroma.php:35 taxonomy-concentrates_category.php:35
-#: taxonomy-condition.php:35 taxonomy-edibles_category.php:35
-#: taxonomy-effect.php:35 taxonomy-flavor.php:35
-#: taxonomy-flowers_category.php:35 taxonomy-growers_category.php:35
-#: taxonomy-ingredients.php:35 taxonomy-symptom.php:35
-#: taxonomy-topicals_category.php:35 taxonomy-vendor.php:35
-#: taxonomy-wpd_gear_category.php:35 taxonomy-wpd_tinctures_category.php:35
+#: taxonomy-allergens.php:35 taxonomy-aroma.php:35
+#: taxonomy-concentrates_category.php:35 taxonomy-condition.php:35
+#: taxonomy-edibles_category.php:35 taxonomy-effect.php:35
+#: taxonomy-flavor.php:35 taxonomy-flowers_category.php:35
+#: taxonomy-growers_category.php:35 taxonomy-ingredients.php:35
+#: taxonomy-shelf_type.php:35 taxonomy-strain_type.php:35
+#: taxonomy-symptom.php:35 taxonomy-topicals_category.php:35
+#: taxonomy-vendor.php:35 taxonomy-wpd_gear_category.php:35
+#: taxonomy-wpd_tinctures_category.php:35
 msgid "<i class=\"fa fa-chevron-left\"></i>"
 msgstr ""
 
 #: archive-concentrates.php:28 archive-edibles.php:36 archive-flowers.php:36
 #: archive-gear.php:36 archive-growers.php:36 archive-prerolls.php:36
 #: archive-tinctures.php:36 archive-topicals.php:36 index.php:39
-#: taxonomy-aroma.php:36 taxonomy-concentrates_category.php:36
-#: taxonomy-condition.php:36 taxonomy-edibles_category.php:36
-#: taxonomy-effect.php:36 taxonomy-flavor.php:36
-#: taxonomy-flowers_category.php:36 taxonomy-growers_category.php:36
-#: taxonomy-ingredients.php:36 taxonomy-symptom.php:36
-#: taxonomy-topicals_category.php:36 taxonomy-vendor.php:36
-#: taxonomy-wpd_gear_category.php:36 taxonomy-wpd_tinctures_category.php:36
+#: taxonomy-allergens.php:36 taxonomy-aroma.php:36
+#: taxonomy-concentrates_category.php:36 taxonomy-condition.php:36
+#: taxonomy-edibles_category.php:36 taxonomy-effect.php:36
+#: taxonomy-flavor.php:36 taxonomy-flowers_category.php:36
+#: taxonomy-growers_category.php:36 taxonomy-ingredients.php:36
+#: taxonomy-shelf_type.php:36 taxonomy-strain_type.php:36
+#: taxonomy-symptom.php:36 taxonomy-topicals_category.php:36
+#: taxonomy-vendor.php:36 taxonomy-wpd_gear_category.php:36
+#: taxonomy-wpd_tinctures_category.php:36
 msgid "<i class=\"fa fa-chevron-right\"></i>"
 msgstr ""
 
 #: archive-concentrates.php:29 archive-edibles.php:37 archive-flowers.php:37
 #: archive-gear.php:37 archive-growers.php:37 archive-prerolls.php:37
 #: archive-tinctures.php:37 archive-topicals.php:37 index.php:40
-#: taxonomy-aroma.php:37 taxonomy-concentrates_category.php:37
-#: taxonomy-condition.php:37 taxonomy-edibles_category.php:37
-#: taxonomy-effect.php:37 taxonomy-flavor.php:37
-#: taxonomy-flowers_category.php:37 taxonomy-growers_category.php:37
-#: taxonomy-ingredients.php:37 taxonomy-symptom.php:37
-#: taxonomy-topicals_category.php:37 taxonomy-vendor.php:37
-#: taxonomy-wpd_gear_category.php:37 taxonomy-wpd_tinctures_category.php:37
+#: taxonomy-allergens.php:37 taxonomy-aroma.php:37
+#: taxonomy-concentrates_category.php:37 taxonomy-condition.php:37
+#: taxonomy-edibles_category.php:37 taxonomy-effect.php:37
+#: taxonomy-flavor.php:37 taxonomy-flowers_category.php:37
+#: taxonomy-growers_category.php:37 taxonomy-ingredients.php:37
+#: taxonomy-shelf_type.php:37 taxonomy-strain_type.php:37
+#: taxonomy-symptom.php:37 taxonomy-topicals_category.php:37
+#: taxonomy-vendor.php:37 taxonomy-wpd_gear_category.php:37
+#: taxonomy-wpd_tinctures_category.php:37
 msgid "Page"
 msgstr ""
 
@@ -182,7 +188,7 @@ msgstr ""
 msgid "(overrides Customizer setting)"
 msgstr ""
 
-#: header.php:36
+#: header.php:58
 msgid "Skip to content"
 msgstr ""
 
@@ -666,27 +672,31 @@ msgstr ""
 msgid "% Comments"
 msgstr ""
 
+#: inc/template-tags.php:33 inc/template-tags.php:170
+msgid "Price"
+msgstr ""
+
 #. translators: %s: Name of current post
-#: inc/template-tags.php:228
+#: inc/template-tags.php:221
 #, php-format
 msgid "Edit %s"
 msgstr ""
 
-#: inc/template-tags.php:259
+#: inc/template-tags.php:252
 #, php-format
 msgctxt "post date"
 msgid "%s"
 msgstr ""
 
-#: inc/template-tags.php:281
+#: inc/template-tags.php:274
 msgid "0"
 msgstr ""
 
-#: inc/template-tags.php:281
+#: inc/template-tags.php:274
 msgid "1"
 msgstr ""
 
-#: inc/template-tags.php:281
+#: inc/template-tags.php:274
 msgid "%"
 msgstr ""
 
@@ -741,19 +751,19 @@ msgstr ""
 msgid "Nothing Found"
 msgstr ""
 
-#: template-parts/content-none.php:20
+#: template-parts/content-none.php:17
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: template-parts/content-none.php:24
+#: template-parts/content-none.php:21
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
 
-#: template-parts/content-none.php:29
+#: template-parts/content-none.php:26
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
