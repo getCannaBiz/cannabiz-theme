@@ -27,7 +27,7 @@
 ?>
 <?php
 if ( is_home() ) {
-	$pushState = get_bloginfo( 'home' );
+	$pushState = get_bloginfo( 'url' );
 } else {
 	$pushState = get_the_permalink();
 } ?>
