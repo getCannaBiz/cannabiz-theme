@@ -170,7 +170,7 @@ function cannabiz_widgets_init() {
 add_action( 'widgets_init', 'cannabiz_widgets_init' );
 
 function wp_dispensary_sidebars() {
-	if( class_exists( 'WP_Dispensary' ) ) {
+	if ( class_exists( 'WP_Dispensary' ) ) {
 		register_sidebar( array(
 			'name'          => esc_html__( 'Sidebar Flowers', 'cannabiz' ),
 			'id'            => 'sidebar-flowers',
@@ -239,14 +239,14 @@ function cannabiz_scripts() {
 
 	wp_enqueue_style( 'cannabiz-fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
 
-	wp_enqueue_script( 'cannabiz-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20180917', true );
-	wp_enqueue_script( 'cannabiz-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20180917', true );
-	wp_enqueue_script( 'cannabiz-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '20180917', true );
-	wp_enqueue_script( 'cannabiz-hoverIntent', get_template_directory_uri() . '/js/hoverIntent.min.js', array(), '20180917', true );
-	wp_enqueue_script( 'cannabiz-js', get_template_directory_uri() . '/js/cannabiz.min.js', array(), '20180917', true );
+	wp_enqueue_script( 'cannabiz-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20190204', true );
+	wp_enqueue_script( 'cannabiz-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20190204', true );
+	wp_enqueue_script( 'cannabiz-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '20190204', true );
+	wp_enqueue_script( 'cannabiz-hoverIntent', get_template_directory_uri() . '/js/hoverIntent.min.js', array(), '20190204', true );
+	wp_enqueue_script( 'cannabiz-js', get_template_directory_uri() . '/js/cannabiz.min.js', array(), '20190204', true );
 
 	if( class_exists( 'WP_Dispensary' ) ) {
-		wp_enqueue_script( 'cannabiz-wpd-js', get_template_directory_uri() . '/js/wp-dispensary.js', array(), '20180917', true );
+		wp_enqueue_script( 'cannabiz-wpd-js', get_template_directory_uri() . '/js/wp-dispensary.js', array(), '20190204', true );
 	}
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
