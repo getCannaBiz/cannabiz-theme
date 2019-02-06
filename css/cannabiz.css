@@ -931,7 +931,7 @@ section#primary {
 	margin-bottom: 24px;
 }
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:1100px) {
 	div#primary,
 	section#primary {
 		float: left;
@@ -1506,9 +1506,10 @@ div#secondary {
 	margin-bottom: 24px;
 }
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:1100px) {
 	div#secondary {
 		float: left;
+		margin-top: 0;
 		width: 100%;
 	}
 }
