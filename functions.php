@@ -347,7 +347,7 @@ function cannabiz_page_title( $value ) {
 function page_title_add_meta_box() {
 	add_meta_box(
 		'large_page_title',
-		__( 'Large Page Title', 'wp-dispensary' ),
+		__( 'Large Page Title', 'cannabiz' ),
 		'page_title_html',
 		array ( 'page' ),
 		'side',
@@ -361,7 +361,7 @@ function page_title_html( $post) {
 	<style>span.muted-text {color: #ccc;}</style>
 	<p>
 		<input type="checkbox" name="page_title" id="page_title" value="add_page_title" <?php echo ( cannabiz_page_title( 'page_title' ) === 'add_page_title' ) ? 'checked' : ''; ?>>
-		<label for="page_title"><?php _e( 'Display', 'wp-dispensary' ); ?> <span class="muted-text"><?php _e( '(overrides Customizer setting)', 'wp-dispensary' ); ?></span></label>
+		<label for="page_title"><?php _e( 'Display', 'cannabiz' ); ?> <span class="muted-text"><?php _e( '(overrides Customizer setting)', 'cannabiz' ); ?></span></label>
 	</p><?php
 }
 
