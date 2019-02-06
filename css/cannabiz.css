@@ -1948,6 +1948,10 @@ ol.comment-list ol.children li:last-child {
 	color: #76BD1D;
 }
 
+.woocommerce ul.products li.product .price {
+	text-align: center;
+}
+
 .woocommerce-variation-price {
     margin-bottom: 12px;
 }
