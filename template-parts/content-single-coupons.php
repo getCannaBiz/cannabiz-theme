@@ -16,7 +16,7 @@
 
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/css/wpd-coupons.css" />
 
-<?php if ( get_theme_mod('cannabiz_logo') !='' ) { ?>
+<?php if ( '' != get_theme_mod( 'cannabiz_logo' ) ) { ?>
 	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="coupons-single-logo"><img src="<?php echo get_theme_mod( 'cannabiz_logo' ); ?>" alt="<?php bloginfo( 'name' ); ?>" /></a>
 <?php } ?>
 
