@@ -1233,59 +1233,61 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 		)
 	);
 
-	/* Leafly URL */
-	$wp_customize->add_setting(
-		'cannabiz_social_leafly',
-		array(
-			'default'            => '',
-			'sanitize_callback'  => 'cannabiz_sanitize_input',
-			'transport'          => 'refresh'
-		)
-	);
-	$wp_customize->add_control(
-		'cannabiz_social_leafly',
-		array(
-			'section'  => 'cannabiz_social',
-			'label'    => 'Leafly',
-			'type'     => 'text'
-		)
-	);
+	if ( class_exists( 'WP_Dispensary' ) || class_exists( 'WPD_Details' ) ) {
+		/* Leafly URL */
+		$wp_customize->add_setting(
+			'cannabiz_social_leafly',
+			array(
+				'default'            => '',
+				'sanitize_callback'  => 'cannabiz_sanitize_input',
+				'transport'          => 'refresh'
+			)
+		);
+		$wp_customize->add_control(
+			'cannabiz_social_leafly',
+			array(
+				'section'  => 'cannabiz_social',
+				'label'    => 'Leafly',
+				'type'     => 'text'
+			)
+		);
 
-	/* Massroots URL */
-	$wp_customize->add_setting(
-		'cannabiz_social_massroots',
-		array(
-			'default'            => '',
-			'sanitize_callback'  => 'cannabiz_sanitize_input',
-			'transport'          => 'refresh'
-		)
-	);
-	$wp_customize->add_control(
-		'cannabiz_social_massroots',
-		array(
-			'section'  => 'cannabiz_social',
-			'label'    => 'Massroots',
-			'type'     => 'text'
-		)
-	);
+		/* Massroots URL */
+		$wp_customize->add_setting(
+			'cannabiz_social_massroots',
+			array(
+				'default'            => '',
+				'sanitize_callback'  => 'cannabiz_sanitize_input',
+				'transport'          => 'refresh'
+			)
+		);
+		$wp_customize->add_control(
+			'cannabiz_social_massroots',
+			array(
+				'section'  => 'cannabiz_social',
+				'label'    => 'Massroots',
+				'type'     => 'text'
+			)
+		);
 
-	/* Weedmaps URL */
-	$wp_customize->add_setting(
-		'cannabiz_social_weedmaps',
-		array(
-			'default'            => '',
-			'sanitize_callback'  => 'cannabiz_sanitize_input',
-			'transport'          => 'refresh'
-		)
-	);
-	$wp_customize->add_control(
-		'cannabiz_social_weedmaps',
-		array(
-			'section'  => 'cannabiz_social',
-			'label'    => 'Weedmaps',
-			'type'     => 'text'
-		)
-	);
+		/* Weedmaps URL */
+		$wp_customize->add_setting(
+			'cannabiz_social_weedmaps',
+			array(
+				'default'            => '',
+				'sanitize_callback'  => 'cannabiz_sanitize_input',
+				'transport'          => 'refresh'
+			)
+		);
+		$wp_customize->add_control(
+			'cannabiz_social_weedmaps',
+			array(
+				'section'  => 'cannabiz_social',
+				'label'    => 'Weedmaps',
+				'type'     => 'text'
+			)
+		);
+	}
 
 	/* Twitter URL */
 	$wp_customize->add_setting(
