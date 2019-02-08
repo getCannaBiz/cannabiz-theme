@@ -2409,7 +2409,9 @@ p.woocommerce-form-row.form-row span em {
 	body.tax-symptom .hentry,
 	body.tax-ingredients .hentry,
 	body.tax-vendor .hentry,
-	body.tax-allergens .hentry {
+	body.tax-allergens .hentry,
+	body.tax-shelf_type .hentry,
+	body.tax-strain_type .hentry {
 		float: left;
 		margin: 1%;
 		width: 48%;
@@ -2470,7 +2472,9 @@ p.woocommerce-form-row.form-row span em {
 	body.tax-symptom .hentry,
 	body.tax-ingredients .hentry,
 	body.tax-vendor .hentry,
-	body.tax-allergens .hentry {
+	body.tax-allergens .hentry,
+	body.tax-shelf_type .hentry,
+	body.tax-strain_type .hentry {
 		float: left;
 		margin: 1%;
 		width: 98%;
