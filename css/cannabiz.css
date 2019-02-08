@@ -2309,6 +2309,67 @@ p.woocommerce-form-row.form-row span em {
     color: #AAA;
 }
 
+/** Dokan Multivendor Marketplace */
+
+.hentry .dokan-dashboard-wrap li:before {
+	display: none;
+}
+
+@media screen and (min-width:768px) {
+	.hentry .dokan-dashboard .dokan-dashboard-content {
+		width: 78%;
+	}
+
+	.hentry .dokan-dashboard .dokan-dash-sidebar {
+		width: 22%;
+	}
+}
+
+.hentry .dokan-dashboard .dokan-dashboard-content article.dashboard-content-area .dashboard-widget.big-counter ul {
+	padding-left: 0;
+}
+
+.hentry .dokan-dashboard-content ul.list-unstyled.list-count {
+    padding-left: 0;
+}
+
+.hentry .dokan-store-sidebar ul {
+	padding-left: 0;
+}
+
+.hentry .dokan-store-sidebar ul li:before,
+.hentry .dokan-single-store ul li:before {
+	display: none;
+}
+
+/** Dokan - Buttons */
+
+.hentry input[type="submit"].dokan-btn-theme,
+.hentry a.dokan-btn-theme,
+.hentry .dokan-btn-theme {
+    color: #FFF;
+    background: #76bd1d;
+	border-color: #76bd1d;
+}
+
+.hentry input[type="submit"].dokan-btn-theme:hover,
+.hentry a.dokan-btn-theme:hover,
+.hentry .dokan-btn-theme:hover,
+.hentry input[type="submit"].dokan-btn-theme:focus,
+.hentry a.dokan-btn-theme:focus,
+.hentry .dokan-btn-theme:focus,
+.hentry input[type="submit"].dokan-btn-theme:active,
+.hentry a.dokan-btn-theme:active,
+.hentry .dokan-btn-theme:active,
+.hentry input[type="submit"].dokan-btn-theme.active,
+.hentry a.dokan-btn-theme.active,
+.hentry .dokan-btn-theme.active,
+.hentry .open .dropdown-toggleinput[type="submit"].dokan-btn-theme,
+.hentry .open .dropdown-togglea.dokan-btn-theme,
+.hentry .open .dropdown-toggle.dokan-btn-theme {
+	background: #83d122;
+	border-color: #83d122;
+}
 /*--------------------------------------------------------------
 ## Gutenberg
 --------------------------------------------------------------*/
