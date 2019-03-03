@@ -298,10 +298,10 @@ function cannabiz_wrapper_end() {
 		</div>';
 }
 
-add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
     add_theme_support( 'woocommerce' );
 }
+add_action( 'after_setup_theme', 'woocommerce_support' );
 
 // Add WooCommerce Product Gallery Support.
 add_theme_support( 'wc-product-gallery-zoom' );
@@ -311,15 +311,15 @@ add_theme_support( 'wc-product-gallery-slider' );
 /**
  * Custom PayPal button text
  */
-add_filter( 'gettext', 'cannabiz_paypal_button', 20, 3 );
 function cannabiz_paypal_button( $translated_text, $text, $domain ) {
 	switch ( $translated_text ) {
-	case 'Proceed to PayPal' :
-	$translated_text = __( 'Pay Now!', 'cannabiz' );
-break;
-}
+		case 'Proceed to PayPal' :
+		$translated_text = __( 'Pay Now!', 'cannabiz' );
+		break;
+	}
 	return $translated_text;
 }
+add_filter( 'gettext', 'cannabiz_paypal_button', 20, 3 );
 
 /**
  * Add "CannaBiz" submenu to WPD admin menu

@@ -98,7 +98,7 @@ if ( is_home() ) {
 				<div class="col-lg-12">
 					<div class="site-branding">
 					<?php do_action( 'cannabiz_logo_before' ); ?>
-					<?php if ( get_theme_mod('cannabiz_logo') !='' ) { ?>
+					<?php if ( '' != get_theme_mod( 'cannabiz_logo' ) ) { ?>
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_theme_mod( 'cannabiz_logo' ); ?>" alt="<?php bloginfo( 'name' ); ?>" /></a>
 					<?php } else { ?>
 						<?php if ( is_front_page() && is_home() ) : ?>
