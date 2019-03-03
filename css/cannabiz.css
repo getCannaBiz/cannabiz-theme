@@ -2370,6 +2370,34 @@ p.woocommerce-form-row.form-row span em {
 	background: #83d122;
 	border-color: #83d122;
 }
+
+/** Dokan - Vendor Info Tab */
+
+div#tab-seller ul {
+    padding-left: 0;
+}
+
+div#tab-seller ul li:before {
+	display: none;
+}
+
+div#tab-seller ul li {
+	margin-bottom: 0.5em;
+}
+
+/** Dokan - Cart Widget */
+
+.woocommerce ul.cart_list li dl dd, .woocommerce ul.product_list_widget li dl dt.variation-Vendor,
+.woocommerce ul.cart_list li dl dd, .woocommerce ul.product_list_widget li dl dd.variation-Vendor {
+	font-size: 13px;
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+}
+
+.woocommerce ul.cart_list li dl dd, .woocommerce ul.product_list_widget li dl dd.variation-Vendor p {
+    margin-top: 0 !important;
+}
+
 /*--------------------------------------------------------------
 ## Gutenberg
 --------------------------------------------------------------*/
