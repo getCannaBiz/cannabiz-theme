@@ -2421,6 +2421,12 @@ div#tab-seller ul li {
     margin-top: 0 !important;
 }
 
+/** Dokan - Checkout product list */
+
+.woocommerce td.product-name dl.variation {
+    font-size: 12px;
+}
+
 /*--------------------------------------------------------------
 ## Gutenberg
 --------------------------------------------------------------*/
