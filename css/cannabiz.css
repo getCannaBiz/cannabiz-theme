@@ -108,7 +108,8 @@ ol, ul {
 }
 
 .hentry ul.products li:before,
-.hentry ul.page-numbers li:before {
+.hentry ul.page-numbers li:before,
+.hentry ul li.blocks-gallery-item:before {
 	display: none;
 }
 
