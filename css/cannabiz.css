@@ -2173,9 +2173,9 @@ p.woocommerce-mini-cart__empty-message {
 /** WooCommerce checkout different shipping address */
 
 h3#ship-to-different-address {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 1.4;
-    margin-top: 28px;
+    margin: 24px 0;
 }
 
 label.woocommerce-form__label.woocommerce-form__label-for-checkbox.checkbox {
