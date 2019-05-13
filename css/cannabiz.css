@@ -2228,6 +2228,10 @@ input#ship-to-different-address-checkbox {
     margin: -1em 0 0 2em;
 }
 
+.entry-content .woocommerce-MyAccount-content form p {
+    margin: 12px 0;
+}
+
 /** WooCommerce Error notices */
 
 .hentry ul.woocommerce-error li:before {
