@@ -2309,6 +2309,29 @@ p.woocommerce-form-row.form-row span em {
     color: #AAA;
 }
 
+/** WooCommerce Messages */
+
+.woocommerce-message {
+	border-top-color: #76bd1d;
+	line-height: 2;
+}
+
+.woocommerce-message::before {
+    content: '\e015';
+    color: #76bd1d;
+}
+
+.entry-content .woocommerce_message:last-child {
+	margin-bottom: 2em;
+}
+
+/** WooCommerce Order Thank You Page */
+
+.woocommerce ul.order_details li {
+    margin-right: 1em;
+    padding-right: 1em;
+}
+
 /** Dokan Multivendor Marketplace */
 
 .hentry .dokan-dashboard-wrap li:before {
