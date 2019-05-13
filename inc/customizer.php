@@ -1736,6 +1736,8 @@ function cannabiz_customizer_css() {
 		}
 	<?php } ?>
 	<?php if ( '' != get_theme_mod( 'cannabiz_button_color' ) || null != get_theme_mod( 'cannabiz_button_color' ) ) { ?>
+		a.button.wpd-buy-btn,
+		a.button.wpd-buy-btn:visited,
 		a.button.wpd-connect-btn.buy-now,
 		a.button.wpd-connect-btn.buy-now:visited {
 			background: transparent;
@@ -1750,6 +1752,7 @@ function cannabiz_customizer_css() {
 			box-shadow: none;
 			color: <?php echo get_theme_mod( 'cannabiz_button_color' ); ?>;
 		}
+		a.button.wpd-buy-btn:hover,
 		a.button.wpd-connect-btn.buy-now:hover {
 			background: <?php echo get_theme_mod( 'cannabiz_button_color' ); ?>;
 			border: 1px solid <?php echo get_theme_mod( 'cannabiz_button_color' ); ?>;
