@@ -1815,7 +1815,8 @@ function cannabiz_customizer_css() {
 		}
 	<?php } ?>
 	<?php if ( '' != get_theme_mod( 'cannabiz_background_header_color' ) || null != get_theme_mod( 'cannabiz_background_header_color' ) ) { ?>
-		.site-header {
+		.site-header,
+		.main-navigation ul ul {
 			background-color: <?php echo get_theme_mod( 'cannabiz_background_header_color' ); ?>;
 		}
 		.main-navigation ul ul:before {
