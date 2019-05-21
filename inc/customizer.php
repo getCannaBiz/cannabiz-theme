@@ -1505,6 +1505,24 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 		)
 	);
 
+	/* Yelp URL */
+	$wp_customize->add_setting(
+		'cannabiz_social_yelp',
+		array(
+			'default'            => '',
+			'sanitize_callback'  => 'cannabiz_sanitize_input',
+			'transport'          => 'refresh'
+		)
+	);
+	$wp_customize->add_control(
+		'cannabiz_social_yelp',
+		array(
+			'section'  => 'cannabiz_social',
+			'label'    => 'Yelp',
+			'type'     => 'text'
+		)
+	);
+
 	/* RSS URL */
 	$wp_customize->add_setting(
 		'cannabiz_social_rss',

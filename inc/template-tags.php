@@ -366,7 +366,11 @@ function cannabiz_social_icons() {
 		<a href="<?php echo get_theme_mod( 'cannabiz_social_tumblr' ); ?>" target="_blank"><i class="fa fa-tumblr" aria-hidden="true"></i></a>
 	<?php }
 
-	if ( get_theme_mod( 'cannabiz_social_rss' ) !='' ) { ?>
+	if ( '' != get_theme_mod( 'cannabiz_social_yelp' ) ) { ?>
+		<a href="<?php echo get_theme_mod( 'cannabiz_social_yelp' ); ?>" target="_blank"><i class="fa fa-yelp" aria-hidden="true"></i></a>
+	<?php }
+
+	if ( '' != get_theme_mod( 'cannabiz_social_rss' ) ) { ?>
 		<a href="<?php echo get_theme_mod( 'cannabiz_social_rss' ); ?>" target="_blank"><i class="fa fa-rss" aria-hidden="true"></i></a>
 	<?php }
 
