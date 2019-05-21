@@ -394,6 +394,7 @@ function cannabiz_title_large() {
 	?>
 	<?php if ( 'show' === get_theme_mod( 'cannabiz_pages_show_title' ) || get_post_meta( get_the_ID(), 'page_title', true ) ) { ?>
 		<?php if ( is_front_page() && ! is_home() || is_page() || is_home() && ! is_front_page() || is_post_type_archive() ) { ?>
+		<?php do_action( 'cannabiz_titlelarge_before' ); ?>
 		<div class="titlelarge">
 			<div class="container">
 				<div class="row site-intro">
@@ -410,6 +411,7 @@ function cannabiz_title_large() {
 				</div><!-- .row -->
 			</div><!-- .container -->
 		</div>
+		<?php do_action( 'cannabiz_titlelarge_after' ); ?>
 		<?php } ?>
 	<?php }
 }
