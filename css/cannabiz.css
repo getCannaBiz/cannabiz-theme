@@ -1690,7 +1690,7 @@ input.search-field {
 
 .site-footer .widget ul {
 	list-style: none;
-    margin: 0 0 12px 0;
+    margin: 0;
     padding: 0;
 }
 
@@ -1771,7 +1771,7 @@ input.search-field {
 	color: rgba(255,255,255,0.5);
 }
 
-.site-footer .menu {
+.site-footer .col-lg-6.menu {
 	color: #FFF;
 	font-size: 14px;
 	font-weight: 300;
@@ -1779,22 +1779,22 @@ input.search-field {
 	text-align: right;
 }
 
-.site-footer .menu a,
-.site-footer .menu a:visited {
+.site-footer .col-lg-6.menu a,
+.site-footer .col-lg-6.menu a:visited {
 	color: #FFF;
 }
 
-.site-footer .menu a:hover {
+.site-footer .col-lg-6.menu a:hover {
 	color: rgba(255,255,255,0.5);
 }
 
-.site-footer .menu ul {
+.site-footer .col-lg-6.menu ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
-.site-footer .menu ul li {
+.site-footer .col-lg-6.menu ul li {
 	display: inline-block;
 	margin-left: 5px;
 }
