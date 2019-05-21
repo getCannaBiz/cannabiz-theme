@@ -1809,7 +1809,7 @@ function cannabiz_customizer_css() {
 			font-size: <?php echo get_theme_mod( 'cannabiz_blogtitle_size' ); ?>px;
 		}
 	<?php } ?>
-	<?php if ( get_theme_mod( 'cannabiz_title_font_weight' ) !='' ) { ?>
+	<?php if ( '' != get_theme_mod( 'cannabiz_title_font_weight' ) ) { ?>
 		.site-title {
 			font-weight: <?php echo get_theme_mod( 'cannabiz_title_font_weight' ); ?>00;
 		}
