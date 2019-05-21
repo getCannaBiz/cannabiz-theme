@@ -135,7 +135,8 @@ function cannabiz_posted_on() {
 				'growers_category',
 				'wpd_gear_category',
 				'wpd_tinctures_category',
-
+				'strain_type',
+				'shelf_type'
 			)
 		)
 	) {
