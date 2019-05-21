@@ -306,63 +306,63 @@ if ( ! function_exists( 'cannabiz_social_icons' ) ) :
  */
 function cannabiz_social_icons() {
 
-	if ( get_theme_mod( 'cannabiz_social_leafly' ) !='' ) { ?>
+	if ( '' != get_theme_mod( 'cannabiz_social_leafly' ) ) { ?>
 		<a href="<?php echo get_theme_mod( 'cannabiz_social_leafly' ); ?>" target="_blank" class="social-leafly"></a>
 	<?php }
 
-	if ( get_theme_mod( 'cannabiz_social_massroots' ) !='' ) { ?>
+	if ( '' != get_theme_mod( 'cannabiz_social_massroots' ) ) { ?>
 		<a href="<?php echo get_theme_mod( 'cannabiz_social_massroots' ); ?>" target="_blank" class="social-massroots"></a>
 	<?php }
 
-	if ( get_theme_mod( 'cannabiz_social_weedmaps' ) !='' ) { ?>
+	if ( '' != get_theme_mod( 'cannabiz_social_weedmaps' ) ) { ?>
 		<a href="<?php echo get_theme_mod( 'cannabiz_social_weedmaps' ); ?>" target="_blank" class="social-weedmaps"></a>
 	<?php }
 
-	if ( get_theme_mod( 'cannabiz_social_twitter' ) !='' ) { ?>
+	if ( '' != get_theme_mod( 'cannabiz_social_twitter' ) ) { ?>
 		<a href="<?php echo get_theme_mod( 'cannabiz_social_twitter' ); ?>" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 	<?php }
 
-	if ( get_theme_mod( 'cannabiz_social_facebook' ) !='' ) { ?>
+	if ( '' != get_theme_mod( 'cannabiz_social_facebook' ) ) { ?>
 		<a href="<?php echo get_theme_mod( 'cannabiz_social_facebook' ); ?>" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 	<?php }
 
-	if ( get_theme_mod( 'cannabiz_social_instagram' ) !='' ) { ?>
+	if ( '' != get_theme_mod( 'cannabiz_social_instagram' ) ) { ?>
 		<a href="<?php echo get_theme_mod( 'cannabiz_social_instagram' ); ?>" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
 	<?php }
 
-	if ( get_theme_mod( 'cannabiz_social_google' ) !='' ) { ?>
+	if ( '' != get_theme_mod( 'cannabiz_social_google' ) ) { ?>
 		<a href="<?php echo get_theme_mod( 'cannabiz_social_google' ); ?>" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
 	<?php }
 
-	if ( get_theme_mod( 'cannabiz_social_snapchat' ) !='' ) { ?>
+	if ( '' != get_theme_mod( 'cannabiz_social_snapchat' ) ) { ?>
 		<a href="<?php echo get_theme_mod( 'cannabiz_social_snapchat' ); ?>" target="_blank"><i class="fa fa-snapchat-ghost" aria-hidden="true"></i></a>
 	<?php }
 
-	if ( get_theme_mod( 'cannabiz_social_github' ) !='' ) { ?>
+	if ( get_theme_mod( 'cannabiz_social_github' ) ) { ?>
 		<a href="<?php echo get_theme_mod( 'cannabiz_social_github' ); ?>" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
 	<?php }
 
-	if ( get_theme_mod( 'cannabiz_social_wordpress' ) !='' ) { ?>
+	if ( '' != get_theme_mod( 'cannabiz_social_wordpress' ) ) { ?>
 		<a href="<?php echo get_theme_mod( 'cannabiz_social_wordpress' ); ?>" target="_blank"><i class="fa fa-wordpress" aria-hidden="true"></i></a>
 	<?php }
 
-	if ( get_theme_mod( 'cannabiz_social_linkedin' ) !='' ) { ?>
+	if ( '' != get_theme_mod( 'cannabiz_social_linkedin' ) ) { ?>
 		<a href="<?php echo get_theme_mod( 'cannabiz_social_linkedin' ); ?>" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
 	<?php }
 
-	if ( get_theme_mod( 'cannabiz_social_pinterest' ) !='' ) { ?>
+	if ( '' != get_theme_mod( 'cannabiz_social_pinterest' ) ) { ?>
 		<a href="<?php echo get_theme_mod( 'cannabiz_social_pinterest' ); ?>" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
 	<?php }
 
-	if ( get_theme_mod( 'cannabiz_social_medium' ) !='' ) { ?>
+	if ( '' != get_theme_mod( 'cannabiz_social_medium' ) ) { ?>
 		<a href="<?php echo get_theme_mod( 'cannabiz_social_medium' ); ?>" target="_blank"><i class="fa fa-medium" aria-hidden="true"></i></a>
 	<?php }
 
-	if ( get_theme_mod( 'cannabiz_social_youtube' ) !='' ) { ?>
+	if ( '' != get_theme_mod( 'cannabiz_social_youtube' ) ) { ?>
 		<a href="<?php echo get_theme_mod( 'cannabiz_social_youtube' ); ?>" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
 	<?php }
 
-	if ( get_theme_mod( 'cannabiz_social_tumblr' ) !='' ) { ?>
+	if ( '' != get_theme_mod( 'cannabiz_social_tumblr' ) ) { ?>
 		<a href="<?php echo get_theme_mod( 'cannabiz_social_tumblr' ); ?>" target="_blank"><i class="fa fa-tumblr" aria-hidden="true"></i></a>
 	<?php }
 
