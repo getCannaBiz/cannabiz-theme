@@ -55,7 +55,7 @@
 						$cannabiz_footer_designedby = '';
 						echo apply_filters( 'cannabiz_footer_designedby', $cannabiz_footer_designedby );
 					?>
-				</div><!-- .col-lg-12.copyright -->
+				</div><!-- .col-lg-6.copyright -->
 				<div class="col-lg-6 menu">
 					<?php if ( 'show' === get_theme_mod( 'cannabiz_footer_menu' ) || '' === get_theme_mod( 'cannabiz_footer_menu' ) ) {
 						$footermenu = wp_nav_menu(
