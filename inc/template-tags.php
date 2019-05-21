@@ -27,91 +27,9 @@ function cannabiz_posted_on() {
 	/**
 	 * Price - Edibles, Pre-rolls, Growers, Gear, Tinctures
 	 */
-	if ( is_post_type_archive( array( 'edibles', 'prerolls', 'growers', 'gear', 'tinctures' ) ) ) {
+	if ( is_post_type_archive( array( 'flowers', 'concentrates', 'edibles', 'prerolls', 'topicals', 'growers', 'gear', 'tinctures' ) ) ) {
 
-		if ( get_post_meta( get_the_ID(), '_priceeach', true ) ) {
-			echo '<strong> ' . __( 'Price', 'cannabiz' ) . ':</strong> ' . wpd_currency_code() . get_post_meta( get_the_id(), '_priceeach', true );
-		}
-
-		if ( get_post_meta( get_the_ID(), '_priceperpack', true ) ) {
-			echo ' &middot; ' . get_post_meta( get_the_id(), '_unitsperpack', true ) . ' for ' . wpd_currency_code() . get_post_meta( get_the_id(), '_priceperpack', true );
-		}
-
-	}
-
-	/**
-	 * Price - Topicals
-	 */
-	if ( is_post_type_archive( array( 'topicals' ) ) ) {
-
-		if ( get_post_meta( get_the_ID(), '_pricetopical', true ) ) {
-			echo wpd_currency_code() . get_post_meta( get_the_id(), '_pricetopical', true );
-		}
-
-	}
-
-	/**
-	 * Price - Flowers
-	 */
-	if ( is_post_type_archive( 'flowers' ) ) {
-
-		if ( get_post_meta( get_the_ID(), '_gram', true ) ) {
-			echo wpd_currency_code() . get_post_meta(get_the_id(), '_gram', true);
-		} elseif ( get_post_meta( get_the_ID(), '_eighth', true ) ) {
-			echo wpd_currency_code() . get_post_meta(get_the_id(), '_eighth', true);
-		} elseif ( get_post_meta( get_the_ID(), '_quarter', true ) ) {
-			echo wpd_currency_code() . get_post_meta(get_the_id(), '_quarter', true);
-		} elseif ( get_post_meta( get_the_ID(), '_halfounce', true ) ) {
-			echo wpd_currency_code() . get_post_meta(get_the_id(), '_halfounce', true);
-		}
-		echo " - ";
-		if ( get_post_meta( get_the_ID(), '_ounce', true ) ) {
-			echo wpd_currency_code() . get_post_meta( get_the_id(), '_ounce', true );
-		} elseif ( get_post_meta( get_the_ID(), '_halfounce', true ) ) {
-			echo wpd_currency_code() . get_post_meta( get_the_id(), '_halfounce', true );
-		} elseif ( get_post_meta( get_the_ID(), '_quarter', true ) ) {
-			echo wpd_currency_code() . get_post_meta( get_the_id(), '_quarter', true );
-		} elseif ( get_post_meta( get_the_ID(), '_eighth', true ) ) {
-			echo wpd_currency_code() . get_post_meta( get_the_id(), '_eighth', true );
-		} elseif ( get_post_meta( get_the_ID(), '_gram', true ) ) {
-			echo wpd_currency_code() . get_post_meta( get_the_id(), '_gram', true );
-		}
-
-	}
-	
-	/**
-	 * Price - Concentrates
-	 */
-	if ( is_post_type_archive( 'concentrates' ) ) {
-		if ( get_post_meta( get_the_ID(), '_priceeach', true ) ) {
-			$pricingeach = wpd_currency_code() . get_post_meta( get_the_id(), '_priceeach', true ) . ' each';
-		} else {
-			$pricingeach = '';
-		}
-
-		if ( get_post_meta( get_the_ID(), '_halfgram', true ) ) {
-			$halfgram = '<span class="wpd-productinfo"><strong>1/2g: </strong>' . wpd_currency_code() . get_post_meta( get_the_id(), '_halfgram', true ) .'</span>';
-		} else {
-			$halfgram = '';
-		}
-
-		if ( get_post_meta( get_the_ID(), '_gram', true ) ) {
-			$gram = '<span class="wpd-productinfo"><strong>1g: </strong>' . wpd_currency_code() . get_post_meta( get_the_id(), '_gram', true ) .'</span>';
-		} else {
-			$gram = '';
-		}
-
-		if ( get_post_meta( get_the_ID(), '_twograms', true ) ) {
-			$twograms = '<span class="wpd-productinfo"><strong>2g: </strong>' . wpd_currency_code() . get_post_meta( get_the_id(), '_twograms', true ) .'</span>';
-		} else {
-			$twograms = '';
-		}
-
-		if ( empty( $pricingeach ) ) {
-			echo $halfgram .''. $gram .''. $twograms;
-		} else {
-			echo $pricingeach;
-		}
+		echo wpd_all_prices_simple( get_the_id(), NULL );
 
 	}
 
@@ -140,77 +58,7 @@ function cannabiz_posted_on() {
 			)
 		)
 	) {
-
-		// Add price each & per pack to these menu types.
-		$priceeachperpack = array( 'edibles', 'prerolls', 'growers', 'gear', 'tinctures' );
-
-		if ( 'flowers' === get_post_type() ) {
-			if ( get_post_meta( get_the_ID(), '_gram', true ) ) {
-				echo wpd_currency_code() . get_post_meta(get_the_id(), '_gram', true);
-			} elseif ( get_post_meta( get_the_ID(), '_eighth', true ) ) {
-				echo wpd_currency_code() . get_post_meta(get_the_id(), '_eighth', true);
-			} elseif ( get_post_meta( get_the_ID(), '_quarter', true ) ) {
-				echo wpd_currency_code() . get_post_meta(get_the_id(), '_quarter', true);
-			} elseif ( get_post_meta( get_the_ID(), '_halfounce', true ) ) {
-				echo wpd_currency_code() . get_post_meta(get_the_id(), '_halfounce', true);
-			}
-			echo " - ";
-			if ( get_post_meta( get_the_ID(), '_ounce', true ) ) {
-				echo wpd_currency_code() . get_post_meta( get_the_id(), '_ounce', true );
-			} elseif ( get_post_meta( get_the_ID(), '_halfounce', true ) ) {
-				echo wpd_currency_code() . get_post_meta( get_the_id(), '_halfounce', true );
-			} elseif ( get_post_meta( get_the_ID(), '_quarter', true ) ) {
-				echo wpd_currency_code() . get_post_meta( get_the_id(), '_quarter', true );
-			} elseif ( get_post_meta( get_the_ID(), '_eighth', true ) ) {
-				echo wpd_currency_code() . get_post_meta( get_the_id(), '_eighth', true );
-			} elseif ( get_post_meta( get_the_ID(), '_gram', true ) ) {
-				echo wpd_currency_code() . get_post_meta( get_the_id(), '_gram', true );
-			}
-		} elseif ( in_array( get_post_type(), $priceeachperpack ) ) {
-			if ( get_post_meta( get_the_ID(), '_priceeach', true ) ) {
-				echo '<strong> ' . __( 'Price', 'cannabiz' ) . ':</strong> ' . wpd_currency_code() . get_post_meta( get_the_id(), '_priceeach', true );
-			}
-			if ( get_post_meta( get_the_ID(), '_priceperpack', true ) ) {
-				echo ' &middot; ' . get_post_meta( get_the_id(), '_unitsperpack', true ) . ' for ' . wpd_currency_code() . get_post_meta( get_the_id(), '_priceperpack', true );
-			}
-		} elseif ( 'topicals' === get_post_type() ) {
-			if ( get_post_meta( get_the_ID(), '_priceeach', true ) ) {
-				echo wpd_currency_code() . get_post_meta( get_the_id(), '_priceeach', true );
-			}
-		} elseif ( 'concentrates' === get_post_type() ) {
-
-			if ( get_post_meta( get_the_ID(), '_priceeach', true ) ) {
-				$pricingeach = wpd_currency_code() . get_post_meta( get_the_id(), '_priceeach', true ) . ' each';
-			} else {
-				$pricingeach = '';
-			}
-
-			if ( get_post_meta( get_the_ID(), '_halfgram', true ) ) {
-				$halfgram = '<span class="wpd-productinfo"><strong>1/2g: </strong>$' . get_post_meta( get_the_id(), '_halfgram', true ) .'</span>';
-			} else {
-				$halfgram = '';
-			}
-
-			if ( get_post_meta( get_the_ID(), '_gram', true ) ) {
-				$gram = '<span class="wpd-productinfo"><strong>1g: </strong>$' . get_post_meta( get_the_id(), '_gram', true ) .'</span>';
-			} else {
-				$gram = '';
-			}
-
-			if ( get_post_meta( get_the_ID(), '_twograms', true ) ) {
-				$twograms = '<span class="wpd-productinfo"><strong>2g: </strong>$' . get_post_meta( get_the_id(), '_twograms', true ) .'</span>';
-			} else {
-				$twograms = '';
-			}
-
-			if ( empty( $pricingeach ) ) {
-				echo $halfgram .''. $gram .''. $twograms;
-			} else {
-				echo $pricingeach;
-			}
-
-		}
-
+		echo wpd_all_prices_simple( get_the_id(), NULL );
 	}
 
 	/**
