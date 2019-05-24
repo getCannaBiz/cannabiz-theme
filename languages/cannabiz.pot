@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: CannaBiz\n"
-"POT-Creation-Date: 2019-02-04 13:31-0500\n"
-"PO-Revision-Date: 2019-02-04 13:31-0500\n"
+"POT-Creation-Date: 2019-05-24 13:06-0400\n"
+"PO-Revision-Date: 2019-05-24 13:06-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -172,7 +172,7 @@ msgstr ""
 msgid "Sidebar Growers"
 msgstr ""
 
-#: functions.php:318
+#: functions.php:317
 msgid "Pay Now!"
 msgstr ""
 
@@ -190,6 +190,14 @@ msgstr ""
 
 #: header.php:58
 msgid "Skip to content"
+msgstr ""
+
+#: header.php:93
+msgid "Menu"
+msgstr ""
+
+#: header.php:94
+msgid "Close menu"
 msgstr ""
 
 #: inc/class-tgm-plugin-activation.php:333
@@ -672,31 +680,27 @@ msgstr ""
 msgid "% Comments"
 msgstr ""
 
-#: inc/template-tags.php:33 inc/template-tags.php:170
-msgid "Price"
-msgstr ""
-
 #. translators: %s: Name of current post
-#: inc/template-tags.php:221
+#: inc/template-tags.php:70
 #, php-format
 msgid "Edit %s"
 msgstr ""
 
-#: inc/template-tags.php:252
+#: inc/template-tags.php:101
 #, php-format
 msgctxt "post date"
 msgid "%s"
 msgstr ""
 
-#: inc/template-tags.php:274
+#: inc/template-tags.php:123
 msgid "0"
 msgstr ""
 
-#: inc/template-tags.php:274
+#: inc/template-tags.php:123
 msgid "1"
 msgstr ""
 
-#: inc/template-tags.php:274
+#: inc/template-tags.php:123
 msgid "%"
 msgstr ""
 
