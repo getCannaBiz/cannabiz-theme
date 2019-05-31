@@ -1570,7 +1570,8 @@ h2.widget-title:after {
     -webkit-font-smoothing: antialiased;
 }
 
-.widget-area .widget.woocommerce ul li:before {
+.widget-area .widget.woocommerce ul li:before,
+.widget-area .widget ul.wp-dispensary-list li:before {
 	display: none;
 }
 
