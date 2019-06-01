@@ -566,6 +566,28 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 		)
 	);
 
+	/* Button Text Color */
+	$wp_customize->add_setting(
+		'cannabiz_button_text_color',
+		array(
+			'default'     		 => '#FFFFFF',
+			'sanitize_callback'  => 'cannabiz_sanitize_input',
+			'transport'   		 => 'refresh'
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'button_text_color',
+			array(
+			    'label'      => 'Button Text Color',
+			    'section'    => 'colors',
+			    'settings'   => 'cannabiz_button_text_color',
+				'priority'	 => 13
+			)
+		)
+	);
+
 	/* Button Hover Color */
 	$wp_customize->add_setting(
 		'cannabiz_button_hover_color',
@@ -584,6 +606,28 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 			    'section'    => 'colors',
 			    'settings'   => 'cannabiz_button_hover_color',
 				'priority'	 => 13
+			)
+		)
+	);
+
+	/* Button Hover Text Color */
+	$wp_customize->add_setting(
+		'cannabiz_button_hover_text_color',
+		array(
+			'default'     		 => '#FFFFFF',
+			'sanitize_callback'  => 'cannabiz_sanitize_input',
+			'transport'   		 => 'refresh'
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'button_hover_text_color',
+			array(
+			    'label'    => 'Button Text Color (hover)',
+			    'section'  => 'colors',
+			    'settings' => 'cannabiz_button_hover_text_color',
+				'priority' => 13
 			)
 		)
 	);
