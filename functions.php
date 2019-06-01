@@ -376,6 +376,107 @@ function page_title_save( $post_id ) {
 }
 add_action( 'save_post', 'page_title_save' );
 
-/*
-	Usage: cannabiz_page_title( 'page_title' )
-*/
+/**
+ * Custom login form styles.
+ */
+function cannabiz_login_logo() {
+
+	if ( '' != get_theme_mod( 'cannabiz_logo' ) ) { ?>
+		<style type="text/css">
+			body.login {
+				background-color: #<?php echo get_theme_mod( 'background_color' ); ?>;
+			}
+			body.login a,
+			body.login a:visited,
+			body.login a:focus,
+			body.login a:active,
+			body.login #backtoblog a,
+			body.login #nav a {
+				color: <?php echo get_theme_mod( 'cannabiz_link_color' ); ?>;
+			}
+
+			body.login #backtoblog a:hover,
+			body.login #nav a:hover,
+			body.login h1 a:hover,
+			body.login #backtoblog a:focus,
+			body.login #nav a:focus,
+			body.login h1 a:focus {
+				color: <?php echo get_theme_mod( 'cannabiz_link_hover_color' ); ?>;
+			}
+
+			body.login #login {
+				padding-top: 48px;
+			}
+
+			#login h1 a,
+			.login h1 a {
+					background-size: auto;
+					background-image: none;
+					background-position: center center;
+					text-indent: 0;
+					width: auto;
+					height: auto;
+					max-width: 320px;
+			}
+
+			#login h1 a img,
+			.login h1 a img {
+		    max-width: 100%;
+			}
+
+			body.login.wp-core-ui .button-primary {
+				background-color: <?php echo get_theme_mod( 'cannabiz_button_color' ); ?>;
+				border-color: <?php echo get_theme_mod( 'cannabiz_button_color' ); ?>;
+				box-shadow: none;
+				text-shadow: none;
+				color: <?php echo get_theme_mod( 'cannabiz_button_text_color' ); ?>;
+			}
+			body.login.wp-core-ui .button-primary:hover {
+				background-color: <?php echo get_theme_mod( 'cannabiz_button_hover_color' ); ?>;
+				border-color: <?php echo get_theme_mod( 'cannabiz_button_hover_color' ); ?>;
+				box-shadow: none;
+				text-shadow: none;
+				color: <?php echo get_theme_mod( 'cannabiz_button_text_color' ); ?>;
+			}
+		</style>
+	<?php }
+}
+add_action( 'login_enqueue_scripts', 'cannabiz_login_logo' );
+
+/**
+ * Custom login form logo link.
+ */
+function cannabiz_login_logo_url() {
+	return home_url();
+}
+add_filter( 'login_headerurl', 'cannabiz_login_logo_url' );
+
+/**
+ * Custom login form logo link title.
+ */
+function my_login_logo_url_title() {
+	return get_bloginfo( 'title' );
+}
+add_filter( 'login_headertitle', 'my_login_logo_url_title' );
+
+/**
+ * Custom login form logo link title.
+ */
+function cannabiz_login_logo_image( $login_header_text ) {
+
+	$login_header_text = $login_header_text;
+
+	if ( '' != get_theme_mod( 'cannabiz_logo' ) ) {
+		$login_header_text = '';
+		$logo_url          = get_theme_mod( 'cannabiz_logo' );
+		$login_header_text = '<img src="' . $logo_url . '" alt="' . get_bloginfo( 'title' ) . '" />';
+	}
+
+	return $login_header_text;
+
+}
+
+// Add filter if WP version is 5.2+
+if ( 5.2 >= get_bloginfo( 'version' ) ) {
+	add_filter( 'login_headertext', 'cannabiz_login_logo_image' );
+}
