@@ -45,7 +45,7 @@ function cannabiz_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'cannabiz' ),
-		'footer' => esc_html__( 'Footer Menu', 'cannabiz' ),
+		'footer'  => esc_html__( 'Footer Menu', 'cannabiz' ),
 	) );
 
 
@@ -95,7 +95,6 @@ function cannabiz_setup() {
 		get_theme_mod( 'cannabiz_link_color' ),
 		get_theme_mod( 'cannabiz_link_hover_color' )
 	);
-
 
 }
 endif;
