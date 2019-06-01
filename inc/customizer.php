@@ -1790,11 +1790,13 @@ function cannabiz_customizer_css() {
 		.woocommerce input.button,
 		.wpd-av button.yes {
 			background: <?php echo get_theme_mod( 'cannabiz_button_color' ); ?>;
+			color: <?php echo get_theme_mod( 'cannabiz_button_text_color' ); ?>;
 		}
 	<?php } ?>
 	<?php if ( '' != get_theme_mod( 'cannabiz_button_hover_color' ) || null != get_theme_mod( 'cannabiz_button_hover_color' ) ) { ?>
 		.menu-toggle:hover {
 			background: <?php echo get_theme_mod( 'cannabiz_button_hover_color' ); ?>;
+			color: <?php echo get_theme_mod( 'cannabiz_button_hover_text_color' ); ?>;
 		}
 	<?php } ?>
 	<?php if ( '' != get_theme_mod( 'cannabiz_button_color' ) || null != get_theme_mod( 'cannabiz_button_color' ) ) { ?>
@@ -1818,7 +1820,7 @@ function cannabiz_customizer_css() {
 		a.button.wpd-connect-btn.buy-now:hover {
 			background: <?php echo get_theme_mod( 'cannabiz_button_color' ); ?>;
 			border: 1px solid <?php echo get_theme_mod( 'cannabiz_button_color' ); ?>;
-			color: #FFF;
+			color: <?php echo get_theme_mod( 'cannabiz_button_hover_text_color' ); ?>;
 		}
 	<?php } ?>
 	<?php if ( '' != get_theme_mod( 'cannabiz_link_color' ) || null != get_theme_mod( 'cannabiz_link_color' ) ) { ?>

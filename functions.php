@@ -438,7 +438,7 @@ function cannabiz_login_logo() {
 				border-color: <?php echo get_theme_mod( 'cannabiz_button_hover_color' ); ?>;
 				box-shadow: none;
 				text-shadow: none;
-				color: <?php echo get_theme_mod( 'cannabiz_button_text_color' ); ?>;
+				color: <?php echo get_theme_mod( 'cannabiz_button_hover_text_color' ); ?>;
 			}
 		</style>
 	<?php }
