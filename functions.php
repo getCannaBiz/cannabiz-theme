@@ -378,6 +378,8 @@ add_action( 'save_post', 'page_title_save' );
 
 /**
  * Custom login form styles.
+ * 
+ * @since 2.5
  */
 function cannabiz_login_logo() {
 
@@ -445,6 +447,8 @@ add_action( 'login_enqueue_scripts', 'cannabiz_login_logo' );
 
 /**
  * Custom login form logo link.
+ * 
+ * @since 2.5
  */
 function cannabiz_login_logo_url() {
 	return home_url();
@@ -453,6 +457,8 @@ add_filter( 'login_headerurl', 'cannabiz_login_logo_url' );
 
 /**
  * Custom login form logo link title.
+ * 
+ * @since 2.5
  */
 function my_login_logo_url_title() {
 	return get_bloginfo( 'title' );
@@ -461,6 +467,10 @@ add_filter( 'login_headertitle', 'my_login_logo_url_title' );
 
 /**
  * Custom login form logo link title.
+ * 
+ * Requires WordPress v5.2+ in order to use the login_headertext filter
+ * 
+ * @since 2.5
  */
 function cannabiz_login_logo_image( $login_header_text ) {
 
