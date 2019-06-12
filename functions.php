@@ -385,9 +385,15 @@ function cannabiz_login_logo() {
 
 	if ( '' != get_theme_mod( 'cannabiz_logo' ) ) { ?>
 		<style type="text/css">
+
 			body.login {
 				background-color: #<?php echo get_theme_mod( 'background_color' ); ?>;
 			}
+
+			body.login form {
+    		padding-bottom: 32px;
+			}
+
 			body.login a,
 			body.login a:visited,
 			body.login a:focus,
@@ -432,6 +438,11 @@ function cannabiz_login_logo() {
 				box-shadow: none;
 				text-shadow: none;
 				color: <?php echo get_theme_mod( 'cannabiz_button_text_color' ); ?>;
+				width: 100%;
+				margin-top: 16px;
+				padding: 6px 12px 6px 12px;
+				height: auto;
+				font-size: 16px;
 			}
 			body.login.wp-core-ui .button-primary:hover {
 				background-color: <?php echo get_theme_mod( 'cannabiz_button_hover_color' ); ?>;
