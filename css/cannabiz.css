@@ -2338,6 +2338,18 @@ p.woocommerce-form-row.form-row span em {
     padding-right: 1em;
 }
 
+/** WooCommerce Customer Order Details page */
+
+.woocommerce-column--billing-address h2.woocommerce-column__title,
+.woocommerce-column--shipping-address h2.woocommerce-column__title {
+    font-size: 28px;
+}
+
+.woocommerce .woocommerce-customer-details .woocommerce-customer-details--email,
+.woocommerce .woocommerce-customer-details .woocommerce-customer-details--phone {
+    margin: 9px 0;
+}
+
 /** Dokan Multivendor Marketplace */
 
 .hentry .dokan-dashboard-wrap li:before {
