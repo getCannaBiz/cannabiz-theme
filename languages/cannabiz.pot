@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: CannaBiz\n"
-"POT-Creation-Date: 2019-05-24 13:06-0400\n"
-"PO-Revision-Date: 2019-05-24 13:06-0400\n"
+"POT-Creation-Date: 2019-06-24 15:13-0400\n"
+"PO-Revision-Date: 2019-06-24 15:13-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -124,67 +124,67 @@ msgstr ""
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:123
+#: functions.php:122
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:125
+#: functions.php:124
 msgid "Add widgets here."
 msgstr ""
 
-#: functions.php:133
+#: functions.php:132
 msgid "Footer row #1"
 msgstr ""
 
-#: functions.php:142
+#: functions.php:141
 msgid "Footer row #2"
 msgstr ""
 
-#: functions.php:151
+#: functions.php:150
 msgid "Footer row #3"
 msgstr ""
 
-#: functions.php:160
+#: functions.php:159
 msgid "Footer row #4"
 msgstr ""
 
-#: functions.php:175
+#: functions.php:174
 msgid "Sidebar Flowers"
 msgstr ""
 
-#: functions.php:184
+#: functions.php:183
 msgid "Sidebar Concentrates"
 msgstr ""
 
-#: functions.php:193
+#: functions.php:192
 msgid "Sidebar Edibles"
 msgstr ""
 
-#: functions.php:202
+#: functions.php:201
 msgid "Sidebar Pre-rolls"
 msgstr ""
 
-#: functions.php:211
+#: functions.php:210
 msgid "Sidebar Topicals"
 msgstr ""
 
-#: functions.php:220
+#: functions.php:219
 msgid "Sidebar Growers"
 msgstr ""
 
-#: functions.php:317
+#: functions.php:316
 msgid "Pay Now!"
 msgstr ""
 
-#: functions.php:350
+#: functions.php:349
 msgid "Large Page Title"
 msgstr ""
 
-#: functions.php:364
+#: functions.php:363
 msgid "Display"
 msgstr ""
 
-#: functions.php:364
+#: functions.php:363
 msgid "(overrides Customizer setting)"
 msgstr ""
 
