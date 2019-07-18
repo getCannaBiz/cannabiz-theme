@@ -2263,6 +2263,12 @@ h3.ddwc span {
     margin-top: 4px;
 }
 
+/** Customer Loyalty for WooComerce Styles */
+
+.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--customer-loyalty a:before {
+    content: "\f155";
+}
+
 /** WooCommerce Order Details */
 
 .woocommerce ul.order_details {
