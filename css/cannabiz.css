@@ -2395,8 +2395,8 @@ p.woocommerce-form-row.form-row span em {
 .hentry a.dokan-btn-theme,
 .hentry .dokan-btn-theme {
     color: #FFF;
-    background: #76bd1d;
-	border-color: #76bd1d;
+    background: #76bd1d !important;
+	border-color: #76bd1d !important;
 }
 
 .hentry input[type="submit"].dokan-btn-theme:hover,
@@ -2414,8 +2414,8 @@ p.woocommerce-form-row.form-row span em {
 .hentry .open .dropdown-toggleinput[type="submit"].dokan-btn-theme,
 .hentry .open .dropdown-togglea.dokan-btn-theme,
 .hentry .open .dropdown-toggle.dokan-btn-theme {
-	background: #83d122;
-	border-color: #83d122;
+	background: #83d122 !important;
+	border-color: #83d122 !important;
 }
 
 /** Dokan - Vendor Info Tab */
