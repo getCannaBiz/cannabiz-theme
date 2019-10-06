@@ -2568,6 +2568,10 @@ div#tab-seller ul li {
 		text-align: center;
 	}
 
+	.site-footer .widget ul {
+		text-align: left;
+	}
+
 	.entry-header,
 	.type-edibles .entry-header,
 	.type-concentrates .entry-header,
