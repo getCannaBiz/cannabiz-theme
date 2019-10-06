@@ -45,6 +45,7 @@
 		<?php } ?>
 			<div class="row bottom">
 				<div class="col-lg-6 copyright">
+					<?php do_action( 'cannabiz_footer_inside_copyright_top' ); ?>
 					<?php if ( '' != get_theme_mod( 'cannabiz_copyright' ) ) { ?>
 						<?php echo get_theme_mod( 'cannabiz_copyright' ); ?>
 					<?php } else { ?>
@@ -55,8 +56,10 @@
 						$cannabiz_footer_designedby = '';
 						echo apply_filters( 'cannabiz_footer_designedby', $cannabiz_footer_designedby );
 					?>
+					<?php do_action( 'cannabiz_footer_inside_copyright_bottom' ); ?>
 				</div><!-- .col-lg-6.copyright -->
 				<div class="col-lg-6 menu">
+					<?php do_action( 'cannabiz_footer_inside_menu_top' ); ?>
 					<?php if ( 'show' === get_theme_mod( 'cannabiz_footer_menu' ) || '' === get_theme_mod( 'cannabiz_footer_menu' ) ) {
 						$footermenu = wp_nav_menu(
 							array(
@@ -71,6 +74,7 @@
 							echo $menu;
 						endif;
 					} ?>
+					<?php do_action( 'cannabiz_footer_inside_menu_bottom' ); ?>
 				</div><!-- .col-lg-6.menu -->
 			</div><!-- .row -->
 		</div><!-- .container -->
