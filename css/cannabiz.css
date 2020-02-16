@@ -1799,6 +1799,12 @@ input.search-field {
 	text-align: right;
 }
 
+@media screen and (max-width: 768px) {
+	.site-footer .col-lg-6.menu {
+		text-align: center;
+	}
+}
+
 .site-footer .col-lg-6.menu a,
 .site-footer .col-lg-6.menu a:visited {
 	color: #FFF;
