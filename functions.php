@@ -391,7 +391,7 @@ function cannabiz_login_logo() {
 			}
 
 			body.login form {
-    		padding-bottom: 32px;
+	    		padding-bottom: 32px;
 			}
 
 			body.login a,
@@ -418,18 +418,18 @@ function cannabiz_login_logo() {
 
 			#login h1 a,
 			.login h1 a {
-					background-size: auto;
-					background-image: none;
-					background-position: center center;
-					text-indent: 0;
-					width: auto;
-					height: auto;
-					max-width: 320px;
+				background-size: auto;
+				background-image: none;
+				background-position: center center;
+				text-indent: 0;
+				width: auto;
+				height: auto;
+				max-width: 320px;
 			}
 
 			#login h1 a img,
 			.login h1 a img {
-		    max-width: 100%;
+			    max-width: 100%;
 			}
 
 			body.login.wp-core-ui .button-primary {

@@ -124,24 +124,24 @@ function cannabiz_entry_footer() {
 			echo '</span>'; // WPCS: XSS OK.
 		}
 		if ( 'concentrates' === get_post_type() ) {
-			echo "<span class='dispensary-category'>" .get_the_term_list( $post->ID, 'concentrates_category', '', ' ', '' ) . "</span>";
+			echo "<span class='dispensary-category'>" . get_the_term_list( $post->ID, 'concentrates_category', '', ' ', '' ) . "</span>";
 		} elseif ( 'edibles' === get_post_type() ) {
-			echo "<span class='dispensary-category'>" .get_the_term_list( $post->ID, 'edibles_category', '', ' ', '' ) . "</span>";
+			echo "<span class='dispensary-category'>" . get_the_term_list( $post->ID, 'edibles_category', '', ' ', '' ) . "</span>";
 		} elseif ( 'topicals' === get_post_type() ) {
 			echo "<span class='dispensary-category'>" .get_the_term_list( $post->ID, 'topicals_category', '', ' ', '' ) . "</span>";
 		} elseif ( 'growers' === get_post_type() ) {
-			echo "<span class='dispensary-category'>" .get_the_term_list( $post->ID, 'growers_category', '', ' ', '' ) . "</span>";
+			echo "<span class='dispensary-category'>" . get_the_term_list( $post->ID, 'growers_category', '', ' ', '' ) . "</span>";
 		} elseif ( 'gear' === get_post_type() ) {
-			echo "<span class='dispensary-category'>" .get_the_term_list( $post->ID, 'wpd_gear_category', '', ' ', '' ) . "</span>";
+			echo "<span class='dispensary-category'>" . get_the_term_list( $post->ID, 'wpd_gear_category', '', ' ', '' ) . "</span>";
 		} elseif ( 'tinctures' === get_post_type() ) {
-			echo "<span class='dispensary-category'>" .get_the_term_list( $post->ID, 'wpd_tinctures_category', '', ' ', '' ) . "</span>";
+			echo "<span class='dispensary-category'>" . get_the_term_list( $post->ID, 'wpd_tinctures_category', '', ' ', '' ) . "</span>";
 		} elseif ( 'prerolls' === get_post_type() ) {
 			$prerollflower = get_post_meta( get_the_id(), '_selected_flowers', true );
 			echo "<span class='dispensary-category'>";
 			echo "<a href='". get_permalink( $prerollflower ) ."'>". get_the_title( $prerollflower ) ."</a>";
 			echo "</span>";
 		} elseif ( 'flowers' === get_post_type() ) {
-			echo "<span class='dispensary-category'>" .get_the_term_list( $post->ID, 'flowers_category', '', ' ', '' ) . "</span>";
+			echo "<span class='dispensary-category'>" . get_the_term_list( $post->ID, 'flowers_category', '', ' ', '' ) . "</span>";
 		}
 	}
 
