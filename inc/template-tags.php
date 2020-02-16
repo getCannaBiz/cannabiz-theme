@@ -111,7 +111,7 @@ function cannabiz_entry_footer() {
 			echo '<span class="posted-on"><i class="fa fa-calendar"></i> ' . $posted_on . '</span>'; // WPCS: XSS OK.
 		}
 		if ( 'show' === get_theme_mod( 'cannabiz_posts_show_category' ) || '' === get_theme_mod( 'cannabiz_posts_show_category' ) ) {
-			echo '<span class="category-link">' . get_the_category_list( ', ', get_the_id() ) .'</span>';
+			echo '<span class="category-link">' . get_the_category_list( ' ', get_the_id() ) .'</span>';
 		}
 	} elseif ( 'flowers' || 'edibles' || 'concentrates' || 'prerolls' || 'topicals' || 'growers' || 'gear' || 'tinctures' === get_post_type() ) {
 		global $post;
