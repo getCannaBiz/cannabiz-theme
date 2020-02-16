@@ -2607,8 +2607,14 @@ div#tab-seller ul li {
 	}
 
 	.col-lg-6.copyright,
-	.site-footer .menu {
+	.site-footer .menu,
+	span.footer-social {
 		text-align: center;
+	}
+
+	span.footer-social {
+		margin-left: 0;
+		display: block;
 	}
 
 	.site-footer .widget ul {
