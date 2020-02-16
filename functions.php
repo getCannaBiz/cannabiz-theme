@@ -501,3 +501,12 @@ function cannabiz_login_logo_image( $login_header_text ) {
 if ( 5.2 >= get_bloginfo( 'version' ) ) {
 	add_filter( 'login_headertext', 'cannabiz_login_logo_image' );
 }
+
+/**
+ * Check if WooCommerce is activated
+ */
+if ( ! function_exists( 'is_woocommerce_activated' ) ) {
+	function is_woocommerce_activated() {
+		if ( class_exists( 'woocommerce' ) ) { return true; } else { return false; }
+	}
+}
