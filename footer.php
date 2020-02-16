@@ -74,6 +74,9 @@
 							echo $menu;
 						endif;
 					} ?>
+					<?php if ( 'show' === get_theme_mod( 'cannabiz_footer_social' ) ) { ?>
+						<span class="footer-social"><?php cannabiz_social_icons(); ?></span>
+					<?php } ?>
 					<?php do_action( 'cannabiz_footer_inside_menu_bottom' ); ?>
 				</div><!-- .col-lg-6.menu -->
 			</div><!-- .row -->

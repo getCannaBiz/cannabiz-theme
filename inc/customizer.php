@@ -1265,6 +1265,28 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 		)
 	);
 
+	/* Footer Social */
+	$wp_customize->add_setting(
+		'cannabiz_footer_social',
+		array(
+			'default'   		=> 'hide',
+			'sanitize_callback' => 'cannabiz_sanitize_input',
+			'transport' 		=> 'refresh'
+		)
+	);
+	$wp_customize->add_control(
+		'cannabiz_footer_social',
+		array(
+			'section'  			=> 'cannabiz_footer',
+			'label'    			=> 'Footer Social',
+			'type'     			=> 'radio',
+			'choices'  			=> array(
+				'hide'			=> __( 'Hide', 'cannabiz' ),
+				'show'			=> __( 'Show', 'cannabiz' )
+			)
+		)
+	);
+
 	/*-----------------------------------------------------------*
 	 * Defining our own 'Social' section
 	 *-----------------------------------------------------------*/
