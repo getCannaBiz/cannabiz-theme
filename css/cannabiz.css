@@ -464,7 +464,7 @@ body.admin-bar .site-header.scroll-to-fixed-fixed {
 @media screen and (max-width: 400px) {
 	.site-branding img {
 		max-width: 100%;
-		width: 100%;
+		width: auto;
 	}
 }
 
