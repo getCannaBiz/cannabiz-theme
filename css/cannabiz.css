@@ -29,7 +29,7 @@ body.fl-builder #content .container {
 }
 
 a, a:visited {
-	color: #76BD1D;
+	color: #76bd43;
 	text-decoration: none;
 }
 
@@ -153,7 +153,7 @@ input[type="date"]:focus,
 input[type="tel"]:focus,
 textarea:focus,
 select:focus {
-	border: 1px solid #76BD1D;
+	border: 1px solid #76bd43;
 	outline: none;
 }
 
@@ -186,7 +186,7 @@ html input[type=button],
 input[type=reset],
 input[type=submit],
 #commentform #submit {
-	background: #76BD1D;
+	background: #76bd43;
 	border: none;
 	border-radius: 3px;
 	box-shadow: none;
@@ -209,7 +209,7 @@ html input[type=button]:hover,
 input[type=reset]:hover,
 input[type=submit]:hover,
 #commentform #submit:hover {
-	background: #83D122;
+	background: #87d74d;
 	box-shadow: none;
 	color: #FFF;
 }
@@ -231,11 +231,11 @@ input[type="submit"]:active {
 
 a.button,
 a.button:visited {
-	background: #76BD1D;
+	background: #76bd43;
 }
 
 a.button:hover {
-	background: #83d122;
+	background: #87d74d;
 	color: #FFF;
 }
 
@@ -256,7 +256,7 @@ a.button.alt:hover {
 .woocommerce a.button,
 .woocommerce button.button,
 .woocommerce input.button {
-	background-color: #76BD1D;
+	background-color: #76bd43;
 	color: #FFF;
 }
 
@@ -268,7 +268,7 @@ a.button.alt:hover {
 .woocommerce a.button:hover,
 .woocommerce button.button:hover,
 .woocommerce input.button:hover {
-    background-color: #83d122;
+    background-color: #87d74d;
     color: #FFF;
 }
 
@@ -460,7 +460,7 @@ body.admin-bar .site-header.scroll-to-fixed-fixed {
 .site-title a,
 .site-title a:visited {
     position: relative;
-    color: #76bd1d;
+    color: #76bd43;
 }
 
 .site-title a:hover {
@@ -558,7 +558,7 @@ body.admin-bar .site-header.scroll-to-fixed-fixed {
 		box-shadow: none;
 	}
 	.main-navigation ul {
-		background: #83D122;
+		background: #87d74d;
 		overflow: auto;
 		padding: 0;
 	}
@@ -659,13 +659,13 @@ body.admin-bar .site-header.scroll-to-fixed-fixed {
 .main-navigation ul li.current-menu-item > a {
 	-webkit-transition: .07s ease-in-out;
 	transition: .07s ease-in-out;
-	color: #83d122;
+	color: #87d74d;
 }
 
 .main-navigation ul > li:hover > a {
 	-webkit-transition: .07s ease-in-out;
 	transition: .07s ease-in-out;
-	color: #83d122;
+	color: #87d74d;
 }
 
 .main-navigation ul ul li:hover > a {
@@ -702,7 +702,7 @@ body.admin-bar .site-header.scroll-to-fixed-fixed {
 }
 
 .main-navigation a:hover {
-	color: #83d122;
+	color: #87d74d;
 }
 
 .main-navigation ul > li > a {
@@ -726,7 +726,7 @@ body.admin-bar .site-header.scroll-to-fixed-fixed {
 }
 
 .menu-toggle {
-	background: #76BD1D;
+	background: #76bd43;
 	color: #FFF;
 	display: none;
 	font-size: 15px;
@@ -739,7 +739,7 @@ body.admin-bar .site-header.scroll-to-fixed-fixed {
 }
 
 .menu-toggle:hover {
-	background: #83D122;
+	background: #87d74d;
 }
 
 span.menu-close {
@@ -890,7 +890,7 @@ span.menu-close {
 }
 
 .titlelarge {
-	background: #76bd1d;
+	background: #76bd43;
 	color: #FFF;
 	display: block;
 	margin: 0;
@@ -986,7 +986,7 @@ h1.entry-title a,
 h1.entry-title a:visited,
 h2.entry-title a,
 h2.entry-title a:visited {
-	color: #76bd1d;
+	color: #76bd43;
 }
 
 h1.entry-title a:hover,
@@ -1495,16 +1495,16 @@ body.home .metaslider {
 }
 
 body.home #mc_embed_signup input#mc-embedded-subscribe {
-	background: #76bd1d;
+	background: #76bd43;
 }
 
 body.home #mc_embed_signup input#mc-embedded-subscribe:hover {
-	background: #83D122;
+	background: #87d74d;
 }
 
 body.home .hebe .tp-tab-title,
 body.home .tp-caption.Newspaper-Subtitle, .Newspaper-Subtitle {
-	color: #76bd1d;
+	color: #76bd43;
 }
 
 /*--------------------------------------------------------------
@@ -1602,7 +1602,7 @@ input.search-field {
 /* WP Dispensary pricing table */
 
 .cannabiz-table {
-  color: #76BD1D;
+  color: #76bd43;
 }
 
 .cannabiz-table span {
@@ -1658,7 +1658,7 @@ input.search-field {
 --------------------------------------------------------------*/
 
 .site-footer {
-	background: #76BD1D;
+	background: #76bd43;
 	color: #FFF;
 	margin: 0;
 	padding: 0;
@@ -1958,7 +1958,7 @@ ol.comment-list ol.children li:last-child {
 .woocommerce ul.products li.product .price,
 .woocommerce div.product p.price,
 .woocommerce div.product span.price {
-	color: #76BD1D;
+	color: #76bd43;
 }
 
 .woocommerce ul.products li.product .price {
@@ -1983,7 +1983,7 @@ ol.comment-list ol.children li:last-child {
 }
 
 .woocommerce ul.products li.product a.woocommerce-LoopProduct-link:hover {
-	color: #76BD1D;
+	color: #76bd43;
 }
 
 span.posted_in,
@@ -2084,12 +2084,12 @@ ul.product_list_widget span.woocommerce-Price-amount.amount {
 }
 
 .woocommerce-MyAccount-navigation ul li a:hover {
-	color: #76bd1d;
+	color: #76bd43;
 }
 
 
 .woocommerce-MyAccount-navigation ul li a:before {
-    color: #76bd1d;
+    color: #76bd43;
     content: "\f138";
     margin-right: 6px;
     -webkit-font-smoothing: antialiased;
@@ -2324,13 +2324,13 @@ p.woocommerce-form-row.form-row span em {
 /** WooCommerce Messages */
 
 .woocommerce-message {
-	border-top-color: #76bd1d;
+	border-top-color: #76bd43;
 	line-height: 2;
 }
 
 .woocommerce-message::before {
     content: '\e015';
-    color: #76bd1d;
+    color: #76bd43;
 }
 
 .entry-content .woocommerce_message:last-child {
@@ -2395,8 +2395,8 @@ p.woocommerce-form-row.form-row span em {
 .hentry a.dokan-btn-theme,
 .hentry .dokan-btn-theme {
     color: #FFF;
-    background: #76bd1d !important;
-	border-color: #76bd1d !important;
+    background: #76bd43 !important;
+	border-color: #76bd43 !important;
 }
 
 .hentry input[type="submit"].dokan-btn-theme:hover,
@@ -2414,8 +2414,8 @@ p.woocommerce-form-row.form-row span em {
 .hentry .open .dropdown-toggleinput[type="submit"].dokan-btn-theme,
 .hentry .open .dropdown-togglea.dokan-btn-theme,
 .hentry .open .dropdown-toggle.dokan-btn-theme {
-	background: #83d122 !important;
-	border-color: #83d122 !important;
+	background: #87d74d !important;
+	border-color: #87d74d !important;
 }
 
 /** Dokan - Vendor Info Tab */
