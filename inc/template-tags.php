@@ -148,6 +148,34 @@ function cannabiz_entry_footer() {
 }
 endif;
 
+/**
+ * Prints a shopping cart link in the topbar of the header.
+ */
+function cannabiz_topbar_shopping_cart() {
+	// Make sure WooCommerce is activated.	
+	if ( is_woocommerce_activated() ) {
+		global $woocommerce;
+		// get cart quantity.
+		$qty = $woocommerce->cart->get_cart_contents_count();
+		// get cart subtotal.
+		$cart_subtotal = $woocommerce->cart->get_cart_subtotal();
+		// get cart url.
+		$cart_url = $woocommerce->cart->get_cart_url();
+
+		if ( 'show' === get_theme_mod( 'cannabiz_topbar_woocommerce_cart' ) || '' === get_theme_mod( 'cannabiz_topbar_woocommerce_cart' ) ) {
+		do_action( 'cannabiz_topbar_inside_before_woocommerce_cart' ); ?>
+			<span class="topbar-woocommerce">
+				<a href="<?php echo $cart_url ?>">
+					<i class="fa fa-shopping-cart" aria-hidden="true"></i> (<?php echo $qty; ?>)
+				</a>
+			</span>
+		<?php
+		do_action( 'cannabiz_topbar_inside_after_woocommerce_cart' );
+		}
+	}
+}
+add_action( 'cannabiz_topbar_inside_after_social', 'cannabiz_topbar_shopping_cart' );
+
 
 if ( ! function_exists( 'cannabiz_social_icons' ) ) :
 /**

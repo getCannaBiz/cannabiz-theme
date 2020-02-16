@@ -234,6 +234,32 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 		)
 	);
 
+	if ( is_woocommerce_activated() ) {
+		/* Show or Hide Top Bar WooCommerce Cart */
+		$wp_customize->add_setting(
+			'cannabiz_topbar_woocommerce_cart',
+			array(
+				'default'            => 'hide',
+				'sanitize_callback'  => 'cannabiz_sanitize_input',
+				'transport'          => 'refresh'
+			)
+		);
+		$wp_customize->add_control(
+			'cannabiz_topbar_woocommerce_cart',
+			array(
+				'section'  => 'title_tagline',
+				'label'    => 'Top Bar WooCommerce Cart',
+				'type'     => 'radio',
+				'choices'  => array(
+					'hide' => 'Hide',
+					'show' => 'Show'
+				),
+				'priority'  => 30
+
+			)
+		);
+	}
+
 	/* Home page slider */
 	$wp_customize->add_setting(
 		'cannabiz_home_slider',
