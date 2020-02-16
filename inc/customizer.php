@@ -332,7 +332,7 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 	$wp_customize->add_setting(
 		'cannabiz_background_pagetitle_color',
 		array(
-			'default'     		 => '#76bd1d',
+			'default'     		 => '#76bd43',
 			'sanitize_callback'  => 'cannabiz_sanitize_input',
 			'transport'   		 => 'refresh'
 		)
@@ -354,7 +354,7 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 	$wp_customize->add_setting(
 		'cannabiz_background_footer_color',
 		array(
-			'default'     		 => '#76bd1d',
+			'default'     		 => '#76bd43',
 			'sanitize_callback'  => 'cannabiz_sanitize_input',
 			'transport'   		 => 'refresh'
 		)
@@ -376,7 +376,7 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 	$wp_customize->add_setting(
 		'cannabiz_link_color',
 		array(
-			'default'     		 => '#76bd1d',
+			'default'     		 => '#76bd43',
 			'sanitize_callback'  => 'cannabiz_sanitize_input',
 			'transport'   		 => 'refresh'
 		)
@@ -464,7 +464,7 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 	$wp_customize->add_setting(
 		'cannabiz_blogtitle_link_color',
 		array(
-			'default'     		 => '#76bd1d',
+			'default'     		 => '#76bd43',
 			'sanitize_callback'  => 'cannabiz_sanitize_input',
 			'transport'   		 => 'refresh'
 		)
@@ -552,7 +552,7 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 	$wp_customize->add_setting(
 		'cannabiz_menu_link_hover_color',
 		array(
-			'default'     		 => '#76bd1d',
+			'default'     		 => '#76bd43',
 			'sanitize_callback'  => 'cannabiz_sanitize_input',
 			'transport'   		 => 'refresh'
 		)
@@ -574,7 +574,7 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 	$wp_customize->add_setting(
 		'cannabiz_button_color',
 		array(
-			'default'     		 => '#76bd1d',
+			'default'     		 => '#76bd43',
 			'sanitize_callback'  => 'cannabiz_sanitize_input',
 			'transport'   		 => 'refresh'
 		)
@@ -618,7 +618,7 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 	$wp_customize->add_setting(
 		'cannabiz_button_hover_color',
 		array(
-			'default'     		 => '#83d122',
+			'default'     		 => '#87d74d',
 			'sanitize_callback'  => 'cannabiz_sanitize_input',
 			'transport'   		 => 'refresh'
 		)
@@ -662,7 +662,7 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 	$wp_customize->add_setting(
 		'cannabiz_post_title_color',
 		array(
-			'default'     		 => '#76bd1d',
+			'default'     		 => '#76bd43',
 			'sanitize_callback'  => 'cannabiz_sanitize_input',
 			'transport'   		 => 'refresh'
 		)
