@@ -1822,9 +1822,27 @@ input.search-field {
 
 .site-footer .col-lg-6.menu ul li {
 	display: inline-block;
-	margin-left: 5px;
+	margin-left: 12px;
 }
 
+.site-footer .col-lg-6.menu ul,
+span.footer-social {
+    display: inline-block;
+}
+
+span.footer-social {
+	margin-left: 12px;
+}
+
+span.footer-social a {
+	margin: 0 0 0 6px;
+}
+
+@media screen and (max-width: 768px) {
+	span.footer-social {
+		margin-top: 6px;
+	}
+}
 
 /*--------------------------------------------------------------
 ## Comments
