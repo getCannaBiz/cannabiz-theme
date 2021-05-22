@@ -20,27 +20,6 @@
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/css/ie.css" />
 <![endif]-->
 
-<?php
-/**
- * @todo move this script to the wpd-ecommerce plugin
- */
-?>
-<?php
-if ( is_home() ) {
-	$pushState = get_bloginfo( 'url' );
-} else {
-	$pushState = get_the_permalink();
-} ?>
-<?php
-/*
-<script>
-    if(typeof window.history.pushState == 'function') {
-        window.history.pushState({}, "Hide", '<?php echo $pushState ?>');
-    }
-</script>
-*/
-?>
-
 <?php wp_head(); ?>
 
 <?php if ( 'on' === get_theme_mod( 'cannabiz_stickyhead' ) || '' === get_theme_mod( 'cannabiz_stickyhead' ) ) { ?>
@@ -123,13 +102,6 @@ if ( is_home() ) {
 		<?php do_action( 'cannabiz_header_inside_bottom' ); ?>
 	</header><!-- #masthead -->
 	<?php do_action( 'cannabiz_header_after' ); ?>
-
-	<?php
-		$cannabizslider = get_theme_mod( 'cannabiz_home_slider' );
-		if( is_front_page() ) {
-			echo do_shortcode( $cannabizslider );
-		}
-	?>
 	
 	<?php cannabiz_title_large(); ?>
 

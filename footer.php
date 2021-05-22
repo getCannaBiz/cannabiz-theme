@@ -16,13 +16,6 @@
 	</div><!-- #content -->
 	<?php do_action( 'cannabiz_content_after' ); ?>
 
-	<?php
-	$cannabizsliderbottom = get_theme_mod( 'cannabiz_home_slider_bottom' );
-	if ( is_front_page() ) {
-			echo do_shortcode( $cannabizsliderbottom );
-	}
-	?>
-
 	<?php do_action( 'cannabiz_footer_before' ); ?>
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<?php do_action( 'cannabiz_footer_inside_top' ); ?>
@@ -49,12 +42,11 @@
 					<?php if ( '' != get_theme_mod( 'cannabiz_copyright' ) ) { ?>
 						<?php echo get_theme_mod( 'cannabiz_copyright' ); ?>
 					<?php } else { ?>
-						&copy; <?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?>. <?php printf( esc_html__( '%s', 'cannabiz' ), 'Powered by ' ); ?>
+						&copy; <?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?>. <?php _e( 'Powered by ', 'cannabiz' ); ?>
 						<?php printf( esc_html__( '%1$s', 'cannabiz' ), '<a href="https://www.wpdispensary.com/" rel="WP Dispensary - WordPress Marijuana Plugin">WP Dispensary</a>' ); ?>
 					<?php } ?>
 					<?php
-						$cannabiz_footer_designedby = '';
-						echo apply_filters( 'cannabiz_footer_designedby', $cannabiz_footer_designedby );
+						echo apply_filters( 'cannabiz_footer_designedby', '' );
 					?>
 					<?php do_action( 'cannabiz_footer_inside_copyright_bottom' ); ?>
 				</div><!-- .col-lg-6.copyright -->

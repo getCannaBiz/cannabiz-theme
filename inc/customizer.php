@@ -1233,24 +1233,6 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 		)
 	);
 
-	/* Home page bottom */
-	$wp_customize->add_setting(
-		'cannabiz_home_slider_bottom',
-		array(
-			'default'            => '',
-			'sanitize_callback'  => 'cannabiz_sanitize_text',
-			'transport'          => 'refresh'
-		)
-	);
-	$wp_customize->add_control(
-		'cannabiz_home_slider_bottom',
-		array(
-			'section'  => 'cannabiz_footer',
-			'label'    => 'Home page bottom shortcode',
-			'type'     => 'text'
-		)
-	);
-
 	/* Display Copyright */
 	$wp_customize->add_setting(
 		'cannabiz_copyright',
