@@ -979,14 +979,7 @@ section#primary {
 	margin: 0;
 }
 
-.has-post-thumbnail .type-flowers .entry-header,
-.has-post-thumbnail .type-edibles .entry-header,
-.has-post-thumbnail .type-concentrates .entry-header,
-.has-post-thumbnail .type-prerolls .entry-header,
-.has-post-thumbnail .type-topicals .entry-header,
-.has-post-thumbnail .type-growers .entry-header,
-.has-post-thumbnail .type-gear .entry-header,
-.has-post-thumbnail .type-tinctures .entry-header {
+.has-post-thumbnail .type-products .entry-header {
   margin: 0;
   padding: 20px 20px 0 20px;
 }
@@ -1287,142 +1280,77 @@ article.hentry.no-results.not-found {
 ## Custom Post Types
 --------------------------------------------------------------*/
 
-body.post-type-archive-flowers .hentry,
-body.post-type-archive-edibles .hentry,
-body.post-type-archive-concentrates .hentry,
-body.post-type-archive-prerolls .hentry,
-body.post-type-archive-topicals .hentry,
-body.post-type-archive-growers .hentry,
-body.post-type-archive-gear .hentry,
-body.post-type-archive-tinctures .hentry,
-body.tax-flowers_category .hentry,
-body.tax-edibles_category .hentry,
-body.tax-concentrates_category .hentry,
-body.tax-topicals_category .hentry,
-body.tax-growers_category .hentry,
-body.tax-wpd_gear_category .hentry,
-body.tax-wpd_tinctures_category .hentry,
-body.tax-aroma .hentry,
-body.tax-flavor .hentry,
-body.tax-effect .hentry,
-body.tax-condition .hentry,
-body.tax-symptom .hentry,
+body.post-type-archive-products .hentry,
+body.tax-wpd_categories .hentry,
+body.tax-aromas .hentry,
+body.tax-flavors .hentry,
+body.tax-effects .hentry,
+body.tax-conditions .hentry,
+body.tax-symptoms .hentry,
 body.tax-ingredients .hentry,
-body.tax-vendor .hentry,
+body.tax-vendors .hentry,
 body.tax-allergens .hentry,
-body.tax-shelf_type .hentry,
-body.tax-strain_type .hentry {
+body.tax-shelf_types .hentry,
+body.tax-strain_types .hentry {
 	float: left;
 	margin: 1%;
 	width: 31.333%;
 }
 
-body.post-type-archive-flowers .hentry .entry-header,
-body.post-type-archive-flowers .hentry .entry-footer,
-body.post-type-archive-edibles .hentry .entry-header,
-body.post-type-archive-edibles .hentry .entry-footer,
-body.post-type-archive-concentrates .hentry .entry-header,
-body.post-type-archive-concentrates .hentry .entry-footer,
-body.post-type-archive-prerolls .hentry .entry-header,
-body.post-type-archive-prerolls .hentry .entry-footer,
-body.post-type-archive-topicals .hentry .entry-header,
-body.post-type-archive-topicals .hentry .entry-footer,
-body.post-type-archive-growers .hentry .entry-header,
-body.post-type-archive-growers .hentry .entry-footer,
-body.post-type-archive-gear .hentry .entry-header,
-body.post-type-archive-gear .hentry .entry-footer,
-body.post-type-archive-tinctures .hentry .entry-header,
-body.post-type-archive-tinctures .hentry .entry-footer,
-body.tax-flowers_category .hentry .entry-header,
-body.tax-flowers_category .hentry .entry-footer,
-body.tax-edibles_category .hentry .entry-header,
-body.tax-edibles_category .hentry .entry-footer,
-body.tax-concentrates_category .hentry .entry-header,
-body.tax-concentrates_category .hentry .entry-footer,
-body.tax-growers_category .hentry .entry-header,
-body.tax-growers_category .hentry .entry-footer,
-body.tax-topicals_category .hentry .entry-header,
-body.tax-topicals_category .hentry .entry-footer,
-body.tax-wpd_gear_category .hentry .entry-header,
-body.tax-wpd_gear_category .hentry .entry-footer,
-body.tax-wpd_tinctures_category .hentry .entry-header,
-body.tax-wpd_tinctures_category .hentry .entry-footer,
-body.tax-aroma .hentry .entry-header,
-body.tax-aroma .hentry .entry-footer,
-body.tax-flavor .hentry .entry-header,
-body.tax-flavor .hentry .entry-footer,
-body.tax-effect .hentry .entry-header,
-body.tax-effect .hentry .entry-footer,
-body.tax-condition .hentry .entry-header,
-body.tax-condition .hentry .entry-footer,
-body.tax-symptom .hentry .entry-header,
-body.tax-symptom .hentry .entry-footer,
+body.post-type-archive-products .hentry .entry-header,
+body.post-type-archive-products .hentry .entry-footer,
+body.tax-wpd_categories .hentry .entry-header,
+body.tax-wpd_categories .hentry .entry-footer,
+body.tax-aromas .hentry .entry-header,
+body.tax-aromas .hentry .entry-footer,
+body.tax-flavors .hentry .entry-header,
+body.tax-flavors .hentry .entry-footer,
+body.tax-effects .hentry .entry-header,
+body.tax-effects .hentry .entry-footer,
+body.tax-conditions .hentry .entry-header,
+body.tax-conditions .hentry .entry-footer,
+body.tax-symptoms .hentry .entry-header,
+body.tax-symptoms .hentry .entry-footer,
 body.tax-ingredients .hentry .entry-header,
 body.tax-ingredients .hentry .entry-footer,
-body.tax-vendor .hentry .entry-header,
-body.tax-vendor .hentry .entry-footer,
+body.tax-vendors .hentry .entry-header,
+body.tax-vendors .hentry .entry-footer,
 body.tax-allergens .hentry .entry-header,
 body.tax-allergens .hentry .entry-footer,
-body.tax-shelf_type .hentry .entry-header,
-body.tax-shelf_type .hentry .entry-footer,
-body.tax-strain_type .hentry .entry-header,
-body.tax-strain_type .hentry .entry-footer {
+body.tax-shelf_types .hentry .entry-header,
+body.tax-shelf_types .hentry .entry-footer,
+body.tax-strain_types .hentry .entry-header,
+body.tax-strain_types .hentry .entry-footer {
 	padding: 24px;
 }
 
-body.post-type-archive-flowers .hentry .entry-header h2.entry-title,
-body.post-type-archive-edibles .hentry .entry-header h2.entry-title,
-body.post-type-archive-concentrates .hentry .entry-header h2.entry-title,
-body.post-type-archive-prerolls .hentry .entry-header h2.entry-title,
-body.post-type-archive-topicals .hentry .entry-header h2.entry-title,
-body.post-type-archive-growers .hentry .entry-header h2.entry-title,
-body.post-type-archive-gear .hentry .entry-header h2.entry-title,
-body.post-type-archive-topicals .hentry .entry-header h2.entry-title,
-body.tax-flowers_category .hentry .entry-header h2.entry-title,
-body.tax-edibles_category .hentry .entry-header h2.entry-title,
-body.tax-concentrates_category .hentry .entry-header h2.entry-title,
-body.tax-growers_category .hentry .entry-header h2.entry-title,
-body.tax-topicals_category .hentry .entry-header h2.entry-title,
-body.tax-wpd_gear_category .hentry .entry-header h2.entry-title,
-body.tax-wpd_tinctures_category .hentry .entry-header h2.entry-title,
-body.tax-aroma .hentry .entry-header h2.entry-title,
-body.tax-flavor .hentry .entry-header h2.entry-title,
-body.tax-effect .hentry .entry-header h2.entry-title,
-body.tax-condition .hentry .entry-header h2.entry-title,
-body.tax-symptom .hentry .entry-header h2.entry-title,
+body.post-type-archive-products .hentry .entry-header h2.entry-title,
+body.tax-wpd_categories .hentry .entry-header h2.entry-title,
+body.tax-aromas .hentry .entry-header h2.entry-title,
+body.tax-flavors .hentry .entry-header h2.entry-title,
+body.tax-effects .hentry .entry-header h2.entry-title,
+body.tax-conditions .hentry .entry-header h2.entry-title,
+body.tax-symptoms .hentry .entry-header h2.entry-title,
 body.tax-ingredients .hentry .entry-header h2.entry-title,
-body.tax-vendor .hentry .entry-header h2.entry-title,
+body.tax-vendors .hentry .entry-header h2.entry-title,
 body.tax-allergens .hentry .entry-header h2.entry-title,
-body.tax-shelf_type .hentry .entry-header h2.entry-title,
-body.tax-strain_type .hentry .entry-header h2.entry-title {
+body.tax-shelf_types .hentry .entry-header h2.entry-title,
+body.tax-strain_types .hentry .entry-header h2.entry-title {
 	font-size: 28px;
 }
 
-body.post-type-archive-flowers nav.navigation.posts-navigation,
-body.post-type-archive-edibles nav.navigation.posts-navigation,
-body.post-type-archive-concentrates nav.navigation.posts-navigation,
-body.post-type-archive-prerolls nav.navigation.posts-navigation,
-body.post-type-archive-topicals nav.navigation.posts-navigation,
-body.post-type-archive-growers nav.navigation.posts-navigation,
-body.post-type-archive-gear nav.navigation.posts-navigation,
-body.post-type-archive-tinctures nav.navigation.posts-navigation,
-body.tax-flowers_category nav.navigation.posts-navigation,
-body.tax-edibles_category nav.navigation.posts-navigation,
-body.tax-concentrates_category nav.navigation.posts-navigation,
-body.tax-topicals_category nav.navigation.posts-navigation,
-body.tax-growers_category nav.navigation.posts-navigation,
-body.tax-wpd_gear_category nav.navigation.posts-navigation,
-body.tax-wpd_tinctures_category nav.navigation.posts-navigation,
+body.post-type-archive-products nav.navigation.posts-navigation,
+body.tax-wpd_categories nav.navigation.posts-navigation,
 body.tax-aromas nav.navigation.posts-navigation,
-body.tax-flavor nav.navigation.posts-navigation,
-body.tax-effect nav.navigation.posts-navigation,
-body.tax-symptom nav.navigation.posts-navigation,
-body.tax-condition nav.navigation.posts-navigation,
+body.tax-flavors nav.navigation.posts-navigation,
+body.tax-effects nav.navigation.posts-navigation,
+body.tax-symptoms nav.navigation.posts-navigation,
+body.tax-conditions nav.navigation.posts-navigation,
 body.tax-ingredients nav.navigation.posts-navigation,
-body.tax-vendor nav.navigation.posts-navigation,
+body.tax-vendors nav.navigation.posts-navigation,
 body.tax-allergens nav.navigation.posts-navigation,
-body.tax-shelf_type nav.navigation.posts-navigation,
-body.tax-strain_type nav.navigation.posts-navigation {
+body.tax-shelf_types nav.navigation.posts-navigation,
+body.tax-strain_types nav.navigation.posts-navigation {
     float: left;
     margin: 1%;
     width: 98%;
@@ -2570,31 +2498,18 @@ div#tab-seller ul li {
 
 	.site-header.scroll-to-fixed-fixed .site-branding { padding-bottom: 0; }
 
-	body.post-type-archive-flowers .hentry,
-	body.post-type-archive-edibles .hentry,
-	body.post-type-archive-concentrates .hentry,
-	body.post-type-archive-prerolls .hentry,
-	body.post-type-archive-topicals .hentry,
-	body.post-type-archive-growers .hentry,
-	body.post-type-archive-gear .hentry,
-	body.post-type-archive-tinctures .hentry,
-	body.tax-flowers_category .hentry,
-	body.tax-edibles_category .hentry,
-	body.tax-concentrates_category .hentry,
-	body.tax-topicals_category .hentry,
-	body.tax-growers_category .hentry,
-	body.tax-wpd_gear_category .hentry,
-	body.tax-wpd_tinctures_category .hentry,
-	body.tax-aroma .hentry,
-	body.tax-flavor .hentry,
-	body.tax-effect .hentry,
-	body.tax-condition .hentry,
-	body.tax-symptom .hentry,
+	body.post-type-archive-products .hentry,
+	body.tax-wpd_categories .hentry,
+	body.tax-aromas .hentry,
+	body.tax-flavors .hentry,
+	body.tax-effects .hentry,
+	body.tax-conditions .hentry,
+	body.tax-symptoms .hentry,
 	body.tax-ingredients .hentry,
-	body.tax-vendor .hentry,
+	body.tax-vendors .hentry,
 	body.tax-allergens .hentry,
-	body.tax-shelf_type .hentry,
-	body.tax-strain_type .hentry {
+	body.tax-shelf_types .hentry,
+	body.tax-strain_types .hentry {
 		float: left;
 		margin: 1%;
 		width: 48%;
@@ -2620,14 +2535,7 @@ div#tab-seller ul li {
 	}
 
 	.entry-header,
-	.type-edibles .entry-header,
-	.type-concentrates .entry-header,
-	.type-flowers .entry-header,
-	.type-prerolls .entry-header,
-	.type-topicals .entry-header,
-	.type-growers .entry-header,
-	.type-gear .entry-header,
-	.type-tinctures .entry-header {
+	.type-products .entry-header {
 		margin: 0;
 	}
 
@@ -2643,31 +2551,18 @@ div#tab-seller ul li {
 
 @media screen and (max-width:600px) {
 
-	body.post-type-archive-flowers .hentry,
-	body.post-type-archive-edibles .hentry,
-	body.post-type-archive-concentrates .hentry,
-	body.post-type-archive-prerolls .hentry,
-	body.post-type-archive-tinctures .hentry,
-	body.post-type-archive-growers .hentry,
-	body.post-type-archive-gear .hentry,
-	body.post-type-archive-tinctures .hentry,
-	body.tax-flowers_category .hentry,
-	body.tax-edibles_category .hentry,
-	body.tax-concentrates_category .hentry,
-	body.tax-topicals_category .hentry,
-	body.tax-growers_category .hentry,
-	body.tax-wpd_gear_category .hentry,
-	body.tax-wpd_tinctures_category .hentry,
-	body.tax-aroma .hentry,
-	body.tax-flavor .hentry,
-	body.tax-effect .hentry,
-	body.tax-condition .hentry,
-	body.tax-symptom .hentry,
+	body.post-type-archive-products .hentry,
+	body.tax-wpd_categories .hentry,
+	body.tax-aromas .hentry,
+	body.tax-flavors .hentry,
+	body.tax-effects .hentry,
+	body.tax-conditions .hentry,
+	body.tax-symptoms .hentry,
 	body.tax-ingredients .hentry,
-	body.tax-vendor .hentry,
+	body.tax-vendors .hentry,
 	body.tax-allergens .hentry,
-	body.tax-shelf_type .hentry,
-	body.tax-strain_type .hentry {
+	body.tax-shelf_types .hentry,
+	body.tax-strain_types .hentry {
 		float: left;
 		margin: 1%;
 		width: 98%;
