@@ -171,54 +171,9 @@ add_action( 'widgets_init', 'cannabiz_widgets_init' );
 function wp_dispensary_sidebars() {
 	if ( class_exists( 'WP_Dispensary' ) ) {
 		register_sidebar( array(
-			'name'          => esc_html__( 'Sidebar Flowers', 'cannabiz' ),
-			'id'            => 'sidebar-flowers',
-			'description'   => 'Displays at top of the sidebar in Flowers',
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</aside>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		) );
-		register_sidebar( array(
-			'name'          => esc_html__( 'Sidebar Concentrates', 'cannabiz' ),
-			'id'            => 'sidebar-concentrates',
-			'description'   => 'Displays at top of the sidebar in Concentrates',
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</aside>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		) );
-		register_sidebar( array(
-			'name'          => esc_html__( 'Sidebar Edibles', 'cannabiz' ),
-			'id'            => 'sidebar-edibles',
-			'description'   => 'Displays at top of the sidebar in Edibles',
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</aside>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		) );
-		register_sidebar( array(
-			'name'          => esc_html__( 'Sidebar Pre-rolls', 'cannabiz' ),
-			'id'            => 'sidebar-prerolls',
-			'description'   => 'Displays at top of the sidebar in Pre-rolls',
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</aside>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		) );
-		register_sidebar( array(
-			'name'          => esc_html__( 'Sidebar Topicals', 'cannabiz' ),
-			'id'            => 'sidebar-topicals',
-			'description'   => 'Displays at top of the sidebar in Topicals',
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</aside>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		) );
-		register_sidebar( array(
-			'name'          => esc_html__( 'Sidebar Growers', 'cannabiz' ),
-			'id'            => 'sidebar-growers',
-			'description'   => 'Displays at top of the sidebar in Growers',
+			'name'          => esc_html__( 'Sidebar Products', 'cannabiz' ),
+			'id'            => 'sidebar-products',
+			'description'   => 'Displays at top of the single products sidebar',
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</aside>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -238,14 +193,14 @@ function cannabiz_scripts() {
 
 	wp_enqueue_style( 'cannabiz-fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
 
-	wp_enqueue_script( 'cannabiz-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20190204', true );
-	wp_enqueue_script( 'cannabiz-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20190204', true );
-	wp_enqueue_script( 'cannabiz-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '20190204', true );
-	wp_enqueue_script( 'cannabiz-hoverIntent', get_template_directory_uri() . '/js/hoverIntent.min.js', array(), '20190204', true );
-	wp_enqueue_script( 'cannabiz-js', get_template_directory_uri() . '/js/cannabiz.min.js', array(), '20190204', true );
+	wp_enqueue_script( 'cannabiz-navigation', get_template_directory_uri() . '/js/navigation.js', array(), time(), true );
+	wp_enqueue_script( 'cannabiz-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), time(), true );
+	wp_enqueue_script( 'cannabiz-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), time(), true );
+	wp_enqueue_script( 'cannabiz-hoverIntent', get_template_directory_uri() . '/js/hoverIntent.min.js', array(), time(), true );
+	wp_enqueue_script( 'cannabiz-js', get_template_directory_uri() . '/js/cannabiz.min.js', array(), time(), true );
 
 	if( class_exists( 'WP_Dispensary' ) ) {
-		wp_enqueue_script( 'cannabiz-wpd-js', get_template_directory_uri() . '/js/wp-dispensary.js', array(), '20190204', true );
+		wp_enqueue_script( 'cannabiz-wpd-js', get_template_directory_uri() . '/js/wp-dispensary.js', array(), time(), true );
 	}
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
