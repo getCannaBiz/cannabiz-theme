@@ -2088,7 +2088,7 @@ function cannabiz_customize_scripts() {
 		wp_enqueue_style( 'cannabiz-lato', 'https://fonts.googleapis.com/css?family=Lato:300,400,700' );
 	} elseif ( get_theme_mod( 'cannabiz_title_font' ) === 'Oswald' ) {
 		wp_enqueue_style( 'cannabiz-oswald', 'https://fonts.googleapis.com/css?family=Oswald:300,400,600' );
-	} elseif ( get_theme_mod( 'cannabiz_title_font' ) === 'Source Sans' ) {
+	} elseif ( get_theme_mod( 'cannabiz_title_font' ) === 'Source Sans Pro' ) {
 		wp_enqueue_style( 'cannabiz-sourcesans', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' );
 	} elseif ( get_theme_mod( 'cannabiz_title_font' ) === 'Raleway' ) {
 		wp_enqueue_style( 'cannabiz-raleway', 'https://fonts.googleapis.com/css?family=Raleway:300,400,600' );
