@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying single posts.
+ * Template part for displaying single products.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -23,12 +23,6 @@
 
 	<div class="entry-content">
 		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'cannabiz' ),
-				'after'  => '</div>',
-			) );
-		?>
 		<?php cannabiz_product_footer(); ?>
 	</div><!-- .entry-content -->
 
