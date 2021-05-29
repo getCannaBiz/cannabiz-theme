@@ -21,8 +21,8 @@ get_header(); ?>
 
 			// Previous/next page navigation.
 			the_posts_pagination( array(
-				'prev_text'          => __( '<i class="fa fa-chevron-left"></i>', 'cannabiz' ),
-				'next_text'          => __( '<i class="fa fa-chevron-right"></i>', 'cannabiz' ),
+				'prev_text'          => __( '<i class="fas fa-chevron-left"></i>', 'cannabiz' ),
+				'next_text'          => __( '<i class="fas fa-chevron-right"></i>', 'cannabiz' ),
 				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'cannabiz' ) . ' </span>',
 			) );
 

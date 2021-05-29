@@ -45,11 +45,11 @@
 					<p>
 						<?php do_action( 'cannabiz_topbar_inside_before_email' ); ?>
 						<?php if ( 'show' === get_theme_mod( 'cannabiz_topbar_email' ) || '' === get_theme_mod( 'cannabiz_topbar_email' ) ) { ?>
-						<span class="topbar-email"><a href="mailto:<?php echo get_theme_mod( 'cannabiz_topbar_email_address' ); ?>"><i class="fa fa-envelope-o" aria-hidden="true"></i> <span class="mobilehide"><?php echo get_theme_mod( 'cannabiz_topbar_email_address' ); ?></span></a></span>
+						<span class="topbar-email"><a href="mailto:<?php echo get_theme_mod( 'cannabiz_topbar_email_address' ); ?>"><i class="far fa-envelope" aria-hidden="true"></i> <span class="mobilehide"><?php echo get_theme_mod( 'cannabiz_topbar_email_address' ); ?></span></a></span>
 						<?php } ?>
 						<?php do_action( 'cannabiz_topbar_inside_before_phone' ); ?>
 						<?php if ( 'show' === get_theme_mod( 'cannabiz_topbar_phone' ) || '' === get_theme_mod( 'cannabiz_topbar_phone' ) ) { ?>
-						<span class="topbar-phone"><a href="tel:<?php echo get_theme_mod( 'cannabiz_topbar_phone_number' ); ?>"><i class="fa fa-phone" aria-hidden="true"></i> <span class="mobilehide"><?php echo get_theme_mod( 'cannabiz_topbar_phone_number' ); ?></span></a></span>
+						<span class="topbar-phone"><a href="tel:<?php echo get_theme_mod( 'cannabiz_topbar_phone_number' ); ?>"><i class="fas fa-phone" aria-hidden="true"></i> <span class="mobilehide"><?php echo get_theme_mod( 'cannabiz_topbar_phone_number' ); ?></span></a></span>
 						<?php } ?>
 						<?php do_action( 'cannabiz_topbar_inside_before_social' ); ?>
 						<?php if ( 'show' === get_theme_mod( 'cannabiz_topbar_social' ) || '' === get_theme_mod( 'cannabiz_topbar_social' ) ) { ?>
@@ -69,8 +69,8 @@
 	<header id="masthead" class="site-header" role="banner">
 		<?php do_action( 'cannabiz_header_inside_top' ); ?>
 		<div class="menu-toggle">
-			<span><i class="fa fa-reorder"></i><?php _e( 'Menu', 'cannabiz' ); ?></span>
-			<span class="menu-close"><i class="fa fa-times"></i><?php _e( 'Close menu', 'cannabiz' ); ?></span>
+			<span><i class="fas fa-bars"></i><?php _e( 'Menu', 'cannabiz' ); ?></span>
+			<span class="menu-close"><i class="fas fa-times"></i><?php _e( 'Close menu', 'cannabiz' ); ?></span>
 		</div>
 		<div class="container">
 			<div class="row">

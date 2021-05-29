@@ -14,13 +14,13 @@ function cannabiz_posted_on() {
 	if ( 'post' === get_post_type() ) {
 		if ( 'show' === get_theme_mod( 'cannabiz_posts_show_comments' ) || '' === get_theme_mod( 'cannabiz_posts_show_comments' ) ) {
 			if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-				echo '<span class="comments-link"><i class="fa fa-comment"></i> ';
+				echo '<span class="comments-link"><i class="fas fa-comments"></i> ';
 				comments_popup_link( esc_html__( '0 Comments', 'cannabiz' ), esc_html__( '1 Comment', 'cannabiz' ), esc_html__( '% Comments', 'cannabiz' ) );
 				echo '</span>';
 			}
 		}
 		if ( 'show' === get_theme_mod( 'cannabiz_posts_show_author' ) || '' === get_theme_mod( 'cannabiz_posts_show_author' ) ) {
-			echo '<span class="author-link"><i class="fa fa-user"></i> ' . get_the_author_link( get_the_id() ) .'</span>';
+			echo '<span class="author-link"><i class="fas fa-user"></i> ' . get_the_author_link( get_the_id() ) .'</span>';
 		}
 	}
 
@@ -55,7 +55,7 @@ function cannabiz_posted_on() {
 			esc_html__( 'Edit %s', 'cannabiz' ),
 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		),
-		'<span class="edit-link"><i class="fa fa-pencil"></i> ',
+		'<span class="edit-link"><i class="fas fa-pencil-alt"></i> ',
 		'</span>'
 	);
 
@@ -87,7 +87,7 @@ function cannabiz_entry_footer() {
 		);
 
 		if ( 'show' === get_theme_mod( 'cannabiz_posts_show_date' ) || null === get_theme_mod( 'cannabiz_posts_show_date' ) ) {
-			echo '<span class="posted-on"><i class="fa fa-calendar"></i> ' . $posted_on . '</span>'; // WPCS: XSS OK.
+			echo '<span class="posted-on"><i class="far fa-calendar"></i> ' . $posted_on . '</span>'; // WPCS: XSS OK.
 		}
 		if ( 'show' === get_theme_mod( 'cannabiz_posts_show_category' ) || '' === get_theme_mod( 'cannabiz_posts_show_category' ) ) {
 			echo '<span class="category-link">' . get_the_category_list( ' ', get_the_id() ) .'</span>';
@@ -98,7 +98,7 @@ function cannabiz_entry_footer() {
 		if ( ! comments_open() ) {
 			echo '<span></span> &nbsp;'; // No Comments.
 		} else {
-			echo '<span class="dispensary-comments"><i class="fa fa-comment"></i> ';
+			echo '<span class="dispensary-comments"><i class="fas fa-comments"></i> ';
 			echo comments_popup_link( esc_html__( '0', 'cannabiz' ), esc_html__( '1', 'cannabiz' ), esc_html__( '%', 'cannabiz' ) );
 			echo '</span>'; // WPCS: XSS OK.
 		}
@@ -128,7 +128,7 @@ function cannabiz_topbar_shopping_cart() {
 		do_action( 'cannabiz_topbar_inside_before_woocommerce_cart' ); ?>
 			<span class="topbar-woocommerce">
 				<a href="<?php echo $cart_url ?>">
-					<i class="fa fa-shopping-cart" aria-hidden="true"></i> (<?php echo $qty; ?>)
+					<i class="fas fa-shopping-cart" aria-hidden="true"></i> (<?php echo $qty; ?>)
 				</a>
 			</span>
 		<?php
@@ -158,59 +158,59 @@ function cannabiz_social_icons() {
 	<?php }
 
 	if ( '' != get_theme_mod( 'cannabiz_social_twitter' ) ) { ?>
-		<a href="<?php echo get_theme_mod( 'cannabiz_social_twitter' ); ?>" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+		<a href="<?php echo get_theme_mod( 'cannabiz_social_twitter' ); ?>" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>
 	<?php }
 
 	if ( '' != get_theme_mod( 'cannabiz_social_facebook' ) ) { ?>
-		<a href="<?php echo get_theme_mod( 'cannabiz_social_facebook' ); ?>" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+		<a href="<?php echo get_theme_mod( 'cannabiz_social_facebook' ); ?>" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a>
 	<?php }
 
 	if ( '' != get_theme_mod( 'cannabiz_social_instagram' ) ) { ?>
-		<a href="<?php echo get_theme_mod( 'cannabiz_social_instagram' ); ?>" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+		<a href="<?php echo get_theme_mod( 'cannabiz_social_instagram' ); ?>" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
 	<?php }
 
 	if ( '' != get_theme_mod( 'cannabiz_social_google' ) ) { ?>
-		<a href="<?php echo get_theme_mod( 'cannabiz_social_google' ); ?>" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
+		<a href="<?php echo get_theme_mod( 'cannabiz_social_google' ); ?>" target="_blank"><i class="fab fa-google" aria-hidden="true"></i></a>
 	<?php }
 
 	if ( '' != get_theme_mod( 'cannabiz_social_snapchat' ) ) { ?>
-		<a href="<?php echo get_theme_mod( 'cannabiz_social_snapchat' ); ?>" target="_blank"><i class="fa fa-snapchat-ghost" aria-hidden="true"></i></a>
+		<a href="<?php echo get_theme_mod( 'cannabiz_social_snapchat' ); ?>" target="_blank"><i class="fab fa-snapchat-ghost" aria-hidden="true"></i></a>
 	<?php }
 
 	if ( get_theme_mod( 'cannabiz_social_github' ) ) { ?>
-		<a href="<?php echo get_theme_mod( 'cannabiz_social_github' ); ?>" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+		<a href="<?php echo get_theme_mod( 'cannabiz_social_github' ); ?>" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a>
 	<?php }
 
 	if ( '' != get_theme_mod( 'cannabiz_social_wordpress' ) ) { ?>
-		<a href="<?php echo get_theme_mod( 'cannabiz_social_wordpress' ); ?>" target="_blank"><i class="fa fa-wordpress" aria-hidden="true"></i></a>
+		<a href="<?php echo get_theme_mod( 'cannabiz_social_wordpress' ); ?>" target="_blank"><i class="fab fa-wordpress" aria-hidden="true"></i></a>
 	<?php }
 
 	if ( '' != get_theme_mod( 'cannabiz_social_linkedin' ) ) { ?>
-		<a href="<?php echo get_theme_mod( 'cannabiz_social_linkedin' ); ?>" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+		<a href="<?php echo get_theme_mod( 'cannabiz_social_linkedin' ); ?>" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
 	<?php }
 
 	if ( '' != get_theme_mod( 'cannabiz_social_pinterest' ) ) { ?>
-		<a href="<?php echo get_theme_mod( 'cannabiz_social_pinterest' ); ?>" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+		<a href="<?php echo get_theme_mod( 'cannabiz_social_pinterest' ); ?>" target="_blank"><i class="fab fa-pinterest" aria-hidden="true"></i></a>
 	<?php }
 
 	if ( '' != get_theme_mod( 'cannabiz_social_medium' ) ) { ?>
-		<a href="<?php echo get_theme_mod( 'cannabiz_social_medium' ); ?>" target="_blank"><i class="fa fa-medium" aria-hidden="true"></i></a>
+		<a href="<?php echo get_theme_mod( 'cannabiz_social_medium' ); ?>" target="_blank"><i class="fab fa-medium" aria-hidden="true"></i></a>
 	<?php }
 
 	if ( '' != get_theme_mod( 'cannabiz_social_youtube' ) ) { ?>
-		<a href="<?php echo get_theme_mod( 'cannabiz_social_youtube' ); ?>" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+		<a href="<?php echo get_theme_mod( 'cannabiz_social_youtube' ); ?>" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a>
 	<?php }
 
 	if ( '' != get_theme_mod( 'cannabiz_social_tumblr' ) ) { ?>
-		<a href="<?php echo get_theme_mod( 'cannabiz_social_tumblr' ); ?>" target="_blank"><i class="fa fa-tumblr" aria-hidden="true"></i></a>
+		<a href="<?php echo get_theme_mod( 'cannabiz_social_tumblr' ); ?>" target="_blank"><i class="fab fa-tumblr" aria-hidden="true"></i></a>
 	<?php }
 
 	if ( '' != get_theme_mod( 'cannabiz_social_yelp' ) ) { ?>
-		<a href="<?php echo get_theme_mod( 'cannabiz_social_yelp' ); ?>" target="_blank"><i class="fa fa-yelp" aria-hidden="true"></i></a>
+		<a href="<?php echo get_theme_mod( 'cannabiz_social_yelp' ); ?>" target="_blank"><i class="fab fa-yelp" aria-hidden="true"></i></a>
 	<?php }
 
 	if ( '' != get_theme_mod( 'cannabiz_social_rss' ) ) { ?>
-		<a href="<?php echo get_theme_mod( 'cannabiz_social_rss' ); ?>" target="_blank"><i class="fa fa-rss" aria-hidden="true"></i></a>
+		<a href="<?php echo get_theme_mod( 'cannabiz_social_rss' ); ?>" target="_blank"><i class="fab fa-rss" aria-hidden="true"></i></a>
 	<?php }
 
 }
