@@ -8,7 +8,6 @@
  *
  * @package CannaBiz
  */
-
 ?>
 			</div><!-- .row -->
 		</div><!-- .container -->

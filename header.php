@@ -45,15 +45,15 @@
 					<p>
 						<?php do_action( 'cannabiz_topbar_inside_before_email' ); ?>
 						<?php if ( 'show' === get_theme_mod( 'cannabiz_topbar_email' ) || '' === get_theme_mod( 'cannabiz_topbar_email' ) ) { ?>
-						<span class="topbar-email"><a href="mailto:<?php echo get_theme_mod( 'cannabiz_topbar_email_address' ); ?>"><i class="far fa-envelope" aria-hidden="true"></i> <span class="mobilehide"><?php echo get_theme_mod( 'cannabiz_topbar_email_address' ); ?></span></a></span>
+							<span class="topbar-email"><a href="mailto:<?php echo get_theme_mod( 'cannabiz_topbar_email_address' ); ?>"><i class="far fa-envelope" aria-hidden="true"></i> <span class="mobilehide"><?php echo get_theme_mod( 'cannabiz_topbar_email_address' ); ?></span></a></span>
 						<?php } ?>
 						<?php do_action( 'cannabiz_topbar_inside_before_phone' ); ?>
 						<?php if ( 'show' === get_theme_mod( 'cannabiz_topbar_phone' ) || '' === get_theme_mod( 'cannabiz_topbar_phone' ) ) { ?>
-						<span class="topbar-phone"><a href="tel:<?php echo get_theme_mod( 'cannabiz_topbar_phone_number' ); ?>"><i class="fas fa-phone" aria-hidden="true"></i> <span class="mobilehide"><?php echo get_theme_mod( 'cannabiz_topbar_phone_number' ); ?></span></a></span>
+							<span class="topbar-phone"><a href="tel:<?php echo get_theme_mod( 'cannabiz_topbar_phone_number' ); ?>"><i class="fas fa-phone" aria-hidden="true"></i> <span class="mobilehide"><?php echo get_theme_mod( 'cannabiz_topbar_phone_number' ); ?></span></a></span>
 						<?php } ?>
 						<?php do_action( 'cannabiz_topbar_inside_before_social' ); ?>
 						<?php if ( 'show' === get_theme_mod( 'cannabiz_topbar_social' ) || '' === get_theme_mod( 'cannabiz_topbar_social' ) ) { ?>
-						<span class="topbar-social"><?php cannabiz_social_icons(); ?></span>
+							<span class="topbar-social"><?php cannabiz_social_icons(); ?></span>
 						<?php } ?>
 						<?php do_action( 'cannabiz_topbar_inside_after_social' ); ?>
 					</p>
