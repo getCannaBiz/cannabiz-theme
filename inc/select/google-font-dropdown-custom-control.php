@@ -28,7 +28,7 @@ if ( ! class_exists( 'WP_Customize_Control' ) )
 							printf( '<option value="%s" %s>%s</option>', 'Roboto', selected( $this->value() ), 'Roboto' );
 							printf( '<option value="%s" %s>%s</option>', 'Lato', selected( $this->value() ), 'Lato' );
 							printf( '<option value="%s" %s>%s</option>', 'Oswald', selected( $this->value() ), 'Oswald' );
-							printf( '<option value="%s" %s>%s</option>', 'Source Sans', selected( $this->value() ), 'Source Sans' );
+							printf( '<option value="%s" %s>%s</option>', 'Source Sans Pro', selected( $this->value() ), 'Source Sans Pro' );
 							printf( '<option value="%s" %s>%s</option>', 'Raleway', selected( $this->value() ), 'Raleway' );
 							printf( '<option value="%s" %s>%s</option>', 'Lora', selected( $this->value() ), 'Lora' );
 							printf( '<option value="%s" %s>%s</option>', 'Playfair Display', selected( $this->value() ), 'Playfair Display' );

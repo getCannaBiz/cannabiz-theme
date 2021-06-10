@@ -277,15 +277,14 @@ add_filter( 'gettext', 'cannabiz_paypal_button', 20, 3 );
 /**
  * Add "CannaBiz" submenu to WPD admin menu
  */
-add_action( 'admin_menu', 'wpd_cannabiz_submenu_page', 9 );
 function wpd_cannabiz_submenu_page() {
-	add_submenu_page( 'wpd-settings', 'CannaBiz', 'CannaBiz', 'manage_options', 'customize.php', NULL );
+	add_submenu_page( 'wpd-settings', 'Customizer', 'Customizer', 'manage_options', 'customize.php', NULL );
 }
+add_action( 'admin_menu', 'wpd_cannabiz_submenu_page', 9 );
 
 /**
  * Metabox to hide title on page-by-page basis
  */
-
 function cannabiz_page_title( $value ) {
 	global $post;
 
