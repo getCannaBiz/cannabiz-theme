@@ -296,10 +296,13 @@ function cannabiz_page_title( $value ) {
 	}
 }
 
+/**
+ * Metabox: Large page title
+ */
 function page_title_add_meta_box() {
 	add_meta_box(
 		'large_page_title',
-		__( 'Large Page Title', 'cannabiz' ),
+		__( 'Large page title', 'cannabiz' ),
 		'page_title_html',
 		array ( 'page' ),
 		'side',
@@ -308,24 +311,30 @@ function page_title_add_meta_box() {
 }
 add_action( 'add_meta_boxes', 'page_title_add_meta_box' );
 
+/**
+ * Metabox HTML: Large page title
+ */
 function page_title_html( $post) {
 	wp_nonce_field( '_page_title_nonce', 'page_title_nonce' ); ?>
-	<style>span.muted-text {color: #ccc;}</style>
 	<p>
 		<input type="checkbox" name="page_title" id="page_title" value="add_page_title" <?php echo ( cannabiz_page_title( 'page_title' ) === 'add_page_title' ) ? 'checked' : ''; ?>>
-		<label for="page_title"><?php _e( 'Display', 'cannabiz' ); ?> <span class="muted-text"><?php _e( '(overrides Customizer setting)', 'cannabiz' ); ?></span></label>
+		<label for="page_title"><?php _e( 'Display large page title', 'cannabiz' ); ?></label>
 	</p><?php
 }
 
+/**
+ * Metabox Save: Large page title
+ */
 function page_title_save( $post_id ) {
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
 	if ( ! isset( $_POST['page_title_nonce'] ) || ! wp_verify_nonce( $_POST['page_title_nonce'], '_page_title_nonce' ) ) return;
 	if ( ! current_user_can( 'edit_post', $post_id ) ) return;
 
-	if ( isset( $_POST['page_title'] ) )
+	if ( isset( $_POST['page_title'] ) ) {
 		update_post_meta( $post_id, 'page_title', esc_attr( $_POST['page_title'] ) );
-	else
+	} else {
 		update_post_meta( $post_id, 'page_title', null );
+	}
 }
 add_action( 'save_post', 'page_title_save' );
 
