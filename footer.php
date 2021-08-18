@@ -42,7 +42,7 @@
 						<?php echo get_theme_mod( 'cannabiz_copyright' ); ?>
 					<?php } else { ?>
 						&copy; <?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?>.
-						<?php printf( esc_html__( 'Powered by %1$s', 'cannabiz' ), '<a href="https://www.wpdispensary.com/" rel="WP Dispensary - WordPress Marijuana Plugin">WP Dispensary</a>' ); ?>
+						<?php printf( esc_html__( 'Powered by %1$s', 'cannabiz' ), '<a href="https://cannabiz.pro/" rel="cannabis software">CannaBiz Software, LLC</a>' ); ?>
 					<?php }
 						// Filter to add custom footer content after the copyright.
 						echo apply_filters( 'cannabiz_footer_designedby', '' );
