@@ -314,7 +314,7 @@ add_action( 'add_meta_boxes', 'page_title_add_meta_box' );
 /**
  * Metabox HTML: Large page title
  */
-function page_title_html( $post) {
+function page_title_html( $post ) {
 	wp_nonce_field( '_page_title_nonce', 'page_title_nonce' ); ?>
 	<p>
 		<input type="checkbox" name="page_title" id="page_title" value="add_page_title" <?php echo ( cannabiz_page_title( 'page_title' ) === 'add_page_title' ) ? 'checked' : ''; ?>>
@@ -451,8 +451,8 @@ function cannabiz_login_logo_image( $login_header_text ) {
 
 	if ( '' != get_theme_mod( 'cannabiz_logo' ) ) {
 		$login_header_text = '';
-		$logo_url          = get_theme_mod( 'cannabiz_logo' );
-		$login_header_text = '<img src="' . $logo_url . '" alt="' . get_bloginfo( 'title' ) . '" />';
+		$login_logo_url    = get_theme_mod( 'cannabiz_logo' );
+		$login_header_text = '<img src="' . $login_logo_url . '" alt="' . get_bloginfo( 'title' ) . '" />';
 	}
 
 	return $login_header_text;
