@@ -2048,16 +2048,16 @@ function cannabiz_customizer_css() {
 	<?php } ?>
 
 	<?php if ( '' != get_theme_mod( 'cannabiz_link_color' ) || null != get_theme_mod( 'cannabiz_link_color' ) ) { ?>
-		div.wpd-ecommerce.patient-account input.account-links:checked+label.account-links {
+		div.wpd-ecommerce.customer-account input.account-links:checked+label.account-links {
 			color: <?php echo get_theme_mod( 'cannabiz_link_color' ); ?>;
 			border: 1px solid <?php echo get_theme_mod( 'cannabiz_link_color' ); ?>;
 			border-top: 2px solid <?php echo get_theme_mod( 'cannabiz_link_color' ); ?>;
 			border-bottom: 1px solid #FFF;
 		}
-		div.wpd-ecommerce.patient-account section {
+		div.wpd-ecommerce.customer-account section {
 			border-top: 1px solid <?php echo get_theme_mod( 'cannabiz_link_color' ); ?>;
 		}
-		div.wpd-ecommerce.patient-account label.account-links:hover {
+		div.wpd-ecommerce.customer-account label.account-links:hover {
 			color: <?php echo get_theme_mod( 'cannabiz_link_color' ); ?>;
 		}
 		.wpd-ecommerce.account-administrator.earnings {
