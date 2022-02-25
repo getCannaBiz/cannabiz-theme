@@ -1286,25 +1286,6 @@ article.hentry.no-results.not-found {
 ## Custom Post Types
 --------------------------------------------------------------*/
 
-body.post-type-archive-products .hentry,
-body.tax-wpd_categories .hentry,
-body.tax-aromas .hentry,
-body.tax-flavors .hentry,
-body.tax-effects .hentry,
-body.tax-conditions .hentry,
-body.tax-symptoms .hentry,
-body.tax-ingredients .hentry,
-body.tax-vendors .hentry,
-body.tax-allergens .hentry,
-body.tax-shelf_types .hentry,
-body.tax-strain_types .hentry {
-	float: left;
-	margin: 1%;
-	width: 31.333%;
-}
-
-body.post-type-archive-products .hentry .entry-header,
-body.post-type-archive-products .hentry .entry-footer,
 body.tax-wpd_categories .hentry .entry-header,
 body.tax-wpd_categories .hentry .entry-footer,
 body.tax-aromas .hentry .entry-header,
@@ -1330,7 +1311,6 @@ body.tax-strain_types .hentry .entry-footer {
 	padding: 24px;
 }
 
-body.post-type-archive-products .hentry .entry-header h2.entry-title,
 body.tax-wpd_categories .hentry .entry-header h2.entry-title,
 body.tax-aromas .hentry .entry-header h2.entry-title,
 body.tax-flavors .hentry .entry-header h2.entry-title,
@@ -1360,6 +1340,17 @@ body.tax-strain_types nav.navigation.posts-navigation {
     float: left;
     margin: 1%;
     width: 98%;
+}
+
+/** Vendors - logo archive */
+
+.vendor-logo {
+    display: block;
+    float: left;
+	margin-top: 24px;
+	position: relative;
+    text-align: center;
+	width: 100%;
 }
 
 .dispensary-category {
@@ -2504,7 +2495,6 @@ div#tab-seller ul li {
 
 	.site-header.scroll-to-fixed-fixed .site-branding { padding-bottom: 0; }
 
-	body.post-type-archive-products .hentry,
 	body.tax-wpd_categories .hentry,
 	body.tax-aromas .hentry,
 	body.tax-flavors .hentry,
@@ -2556,23 +2546,6 @@ div#tab-seller ul li {
 
 
 @media screen and (max-width:600px) {
-
-	body.post-type-archive-products .hentry,
-	body.tax-wpd_categories .hentry,
-	body.tax-aromas .hentry,
-	body.tax-flavors .hentry,
-	body.tax-effects .hentry,
-	body.tax-conditions .hentry,
-	body.tax-symptoms .hentry,
-	body.tax-ingredients .hentry,
-	body.tax-vendors .hentry,
-	body.tax-allergens .hentry,
-	body.tax-shelf_types .hentry,
-	body.tax-strain_types .hentry {
-		float: left;
-		margin: 1%;
-		width: 98%;
-	}
 
 	.intro-title {
 		font-size: 32px;
