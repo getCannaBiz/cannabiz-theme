@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying single posts.
+ * Template part for displaying single coupons.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -21,7 +21,6 @@
 <?php } ?>
 
 <article id="wpd-coupon" <?php post_class(); ?>>
-
 	<?php if ( has_post_thumbnail() ) { ?>
 		<?php the_post_thumbnail( 'large-image' ); ?>
 	<?php } ?>

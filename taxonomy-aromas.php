@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying the Allergens taxonomy archive.
+ * The template for displaying the Aromas taxonomy archive.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *

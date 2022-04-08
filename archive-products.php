@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying the Allergens taxonomy archive.
+ * The template for displaying the products archive.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -12,28 +12,24 @@ get_header(); ?>
 	<div id="primary" class="col-lg-12 content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>
+		<?php
+		if ( have_posts() ) :
 
-			<?php while ( have_posts() ) : the_post(); ?>
+			while ( have_posts() ) : the_post();
+				get_template_part( 'template-parts/dispensary', get_post_format() );
+			endwhile;
 
-				<?php get_template_part( 'template-parts/taxonomy' ); ?>
-
-			<?php endwhile; ?>
-
-			<?php 
 			// Previous/next page navigation.
 			the_posts_pagination( array(
 				'prev_text'          => __( '<i class="fas fa-chevron-left"></i>', 'cannabiz' ),
 				'next_text'          => __( '<i class="fas fa-chevron-right"></i>', 'cannabiz' ),
 				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'cannabiz' ) . ' </span>',
 			) );
-			?>
 
-		<?php else : ?>
-
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
-		<?php endif; ?>
+		else :
+			get_template_part( 'template-parts/content', 'none' );	
+		endif;
+		?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

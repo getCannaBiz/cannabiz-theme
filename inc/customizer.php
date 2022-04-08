@@ -1233,24 +1233,6 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 		)
 	);
 
-	/* Home page bottom */
-	$wp_customize->add_setting(
-		'cannabiz_home_slider_bottom',
-		array(
-			'default'            => '',
-			'sanitize_callback'  => 'cannabiz_sanitize_text',
-			'transport'          => 'refresh'
-		)
-	);
-	$wp_customize->add_control(
-		'cannabiz_home_slider_bottom',
-		array(
-			'section'  => 'cannabiz_footer',
-			'label'    => 'Home page bottom shortcode',
-			'type'     => 'text'
-		)
-	);
-
 	/* Display Copyright */
 	$wp_customize->add_setting(
 		'cannabiz_copyright',
@@ -2066,16 +2048,16 @@ function cannabiz_customizer_css() {
 	<?php } ?>
 
 	<?php if ( '' != get_theme_mod( 'cannabiz_link_color' ) || null != get_theme_mod( 'cannabiz_link_color' ) ) { ?>
-		div.wpd-ecommerce.patient-account input.account-links:checked+label.account-links {
+		div.wpd-ecommerce.customer-account input.account-links:checked+label.account-links {
 			color: <?php echo get_theme_mod( 'cannabiz_link_color' ); ?>;
 			border: 1px solid <?php echo get_theme_mod( 'cannabiz_link_color' ); ?>;
 			border-top: 2px solid <?php echo get_theme_mod( 'cannabiz_link_color' ); ?>;
 			border-bottom: 1px solid #FFF;
 		}
-		div.wpd-ecommerce.patient-account section {
+		div.wpd-ecommerce.customer-account section {
 			border-top: 1px solid <?php echo get_theme_mod( 'cannabiz_link_color' ); ?>;
 		}
-		div.wpd-ecommerce.patient-account label.account-links:hover {
+		div.wpd-ecommerce.customer-account label.account-links:hover {
 			color: <?php echo get_theme_mod( 'cannabiz_link_color' ); ?>;
 		}
 		.wpd-ecommerce.account-administrator.earnings {
@@ -2106,8 +2088,8 @@ function cannabiz_customize_scripts() {
 		wp_enqueue_style( 'cannabiz-lato', 'https://fonts.googleapis.com/css?family=Lato:300,400,700' );
 	} elseif ( get_theme_mod( 'cannabiz_title_font' ) === 'Oswald' ) {
 		wp_enqueue_style( 'cannabiz-oswald', 'https://fonts.googleapis.com/css?family=Oswald:300,400,600' );
-	} elseif ( get_theme_mod( 'cannabiz_title_font' ) === 'Source Sans' ) {
-		wp_enqueue_style( 'cannabiz-sourcesans', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' );
+	} elseif ( get_theme_mod( 'cannabiz_title_font' ) === 'Source Sans Pro' ) {
+		wp_enqueue_style( 'cannabiz-source-sans-pro', 'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap' );
 	} elseif ( get_theme_mod( 'cannabiz_title_font' ) === 'Raleway' ) {
 		wp_enqueue_style( 'cannabiz-raleway', 'https://fonts.googleapis.com/css?family=Raleway:300,400,600' );
 	} elseif ( get_theme_mod( 'cannabiz_title_font' ) === 'Lora' ) {
@@ -2156,8 +2138,8 @@ function cannabiz_customize_scripts() {
 		wp_enqueue_style( 'cannabiz-lato', 'https://fonts.googleapis.com/css?family=Lato:300,400,700' );
 	} elseif ( get_theme_mod( 'cannabiz_main_font' ) === 'Oswald' ) {
 		wp_enqueue_style( 'cannabiz-oswald', 'https://fonts.googleapis.com/css?family=Oswald:300,400,600' );
-	} elseif ( get_theme_mod( 'cannabiz_main_font' ) === 'Source Sans' ) {
-		wp_enqueue_style( 'cannabiz-sourcesans', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' );
+	} elseif ( get_theme_mod( 'cannabiz_main_font' ) === 'Source Sans Pro' ) {
+		wp_enqueue_style( 'cannabiz-source-sans-pro', 'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap' );
 	} elseif ( get_theme_mod( 'cannabiz_main_font' ) === 'Raleway' ) {
 		wp_enqueue_style( 'cannabiz-raleway', 'https://fonts.googleapis.com/css?family=Raleway:300,400,600' );
 	} elseif ( get_theme_mod( 'cannabiz_main_font' ) === 'Lora' ) {
@@ -2206,7 +2188,7 @@ function cannabiz_customize_scripts() {
 		wp_enqueue_style( 'cannabiz-lato', 'https://fonts.googleapis.com/css?family=Lato:300,400,700' );
 	} elseif ( get_theme_mod( 'cannabiz_menu_topbar_font' ) === 'Oswald' ) {
 		wp_enqueue_style( 'cannabiz-oswald', 'https://fonts.googleapis.com/css?family=Oswald:300,400,600' );
-	} elseif ( get_theme_mod( 'cannabiz_menu_topbar_font' ) === 'Source Sans' ) {
+	} elseif ( get_theme_mod( 'cannabiz_menu_topbar_font' ) === 'Source Sans Pro' ) {
 		wp_enqueue_style( 'cannabiz-sourcesans', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' );
 	} elseif ( get_theme_mod( 'cannabiz_menu_topbar_font' ) === 'Raleway' ) {
 		wp_enqueue_style( 'cannabiz-raleway', 'https://fonts.googleapis.com/css?family=Raleway:300,400,600' );
@@ -2254,7 +2236,7 @@ function cannabiz_customize_scripts() {
 		wp_enqueue_style( 'cannabiz-lato', 'https://fonts.googleapis.com/css?family=Lato:300,400,700' );
 	} elseif ( get_theme_mod( 'cannabiz_menu_toplevel_font' ) === 'Oswald' ) {
 		wp_enqueue_style( 'cannabiz-oswald', 'https://fonts.googleapis.com/css?family=Oswald:300,400,600' );
-	} elseif ( get_theme_mod( 'cannabiz_menu_toplevel_font' ) === 'Source Sans' ) {
+	} elseif ( get_theme_mod( 'cannabiz_menu_toplevel_font' ) === 'Source Sans Pro' ) {
 		wp_enqueue_style( 'cannabiz-sourcesans', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' );
 	} elseif ( get_theme_mod( 'cannabiz_menu_toplevel_font' ) === 'Raleway' ) {
 		wp_enqueue_style( 'cannabiz-raleway', 'https://fonts.googleapis.com/css?family=Raleway:300,400,600' );
@@ -2302,7 +2284,7 @@ function cannabiz_customize_scripts() {
 		wp_enqueue_style( 'cannabiz-lato', 'https://fonts.googleapis.com/css?family=Lato:300,400,700' );
 	} elseif ( get_theme_mod( 'cannabiz_menu_sublevel_font' ) === 'Oswald' ) {
 		wp_enqueue_style( 'cannabiz-oswald', 'https://fonts.googleapis.com/css?family=Oswald:300,400,600' );
-	} elseif ( get_theme_mod( 'cannabiz_menu_sublevel_font' ) === 'Source Sans' ) {
+	} elseif ( get_theme_mod( 'cannabiz_menu_sublevel_font' ) === 'Source Sans Pro' ) {
 		wp_enqueue_style( 'cannabiz-sourcesans', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' );
 	} elseif ( get_theme_mod( 'cannabiz_menu_sublevel_font' ) === 'Raleway' ) {
 		wp_enqueue_style( 'cannabiz-raleway', 'https://fonts.googleapis.com/css?family=Raleway:300,400,600' );

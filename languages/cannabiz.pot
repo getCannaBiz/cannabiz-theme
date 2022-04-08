@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: CannaBiz\n"
-"POT-Creation-Date: 2019-06-24 15:13-0400\n"
-"PO-Revision-Date: 2019-06-24 15:13-0400\n"
+"POT-Creation-Date: 2021-06-09 20:53-0400\n"
+"PO-Revision-Date: 2021-06-09 20:53-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.1\n"
+"X-Generator: Poedit 3.0\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
@@ -19,7 +19,7 @@ msgstr ""
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
 #: 404.php:17
 msgid ""
@@ -37,48 +37,30 @@ msgstr ""
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: archive-concentrates.php:27 archive-edibles.php:35 archive-flowers.php:35
-#: archive-gear.php:35 archive-growers.php:35 archive-prerolls.php:35
-#: archive-tinctures.php:35 archive-topicals.php:35 index.php:38
-#: taxonomy-allergens.php:35 taxonomy-aroma.php:35
-#: taxonomy-concentrates_category.php:35 taxonomy-condition.php:35
-#: taxonomy-edibles_category.php:35 taxonomy-effect.php:35
-#: taxonomy-flavor.php:35 taxonomy-flowers_category.php:35
-#: taxonomy-growers_category.php:35 taxonomy-ingredients.php:35
-#: taxonomy-shelf_type.php:35 taxonomy-strain_type.php:35
-#: taxonomy-symptom.php:35 taxonomy-topicals_category.php:35
-#: taxonomy-vendor.php:35 taxonomy-wpd_gear_category.php:35
-#: taxonomy-wpd_tinctures_category.php:35
-msgid "<i class=\"fa fa-chevron-left\"></i>"
+#: archive-products.php:24 index.php:38 taxonomy-allergens.php:26
+#: taxonomy-aromas.php:26 taxonomy-conditions.php:26 taxonomy-effects.php:26
+#: taxonomy-flavors.php:26 taxonomy-ingredients.php:26
+#: taxonomy-shelf_types.php:26 taxonomy-strain_types.php:26
+#: taxonomy-symptoms.php:26 taxonomy-vendors.php:26
+#: taxonomy-wpd_categories.php:26
+msgid "<i class=\"fas fa-chevron-left\"></i>"
 msgstr ""
 
-#: archive-concentrates.php:28 archive-edibles.php:36 archive-flowers.php:36
-#: archive-gear.php:36 archive-growers.php:36 archive-prerolls.php:36
-#: archive-tinctures.php:36 archive-topicals.php:36 index.php:39
-#: taxonomy-allergens.php:36 taxonomy-aroma.php:36
-#: taxonomy-concentrates_category.php:36 taxonomy-condition.php:36
-#: taxonomy-edibles_category.php:36 taxonomy-effect.php:36
-#: taxonomy-flavor.php:36 taxonomy-flowers_category.php:36
-#: taxonomy-growers_category.php:36 taxonomy-ingredients.php:36
-#: taxonomy-shelf_type.php:36 taxonomy-strain_type.php:36
-#: taxonomy-symptom.php:36 taxonomy-topicals_category.php:36
-#: taxonomy-vendor.php:36 taxonomy-wpd_gear_category.php:36
-#: taxonomy-wpd_tinctures_category.php:36
-msgid "<i class=\"fa fa-chevron-right\"></i>"
+#: archive-products.php:25 index.php:39 taxonomy-allergens.php:27
+#: taxonomy-aromas.php:27 taxonomy-conditions.php:27 taxonomy-effects.php:27
+#: taxonomy-flavors.php:27 taxonomy-ingredients.php:27
+#: taxonomy-shelf_types.php:27 taxonomy-strain_types.php:27
+#: taxonomy-symptoms.php:27 taxonomy-vendors.php:27
+#: taxonomy-wpd_categories.php:27
+msgid "<i class=\"fas fa-chevron-right\"></i>"
 msgstr ""
 
-#: archive-concentrates.php:29 archive-edibles.php:37 archive-flowers.php:37
-#: archive-gear.php:37 archive-growers.php:37 archive-prerolls.php:37
-#: archive-tinctures.php:37 archive-topicals.php:37 index.php:40
-#: taxonomy-allergens.php:37 taxonomy-aroma.php:37
-#: taxonomy-concentrates_category.php:37 taxonomy-condition.php:37
-#: taxonomy-edibles_category.php:37 taxonomy-effect.php:37
-#: taxonomy-flavor.php:37 taxonomy-flowers_category.php:37
-#: taxonomy-growers_category.php:37 taxonomy-ingredients.php:37
-#: taxonomy-shelf_type.php:37 taxonomy-strain_type.php:37
-#: taxonomy-symptom.php:37 taxonomy-topicals_category.php:37
-#: taxonomy-vendor.php:37 taxonomy-wpd_gear_category.php:37
-#: taxonomy-wpd_tinctures_category.php:37
+#: archive-products.php:26 index.php:40 taxonomy-allergens.php:28
+#: taxonomy-aromas.php:28 taxonomy-conditions.php:28 taxonomy-effects.php:28
+#: taxonomy-flavors.php:28 taxonomy-ingredients.php:28
+#: taxonomy-shelf_types.php:28 taxonomy-strain_types.php:28
+#: taxonomy-symptoms.php:28 taxonomy-vendors.php:28
+#: taxonomy-wpd_categories.php:28
 msgid "Page"
 msgstr ""
 
@@ -106,14 +88,9 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: footer.php:51
+#: footer.php:45
 #, php-format
-msgid "%s"
-msgstr ""
-
-#: footer.php:52
-#, php-format
-msgid "%1$s"
+msgid "Powered by %1$s"
 msgstr ""
 
 #: functions.php:47
@@ -149,54 +126,34 @@ msgid "Footer row #4"
 msgstr ""
 
 #: functions.php:174
-msgid "Sidebar Flowers"
+msgid "Sidebar Products"
 msgstr ""
 
-#: functions.php:183
-msgid "Sidebar Concentrates"
-msgstr ""
-
-#: functions.php:192
-msgid "Sidebar Edibles"
-msgstr ""
-
-#: functions.php:201
-msgid "Sidebar Pre-rolls"
-msgstr ""
-
-#: functions.php:210
-msgid "Sidebar Topicals"
-msgstr ""
-
-#: functions.php:219
-msgid "Sidebar Growers"
-msgstr ""
-
-#: functions.php:316
+#: functions.php:270
 msgid "Pay Now!"
 msgstr ""
 
-#: functions.php:349
+#: functions.php:303
 msgid "Large Page Title"
 msgstr ""
 
-#: functions.php:363
+#: functions.php:317
 msgid "Display"
 msgstr ""
 
-#: functions.php:363
+#: functions.php:317
 msgid "(overrides Customizer setting)"
 msgstr ""
 
-#: header.php:58
+#: header.php:37
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:93
+#: header.php:72
 msgid "Menu"
 msgstr ""
 
-#: header.php:94
+#: header.php:73
 msgid "Close menu"
 msgstr ""
 
@@ -664,6 +621,14 @@ msgstr ""
 msgid "Site Logo"
 msgstr ""
 
+#: inc/customizer.php:1292
+msgid "Hide"
+msgstr ""
+
+#: inc/customizer.php:1293
+msgid "Show"
+msgstr ""
+
 #: inc/select/taxonomy-dropdown-custom-control.php:35
 msgid "None"
 msgstr ""
@@ -681,26 +646,26 @@ msgid "% Comments"
 msgstr ""
 
 #. translators: %s: Name of current post
-#: inc/template-tags.php:70
+#: inc/template-tags.php:55
 #, php-format
 msgid "Edit %s"
 msgstr ""
 
-#: inc/template-tags.php:101
+#: inc/template-tags.php:86
 #, php-format
 msgctxt "post date"
 msgid "%s"
 msgstr ""
 
-#: inc/template-tags.php:123
+#: inc/template-tags.php:102
 msgid "0"
 msgstr ""
 
-#: inc/template-tags.php:123
+#: inc/template-tags.php:102
 msgid "1"
 msgstr ""
 
-#: inc/template-tags.php:123
+#: inc/template-tags.php:102
 msgid "%"
 msgstr ""
 
@@ -709,45 +674,36 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: template-parts/concentrates-single.php:28 template-parts/content-page.php:20
-#: template-parts/content-search.php:31 template-parts/content-single.php:31
-#: template-parts/content.php:31 template-parts/edibles-single.php:27
-#: template-parts/flowers-single.php:28 template-parts/gear-single.php:28
-#: template-parts/growers-single.php:28 template-parts/prerolls-single.php:28
-#: template-parts/tinctures-single.php:28 template-parts/topicals-single.php:28
-msgid "Pages:"
-msgstr ""
-
-#: template-parts/content-header.php:32 template-parts/content-header.php:76
+#: template-parts/content-header.php:43 template-parts/content-header.php:81
 msgid "Build your marijuana dispensary business website with ease"
 msgstr ""
 
-#: template-parts/content-header.php:37 template-parts/content-header.php:81
+#: template-parts/content-header.php:48 template-parts/content-header.php:86
 msgid "With WP Dispensary, it's never been easier to launch your menu"
 msgstr ""
 
-#: template-parts/content-header.php:40
+#: template-parts/content-header.php:51
 msgid "Learn More"
 msgstr ""
 
-#: template-parts/content-header.php:43
+#: template-parts/content-header.php:54
 msgid "Buy This Theme"
 msgstr ""
 
-#: template-parts/content-header.php:97
+#: template-parts/content-header.php:96
 msgid "Search Results"
 msgstr ""
 
-#: template-parts/content-header.php:98
+#: template-parts/content-header.php:97
 #, php-format
 msgid "You searched for: \"%s\""
 msgstr ""
 
-#: template-parts/content-header.php:113
+#: template-parts/content-header.php:106
 msgid "404 Error"
 msgstr ""
 
-#: template-parts/content-header.php:114
+#: template-parts/content-header.php:107
 msgid "Sorry, but the page you're looking for cannot be found"
 msgstr ""
 
@@ -773,27 +729,26 @@ msgid ""
 "searching can help."
 msgstr ""
 
+#: template-parts/content-page.php:20 template-parts/content-search.php:31
+#: template-parts/content-single.php:31 template-parts/content.php:31
+msgid "Pages:"
+msgstr ""
+
 #. Theme Name of the plugin/theme
+#. Author of the plugin/theme
 msgid "CannaBiz"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "https://www.wpdispensary.com/product/cannabiz"
+msgid "https://cannabiz.pro/features/theme"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid ""
-"CannaBiz is a commercial WordPress theme for the cannabis industry, built to "
-"work with the <a href=\"https://www.wpdispensary.com/\" target=\"_blank\">WP "
-"Dispensary</a> WordPress plugin."
-msgstr ""
-
-#. Author of the plugin/theme
-msgid "WP Dispensary"
+msgid "Commercial WordPress theme for the cannabis industry."
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "https://www.wpdispensary.com"
+msgid "https://cannabiz.pro"
 msgstr ""
 
 #. Template Name of the plugin/theme
