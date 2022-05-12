@@ -23,7 +23,7 @@ get_header(); ?>
 
 				<?php
 				// Content display.
-				if ( isset( $_GET['post_type'] ) ) {
+				if ( null !== filter_input( INPUT_GET, 'post_type' ) ) {
 					get_template_part( 'template-parts/products', 'search' );
 				} else {
 					get_template_part( 'template-parts/content', 'search' );

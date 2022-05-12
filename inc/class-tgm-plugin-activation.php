@@ -707,12 +707,12 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		 * @return boolean True on success, false on failure.
 		 */
 		protected function do_plugin_install() {
-			if ( empty( $_GET['plugin'] ) ) {
+			if ( empty( filter_input( INPUT_GET, 'plugin' ) ) ) {
 				return false;
 			}
 
 			// All plugin information will be stored in an array for processing.
-			$slug = $this->sanitize_key( urldecode( $_GET['plugin'] ) );
+			$slug = $this->sanitize_key( urldecode( filter_input( INPUT_GET, 'plugin' ) ) );
 
 			if ( ! isset( $this->plugins[ $slug ] ) ) {
 				return false;
@@ -2638,7 +2638,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				$plugins_to_install = array();
 
 				// Did user actually select any plugins to install/update ?
-				if ( empty( $_POST['plugin'] ) ) {
+				if ( empty( filter_input( INPUT_POST, 'plugin' ) ) ) {
 					if ( 'install' === $install_type ) {
 						$message = esc_attr__( 'No plugins were selected to be installed. No action taken.', 'tgmpa' );
 					} else {
@@ -2650,11 +2650,11 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 					return false;
 				}
 
-				if ( is_array( $_POST['plugin'] ) ) {
-					$plugins_to_install = (array) $_POST['plugin'];
-				} elseif ( is_string( $_POST['plugin'] ) ) {
+				if ( is_array( filter_input( INPUT_POST, 'plugin' ) ) ) {
+					$plugins_to_install = (array) filter_input( INPUT_POST, 'plugin' );
+				} elseif ( is_string( filter_input( INPUT_POST, 'plugin' ) ) ) {
 					// Received via Filesystem page - un-flatten array (WP bug #19643).
-					$plugins_to_install = explode( ',', $_POST['plugin'] );
+					$plugins_to_install = explode( ',', filter_input( INPUT_POST, 'plugin' ) );
 				}
 
 				// Sanitize the received input.
@@ -2784,7 +2784,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				check_admin_referer( 'bulk-' . $this->_args['plural'] );
 
 				// Did user actually select any plugins to activate ?
-				if ( empty( $_POST['plugin'] ) ) {
+				if ( empty( filter_input( INPUT_POST, 'plugin' ) ) ) {
 					echo '<div id="message" class="error"><p>', esc_html__( 'No plugins were selected to be activated. No action taken.', 'tgmpa' ), '</p></div>';
 
 					return false;
@@ -2792,8 +2792,8 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
 				// Grab plugin data from $_POST.
 				$plugins = array();
-				if ( isset( $_POST['plugin'] ) ) {
-					$plugins = array_map( 'urldecode', (array) $_POST['plugin'] );
+				if ( null !== filter_input( INPUT_POST, 'plugin' ) ) {
+					$plugins = array_map( 'urldecode', (array) filter_input( INPUT_POST, 'plugin' ) );
 					$plugins = array_map( array( $this->tgmpa, 'sanitize_key' ), $plugins );
 				}
 

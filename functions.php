@@ -327,11 +327,11 @@ function page_title_html( $post ) {
  */
 function page_title_save( $post_id ) {
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
-	if ( ! isset( $_POST['page_title_nonce'] ) || ! wp_verify_nonce( $_POST['page_title_nonce'], '_page_title_nonce' ) ) return;
+	if ( ! isset( $_POST['page_title_nonce'] ) || ! wp_verify_nonce( filter_input( INPUT_POST, 'page_title_nonce' ), '_page_title_nonce' ) ) return;
 	if ( ! current_user_can( 'edit_post', $post_id ) ) return;
 
-	if ( isset( $_POST['page_title'] ) ) {
-		update_post_meta( $post_id, 'page_title', esc_attr( $_POST['page_title'] ) );
+	if ( null !== filter_input( INPUT_POST, 'page_title' ) ) {
+		update_post_meta( $post_id, 'page_title', filter_input( INPUT_POST, 'page_title' ) );
 	} else {
 		update_post_meta( $post_id, 'page_title', null );
 	}
