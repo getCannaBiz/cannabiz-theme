@@ -32,7 +32,7 @@ class Taxonomy_Dropdown_Custom_Control extends WP_Customize_Control
 
 		// Set defaults
 		$this->defaults = array(
-			'show_option_none' => __( 'None' ),
+			'show_option_none' => esc_attr__( 'None' ),
 			'orderby'          => 'name',
 			'hide_empty'       => 0,
 			'id'               => $this->id,

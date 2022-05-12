@@ -267,7 +267,7 @@ add_theme_support( 'wc-product-gallery-slider' );
 function cannabiz_paypal_button( $translated_text, $text, $domain ) {
 	switch ( $translated_text ) {
 		case 'Proceed to PayPal' :
-		$translated_text = __( 'Pay Now!', 'cannabiz' );
+		$translated_text = esc_attr__( 'Pay Now!', 'cannabiz' );
 		break;
 	}
 	return $translated_text;
@@ -318,7 +318,7 @@ function page_title_html( $post ) {
 	wp_nonce_field( '_page_title_nonce', 'page_title_nonce' ); ?>
 	<p>
 		<input type="checkbox" name="page_title" id="page_title" value="add_page_title" <?php echo ( cannabiz_page_title( 'page_title' ) === 'add_page_title' ) ? 'checked' : ''; ?>>
-		<label for="page_title"><?php _e( 'Display large page title', 'cannabiz' ); ?></label>
+		<label for="page_title"><?php esc_html_e( 'Display large page title', 'cannabiz' ); ?></label>
 	</p><?php
 }
 

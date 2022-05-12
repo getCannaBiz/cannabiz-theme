@@ -69,8 +69,8 @@
 	<header id="masthead" class="site-header" role="banner">
 		<?php do_action( 'cannabiz_header_inside_top' ); ?>
 		<div class="menu-toggle">
-			<span><i class="fas fa-bars"></i><?php _e( 'Menu', 'cannabiz' ); ?></span>
-			<span class="menu-close"><i class="fas fa-times"></i><?php _e( 'Close menu', 'cannabiz' ); ?></span>
+			<span><i class="fas fa-bars"></i><?php esc_html_e( 'Menu', 'cannabiz' ); ?></span>
+			<span class="menu-close"><i class="fas fa-times"></i><?php esc_html_e( 'Close menu', 'cannabiz' ); ?></span>
 		</div>
 		<div class="container">
 			<div class="row">

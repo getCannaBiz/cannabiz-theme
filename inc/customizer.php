@@ -16,7 +16,7 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 	 *-----------------------------------------------------------*/
 
 	// section adjustments
-	$wp_customize->get_section( 'title_tagline' )->title = __( 'Header', 'cannabiz' );
+	$wp_customize->get_section( 'title_tagline' )->title = esc_attr__( 'Header', 'cannabiz' );
 	$wp_customize->get_section( 'title_tagline' )->priority = 10;
 	/* Site title */
 	$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
@@ -27,7 +27,7 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 	/* Logo uploader */
 	$wp_customize->add_setting( 'cannabiz_logo', array( 'default' => null ) );
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'cannabiz_logo', array(
-		'label'     => __( 'Site Logo', 'cannabiz' ),
+		'label'     => esc_attr__( 'Site Logo', 'cannabiz' ),
 		'section'   => 'title_tagline',
 		'settings'  => 'cannabiz_logo',
 		'priority'  => 1
@@ -1289,8 +1289,8 @@ function cannabiz_register_theme_customizer( $wp_customize ) {
 			'label'    			=> 'Footer Social',
 			'type'     			=> 'radio',
 			'choices'  			=> array(
-				'hide'			=> __( 'Hide', 'cannabiz' ),
-				'show'			=> __( 'Show', 'cannabiz' )
+				'hide'			=> esc_attr__( 'Hide', 'cannabiz' ),
+				'show'			=> esc_attr__( 'Show', 'cannabiz' )
 			)
 		)
 	);

@@ -23,9 +23,9 @@ get_header(); ?>
 			<?php 
 			// Previous/next page navigation.
 			the_posts_pagination( array(
-				'prev_text'          => __( '<i class="fas fa-chevron-left"></i>', 'cannabiz' ),
-				'next_text'          => __( '<i class="fas fa-chevron-right"></i>', 'cannabiz' ),
-				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'cannabiz' ) . ' </span>',
+				'prev_text'          => esc_attr__( '<i class="fas fa-chevron-left"></i>', 'cannabiz' ),
+				'next_text'          => esc_attr__( '<i class="fas fa-chevron-right"></i>', 'cannabiz' ),
+				'before_page_number' => '<span class="meta-nav screen-reader-text">' . esc_attr__( 'Page', 'cannabiz' ) . ' </span>',
 			) );
 			?>
 
