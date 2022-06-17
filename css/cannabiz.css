@@ -1070,7 +1070,8 @@ body.single .featured-image:hover::before {
 }
 
 span.edit-link {
-    margin-left: 12px;
+    margin-left: 0;
+    display: block;
 }
 
 .entry-meta.absolute {
@@ -1794,6 +1795,10 @@ ol.comment-list li {
     -webkit-font-smoothing: antialiased;
 }
 
+.comment-author.vcard img {
+    border-radius: 50%;
+}
+
 span.says {
     display: none;
 }
@@ -1817,6 +1822,21 @@ span.says {
     display: block;
     height: 6px;
     width: 100%;
+}
+
+.comment-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.comment-meta {
+    flex-basis: 30%;
+}
+
+.comment-content {
+    flex: 1;
 }
 
 a.comment-reply-link:before {
