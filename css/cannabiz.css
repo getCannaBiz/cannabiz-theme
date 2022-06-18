@@ -1835,6 +1835,10 @@ span.says {
     flex-basis: 30%;
 }
 
+.comment-awaiting-moderation {
+    display: block;
+}
+
 .comment-content {
     flex: 1;
 }
