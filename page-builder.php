@@ -2,11 +2,11 @@
 /**
  * Template Name: Builder
  *
- * @category Page_Templates
- * @package  CannaBizTheme
+ * @category Main_Templates
+ * @package  CannaBiz_Theme
  * @author   CannaBiz Software <hello@cannabiz.pro>
- * @license  GPL v2
- * @link     https://cannabiz.pro
+ * @license GPL-2.0+ http://www.gnu.org/licenses/gpl-2.0.txt
+ * @link     https://codex.wordpress.org/Template_Hierarchy
  */
 
 get_header(); ?>

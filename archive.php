@@ -2,9 +2,11 @@
 /**
  * The template for displaying archive pages.
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package CannaBiz
+ * @category Main_Templates
+ * @package  CannaBiz_Theme
+ * @author   CannaBiz Software <hello@cannabiz.pro>
+ * @license GPL-2.0+ http://www.gnu.org/licenses/gpl-2.0.txt
+ * @link     https://codex.wordpress.org/Template_Hierarchy
  */
 
 get_header(); ?>

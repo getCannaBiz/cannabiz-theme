@@ -2,9 +2,10 @@
 /**
  * CannaBiz functions and definitions.
  *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
- *
  * @package CannaBiz
+ * @author  CannaBiz Software <hello@cannabiz.pro>
+ * @license GPL v2
+ * @link    https://codex.wordpress.org/Template_Hierarchy
  */
 
 if ( ! function_exists( 'cannabiz_setup' ) ) :

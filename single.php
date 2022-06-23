@@ -2,9 +2,11 @@
 /**
  * The template for displaying all single posts.
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package CannaBiz
+ * @category Single_Templates
+ * @package  CannaBiz_Theme
+ * @author   CannaBiz Software <hello@cannabiz.pro>
+ * @license GPL-2.0+ http://www.gnu.org/licenses/gpl-2.0.txt
+ * @link     https://codex.wordpress.org/Template_Hierarchy
  */
 
 get_header(); ?>

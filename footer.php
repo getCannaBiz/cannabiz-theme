@@ -4,9 +4,11 @@
  *
  * Contains the closing of the #content div and all content after.
  *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package CannaBiz
+ * @category Main_Templates
+ * @package  CannaBiz_Theme
+ * @author   CannaBiz Software <hello@cannabiz.pro>
+ * @license GPL-2.0+ http://www.gnu.org/licenses/gpl-2.0.txt
+ * @link     https://codex.wordpress.org/Template_Hierarchy
  */
 ?>
         </div><!-- .row -->
