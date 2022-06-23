@@ -1871,6 +1871,11 @@ ol.comment-list ol.children li:last-child {
 	width: 100%;
 }
 
+div.products .comments {
+    box-shadow: none;
+    padding: 0;
+}
+
 #comments label {
 	width: 100%;
 }

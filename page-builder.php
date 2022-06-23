@@ -2,10 +2,10 @@
 /**
  * Template Name: Builder
  *
- * @category Page Templates
- * @author   CannaBiz Software
+ * @category Page_Templates
+ * @package  CannaBizTheme
+ * @author   CannaBiz Software <hello@cannabiz.pro>
  * @license  GPL v2
- * @package  CannaBiz
  * @link     https://cannabiz.pro
  */
 
