@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div class="entry-content">
-    <?php if ( 'show' !== get_theme_mod( 'cannabiz_pages_show_title' ) ) { ?>
+    <?php if ( 'show' !== get_theme_mod( 'cannabiz_pages_show_title' ) && ! get_post_meta( get_the_ID(), 'page_title', true ) ) { ?>
         <h1 class="entry-title"><?php the_title(); ?></h1>
     <?php } ?>
         <?php the_content(); ?>
@@ -20,7 +20,6 @@
                 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'cannabiz' ),
                 'after'  => '</div>',
             ) );
-        ?>
+            ?>
     </div><!-- .entry-content -->
 </article><!-- #post-## -->
-
