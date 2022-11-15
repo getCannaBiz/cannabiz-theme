@@ -451,7 +451,10 @@ add_filter( 'login_headertitle', 'my_login_logo_url_title' );
  * 
  * Requires WordPress v5.2+ in order to use the login_headertext filter
  * 
- * @since 2.5
+ * @param string $login_header_text - default is the WP site name
+ * 
+ * @since  2.5
+ * @return string
  */
 function cannabiz_login_logo_image( $login_header_text ) {
 
@@ -463,11 +466,7 @@ function cannabiz_login_logo_image( $login_header_text ) {
 
     return $login_header_text;
 }
-
-// Add filter if WP version is 5.2+
-if ( 5.2 >= get_bloginfo( 'version' ) ) {
-    add_filter( 'login_headertext', 'cannabiz_login_logo_image' );
-}
+add_filter( 'login_headertext', 'cannabiz_login_logo_image' );
 
 /**
  * Check if WooCommerce is activated
