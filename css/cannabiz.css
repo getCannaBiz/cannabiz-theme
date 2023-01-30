@@ -1785,14 +1785,8 @@ ol.comment-list li {
 
 .comment-author.vcard {
     display: inline-block;
-	margin-right: 6px;
-}
-
-.comment-author.vcard:after {
-    color: #DDD;
-    content: '\00B7';
-    margin-left: 6px;
-    -webkit-font-smoothing: antialiased;
+    margin-right: 6px;
+    width: 100%;
 }
 
 .comment-author.vcard img {
@@ -1854,7 +1848,7 @@ a.comment-reply-link:before {
 ol.comment-list ol.children {
     border-top: 1px dotted #DDD;
     margin: 15px 0 0 0;
-    padding-left: 25px;
+    padding-left: 0;
 }
 
 ol.comment-list ol.children li:last-child {
@@ -1882,6 +1876,12 @@ div.products .comments {
 
 #comments input {
 	max-width: 100%;
+}
+
+@media (max-width: 600px) {
+    .comment-body {
+        flex-direction: column;
+    }
 }
 
 
