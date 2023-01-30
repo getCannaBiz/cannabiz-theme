@@ -135,6 +135,7 @@ function cannabiz_topbar_shopping_cart() {
         do_action( 'cannabiz_topbar_inside_after_woocommerce_cart' );
         }
     }
+    // @TODO Add cart for WP Dispensary here
 }
 add_action( 'cannabiz_topbar_inside_after_social', 'cannabiz_topbar_shopping_cart' );
 

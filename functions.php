@@ -8,6 +8,32 @@
  * @link    https://codex.wordpress.org/Template_Hierarchy
  */
 
+/**
+ * Theme version
+ * 
+ * Set the version number for staging/production
+ * 
+ * @return int
+ */
+function cannabiz_theme_ver() {
+    // Get the URL.
+    $url = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+
+    // Set theme version number.
+    $theme_ver = wp_get_theme()->Version;
+
+    // Check if we're on the staging website.
+    if ( strpos( $url, '.local' ) ) {
+        // Update theme version number.
+        $theme_ver = time();
+    }
+
+    return $theme_ver;
+}
+
+// Define the theme version.
+define( 'THEME_VER', cannabiz_theme_ver() );
+
 if ( ! function_exists( 'cannabiz_setup' ) ) :
     /**
      * Sets up theme defaults and registers support for various WordPress features.
@@ -171,6 +197,11 @@ function cannabiz_widgets_init() {
 }
 add_action( 'widgets_init', 'cannabiz_widgets_init' );
 
+/**
+ * Register Products Sidebar
+ * 
+ * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+ */
 function wp_dispensary_sidebars() {
     if ( class_exists( 'WP_Dispensary' ) ) {
         register_sidebar( array(
@@ -195,14 +226,14 @@ function cannabiz_scripts() {
     wp_enqueue_style( 'cannabiz-style', get_template_directory_uri() . '/css/cannabiz.min.css' );
     wp_enqueue_style( 'cannabiz-fontawesome', get_template_directory_uri() . '/css/fontawesome.min.css' );
 
-    wp_enqueue_script( 'cannabiz-navigation', get_template_directory_uri() . '/js/navigation.js', array(), time(), true );
-    wp_enqueue_script( 'cannabiz-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), time(), true );
-    wp_enqueue_script( 'cannabiz-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), time(), true );
-    wp_enqueue_script( 'cannabiz-hoverIntent', get_template_directory_uri() . '/js/hoverIntent.min.js', array(), time(), true );
-    wp_enqueue_script( 'cannabiz-js', get_template_directory_uri() . '/js/cannabiz.min.js', array(), time(), true );
+    wp_enqueue_script( 'cannabiz-navigation', get_template_directory_uri() . '/js/navigation.js', array(), THEME_VER, true );
+    wp_enqueue_script( 'cannabiz-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), THEME_VER, true );
+    wp_enqueue_script( 'cannabiz-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), THEME_VER, true );
+    wp_enqueue_script( 'cannabiz-hoverIntent', get_template_directory_uri() . '/js/hoverIntent.min.js', array(), THEME_VER, true );
+    wp_enqueue_script( 'cannabiz-js', get_template_directory_uri() . '/js/cannabiz.min.js', array(), THEME_VER, true );
 
     if ( class_exists( 'WP_Dispensary' ) ) {
-        wp_enqueue_script( 'cannabiz-wpd-js', get_template_directory_uri() . '/js/wp-dispensary.js', array(), time(), true );
+        wp_enqueue_script( 'cannabiz-wpd-js', get_template_directory_uri() . '/js/wp-dispensary.js', array(), THEME_VER, true );
     }
 
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -266,6 +297,8 @@ add_theme_support( 'wc-product-gallery-slider' );
 
 /**
  * Custom PayPal button text
+ * 
+ * @return string
  */
 function cannabiz_paypal_button( $translated_text, $text, $domain ) {
     switch ( $translated_text ) {
@@ -278,7 +311,9 @@ function cannabiz_paypal_button( $translated_text, $text, $domain ) {
 add_filter( 'gettext', 'cannabiz_paypal_button', 20, 3 );
 
 /**
- * Add "CannaBiz" submenu to WPD admin menu
+ * Add "customizer" submenu item to WPD admin menu
+ * 
+ * @return void
  */
 function wpd_cannabiz_submenu_page() {
     add_submenu_page( 'wpd-settings', 'Customizer', 'Customizer', 'manage_options', 'customize.php', NULL );
@@ -287,6 +322,8 @@ add_action( 'admin_menu', 'wpd_cannabiz_submenu_page', 9 );
 
 /**
  * Metabox to hide title on page-by-page basis
+ * 
+ * @return string|bool
  */
 function cannabiz_page_title( $value ) {
     global $post;
@@ -301,6 +338,8 @@ function cannabiz_page_title( $value ) {
 
 /**
  * Metabox: Large page title
+ * 
+ * @return void
  */
 function page_title_add_meta_box() {
     add_meta_box(
@@ -316,6 +355,8 @@ add_action( 'add_meta_boxes', 'page_title_add_meta_box' );
 
 /**
  * Metabox HTML: Large page title
+ * 
+ * @return string
  */
 function page_title_html( $post ) {
     wp_nonce_field( '_page_title_nonce', 'page_title_nonce' ); ?>
