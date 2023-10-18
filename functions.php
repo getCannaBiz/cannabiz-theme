@@ -517,3 +517,122 @@ if ( ! function_exists( 'is_woocommerce_activated' ) ) {
         if ( class_exists( 'woocommerce' ) ) { return true; } else { return false; }
     }
 }
+
+/**
+ * Get all the registered image sizes along with their dimensions
+ *
+ * @global array $_wp_additional_image_sizes
+ * 
+ * @return array $image_sizes - The image sizes
+ */
+if ( ! function_exists( 'cannabiz_theme_get_all_image_sizes' ) ) {
+    function cannabiz_theme_get_all_image_sizes() {
+        global $_wp_additional_image_sizes;
+
+        $default_image_sizes = get_intermediate_image_sizes();
+
+        foreach ( $default_image_sizes as $size ) {
+            $image_sizes[ $size ][ 'width' ]  = intval( get_option( "{$size}_size_w" ) );
+            $image_sizes[ $size ][ 'height' ] = intval( get_option( "{$size}_size_h" ) );
+            $image_sizes[ $size ][ 'crop' ]   = get_option( "{$size}_crop" ) ? get_option( "{$size}_crop" ) : false;
+        }
+
+        if ( isset( $_wp_additional_image_sizes ) && count( $_wp_additional_image_sizes ) ) {
+            $image_sizes = array_merge( $image_sizes, $_wp_additional_image_sizes );
+        }
+
+        return $image_sizes;
+    }
+}
+
+/**
+ * Function to get the width and height of a specific image size.
+ *
+ * @param string $size_name - The name of the image size.
+ *
+ * @return array|false - An array with 'width' and 'height' keys containing the dimensions, or false if the size is not found.
+ */
+function get_image_sizes_by_name( $size_name ) {
+    $image_sizes = cannabiz_theme_get_all_image_sizes();
+
+    if ( isset( $image_sizes[$size_name] ) ) {
+        return array(
+            'width'  => $image_sizes[$size_name]['width'],
+            'height' => $image_sizes[$size_name]['height']
+        );
+    }
+
+    // If the size is not found, return false.
+    return false;
+}
+
+/**
+ * Get media ID from URL
+ * 
+ * @param string $image_url The image URL - https:// ...
+ * 
+ * @return int|null
+ */
+function get_media_id_from_url( $image_url ) {
+    global $wpdb;
+
+    // Prepare the SQL query using $wpdb->prepare() to prevent SQL injection
+    $sql = $wpdb->prepare( "SELECT ID FROM $wpdb->posts WHERE guid = %s", $image_url );
+
+    // Use $wpdb->get_var() to execute the prepared query and retrieve the result.
+    $attachment_id = $wpdb->get_var( $sql );
+
+    // Return the attachment ID (or null if not found).
+    return $attachment_id;
+}
+
+/**
+ * 
+ * @param string $image_url The image URL - https:// ...
+ * 
+ * @return array|bool
+ */
+function get_image_sizes_by_id( $media_id ) {
+    // Check if the media ID is valid.
+    if ( wp_attachment_is_image( $media_id ) ) {
+        // Get the image size information for the full size.
+        $image_size_info = wp_get_attachment_image_src( $media_id, 'full' );
+
+        if ( $image_size_info ) {
+            // Extract the width and height from the returned array
+            list( $url, $width, $height ) = $image_size_info;
+
+            // Return the dimensions as an array
+            return array(
+                'width'  => $width,
+                'height' => $height
+            );
+        }
+    }
+
+    // If the media ID is not valid or doesn't exist, return false.
+    return false;
+}
+
+/**
+ * Get explicit image sizes
+ * 
+ * @param string $image_url The image URL - https:// ...
+ * 
+ * @return string
+ */
+function get_explicit_image_sizes( $image_url ) {
+
+    $img_explicit = '';
+
+    if ( $image_url ) {
+        $logo_media_id  = get_media_id_from_url( $image_url );
+        $img_dimensions = get_image_sizes_by_id( $logo_media_id );
+        
+        if ( $img_dimensions ) {
+            $img_explicit = ' width="' . $img_dimensions['width'] . '" height="' . $img_dimensions['height'] . '" ';
+        }        
+    }
+
+    return $img_explicit;
+}
