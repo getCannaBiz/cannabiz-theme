@@ -81,7 +81,7 @@
                     <div class="site-branding">
                     <?php do_action( 'cannabiz_logo_before' ); ?>
                     <?php if ( '' != get_theme_mod( 'cannabiz_logo' ) ) { ?>
-                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_theme_mod( 'cannabiz_logo' ); ?>" alt="<?php bloginfo( 'name' ); ?>" /></a>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_theme_mod( 'cannabiz_logo' ); ?>"<?php echo get_explicit_image_sizes( get_theme_mod( 'cannabiz_logo' ) ); ?>alt="<?php bloginfo( 'name' ); ?>" /></a>
                     <?php } else { ?>
                         <?php if ( is_front_page() && is_home() ) : ?>
                         <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
