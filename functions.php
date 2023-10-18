@@ -3,7 +3,7 @@
  * CannaBiz functions and definitions.
  *
  * @package CannaBiz
- * @author  CannaBiz Software <hello@cannabiz.pro>
+ * @author  CannaBiz Software <contact@cannabiz.software>
  * @license GPL v2
  * @link    https://codex.wordpress.org/Template_Hierarchy
  */
